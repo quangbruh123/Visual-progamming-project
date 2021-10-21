@@ -1,7 +1,7 @@
 ﻿
 namespace Sorting_Algorithms_Simulator
 {
-    partial class Form1
+    partial class SortProject
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,33 +30,34 @@ namespace Sorting_Algorithms_Simulator
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rdIncrease = new System.Windows.Forms.RadioButton();
+            this.rdDecrease = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.rdInterchange = new System.Windows.Forms.RadioButton();
+            this.rdHeap = new System.Windows.Forms.RadioButton();
+            this.rdMerge = new System.Windows.Forms.RadioButton();
+            this.rdQuick = new System.Windows.Forms.RadioButton();
+            this.rdInsertion = new System.Windows.Forms.RadioButton();
+            this.rdSelection = new System.Windows.Forms.RadioButton();
+            this.rdBubble = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtInput = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.lbInput = new System.Windows.Forms.Label();
+            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.lbAmount = new System.Windows.Forms.Label();
+            this.rdManual = new System.Windows.Forms.RadioButton();
+            this.rdAuto = new System.Windows.Forms.RadioButton();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnPause = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -81,217 +82,253 @@ namespace Sorting_Algorithms_Simulator
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(10, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1164, 256);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1018, 192);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // radioButton1
+            // rdIncrease
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 26);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(134, 34);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Ascending";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdIncrease.AutoSize = true;
+            this.rdIncrease.Location = new System.Drawing.Point(5, 20);
+            this.rdIncrease.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdIncrease.Name = "rdIncrease";
+            this.rdIncrease.Size = new System.Drawing.Size(113, 29);
+            this.rdIncrease.TabIndex = 1;
+            this.rdIncrease.TabStop = true;
+            this.rdIncrease.Text = "Ascending";
+            this.rdIncrease.UseVisualStyleBackColor = true;
+            this.rdIncrease.CheckedChanged += new System.EventHandler(this.rdIncrease_CheckedChanged);
             // 
-            // radioButton2
+            // rdDecrease
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 56);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(147, 34);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Descending";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdDecrease.AutoSize = true;
+            this.rdDecrease.Location = new System.Drawing.Point(5, 42);
+            this.rdDecrease.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdDecrease.Name = "rdDecrease";
+            this.rdDecrease.Size = new System.Drawing.Size(123, 29);
+            this.rdDecrease.TabIndex = 2;
+            this.rdDecrease.TabStop = true;
+            this.rdDecrease.Text = "Descending";
+            this.rdDecrease.UseVisualStyleBackColor = true;
+            this.rdDecrease.CheckedChanged += new System.EventHandler(this.rdDecrease_CheckedChanged);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton9);
-            this.groupBox2.Controls.Add(this.radioButton8);
-            this.groupBox2.Controls.Add(this.radioButton7);
-            this.groupBox2.Controls.Add(this.radioButton6);
-            this.groupBox2.Controls.Add(this.radioButton5);
-            this.groupBox2.Controls.Add(this.radioButton4);
-            this.groupBox2.Controls.Add(this.radioButton3);
+            this.groupBox2.Controls.Add(this.rdInterchange);
+            this.groupBox2.Controls.Add(this.rdHeap);
+            this.groupBox2.Controls.Add(this.rdMerge);
+            this.groupBox2.Controls.Add(this.rdQuick);
+            this.groupBox2.Controls.Add(this.rdInsertion);
+            this.groupBox2.Controls.Add(this.rdSelection);
+            this.groupBox2.Controls.Add(this.rdBubble);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.Location = new System.Drawing.Point(12, 274);
+            this.groupBox2.Location = new System.Drawing.Point(10, 206);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(377, 195);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(330, 146);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Algorithm";
             // 
-            // radioButton9
+            // rdInterchange
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton9.Location = new System.Drawing.Point(175, 35);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(195, 34);
-            this.radioButton9.TabIndex = 8;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Interchange Sort";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.rdInterchange.AutoSize = true;
+            this.rdInterchange.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdInterchange.Location = new System.Drawing.Point(153, 26);
+            this.rdInterchange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdInterchange.Name = "rdInterchange";
+            this.rdInterchange.Size = new System.Drawing.Size(161, 29);
+            this.rdInterchange.TabIndex = 8;
+            this.rdInterchange.TabStop = true;
+            this.rdInterchange.Text = "Interchange Sort";
+            this.rdInterchange.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // rdHeap
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton8.Location = new System.Drawing.Point(175, 115);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(132, 34);
-            this.radioButton8.TabIndex = 7;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Heap Sort";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.rdHeap.AutoSize = true;
+            this.rdHeap.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdHeap.Location = new System.Drawing.Point(153, 86);
+            this.rdHeap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdHeap.Name = "rdHeap";
+            this.rdHeap.Size = new System.Drawing.Size(110, 29);
+            this.rdHeap.TabIndex = 7;
+            this.rdHeap.TabStop = true;
+            this.rdHeap.Text = "Heap Sort";
+            this.rdHeap.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // rdMerge
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton7.Location = new System.Drawing.Point(175, 75);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(145, 34);
-            this.radioButton7.TabIndex = 6;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Merge Sort";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rdMerge.AutoSize = true;
+            this.rdMerge.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdMerge.Location = new System.Drawing.Point(153, 56);
+            this.rdMerge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdMerge.Name = "rdMerge";
+            this.rdMerge.Size = new System.Drawing.Size(119, 29);
+            this.rdMerge.TabIndex = 6;
+            this.rdMerge.TabStop = true;
+            this.rdMerge.Text = "Merge Sort";
+            this.rdMerge.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // rdQuick
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton6.Location = new System.Drawing.Point(6, 155);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(135, 34);
-            this.radioButton6.TabIndex = 5;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Quick Sort";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rdQuick.AutoSize = true;
+            this.rdQuick.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdQuick.Location = new System.Drawing.Point(5, 116);
+            this.rdQuick.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdQuick.Name = "rdQuick";
+            this.rdQuick.Size = new System.Drawing.Size(113, 29);
+            this.rdQuick.TabIndex = 5;
+            this.rdQuick.TabStop = true;
+            this.rdQuick.Text = "Quick Sort";
+            this.rdQuick.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // rdInsertion
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton5.Location = new System.Drawing.Point(6, 115);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(164, 34);
-            this.radioButton5.TabIndex = 4;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Insertion Sort";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rdInsertion.AutoSize = true;
+            this.rdInsertion.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdInsertion.Location = new System.Drawing.Point(5, 86);
+            this.rdInsertion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdInsertion.Name = "rdInsertion";
+            this.rdInsertion.Size = new System.Drawing.Size(137, 29);
+            this.rdInsertion.TabIndex = 4;
+            this.rdInsertion.TabStop = true;
+            this.rdInsertion.Text = "Insertion Sort";
+            this.rdInsertion.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rdSelection
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton4.Location = new System.Drawing.Point(6, 75);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(168, 34);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Selection Sort";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rdSelection.AutoSize = true;
+            this.rdSelection.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdSelection.Location = new System.Drawing.Point(5, 56);
+            this.rdSelection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdSelection.Name = "rdSelection";
+            this.rdSelection.Size = new System.Drawing.Size(139, 29);
+            this.rdSelection.TabIndex = 3;
+            this.rdSelection.TabStop = true;
+            this.rdSelection.Text = "Selection Sort";
+            this.rdSelection.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rdBubble
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton3.Location = new System.Drawing.Point(6, 35);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(145, 34);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Bubble sort";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdBubble.AutoSize = true;
+            this.rdBubble.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdBubble.Location = new System.Drawing.Point(5, 26);
+            this.rdBubble.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBubble.Name = "rdBubble";
+            this.rdBubble.Size = new System.Drawing.Size(121, 29);
+            this.rdBubble.TabIndex = 2;
+            this.rdBubble.TabStop = true;
+            this.rdBubble.Text = "Bubble sort";
+            this.rdBubble.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioButton1);
-            this.groupBox3.Controls.Add(this.radioButton2);
+            this.groupBox3.Controls.Add(this.rdIncrease);
+            this.groupBox3.Controls.Add(this.rdDecrease);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.Location = new System.Drawing.Point(975, 281);
+            this.groupBox3.Location = new System.Drawing.Point(853, 211);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(154, 103);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(135, 77);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Order";
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnAdd);
             this.groupBox4.Controls.Add(this.button12);
             this.groupBox4.Controls.Add(this.button11);
             this.groupBox4.Controls.Add(this.button10);
             this.groupBox4.Controls.Add(this.button9);
-            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.txtInput);
             this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.Controls.Add(this.label3);
-            this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Controls.Add(this.radioButton11);
-            this.groupBox4.Controls.Add(this.radioButton10);
+            this.groupBox4.Controls.Add(this.lbInput);
+            this.groupBox4.Controls.Add(this.txtAmount);
+            this.groupBox4.Controls.Add(this.lbAmount);
+            this.groupBox4.Controls.Add(this.rdManual);
+            this.groupBox4.Controls.Add(this.rdAuto);
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox4.Location = new System.Drawing.Point(395, 280);
+            this.groupBox4.Location = new System.Drawing.Point(346, 210);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(574, 189);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(502, 142);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Input";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(406, 30);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(86, 41);
+            this.btnAdd.TabIndex = 21;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(84, 124);
+            this.button12.Location = new System.Drawing.Point(74, 93);
+            this.button12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(80, 40);
+            this.button12.Size = new System.Drawing.Size(70, 30);
             this.button12.TabIndex = 20;
             this.button12.Text = "x1.0";
             this.button12.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(428, 124);
+            this.button11.Location = new System.Drawing.Point(374, 93);
+            this.button11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(80, 40);
+            this.button11.Size = new System.Drawing.Size(70, 30);
             this.button11.TabIndex = 19;
             this.button11.Text = "x2.0";
             this.button11.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(170, 124);
+            this.button10.Location = new System.Drawing.Point(149, 93);
+            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(80, 40);
+            this.button10.Size = new System.Drawing.Size(70, 30);
             this.button10.TabIndex = 18;
             this.button10.Text = "x1.25";
             this.button10.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(342, 124);
+            this.button9.Location = new System.Drawing.Point(299, 93);
+            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(80, 40);
+            this.button9.Size = new System.Drawing.Size(70, 30);
             this.button9.TabIndex = 17;
             this.button9.Text = "x1.75";
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtInput
             // 
-            this.textBox2.Location = new System.Drawing.Point(398, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(44, 36);
-            this.textBox2.TabIndex = 16;
+            this.txtInput.Location = new System.Drawing.Point(348, 52);
+            this.txtInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtInput.Name = "txtInput";
+            this.txtInput.Size = new System.Drawing.Size(39, 31);
+            this.txtInput.TabIndex = 16;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(256, 124);
+            this.button2.Location = new System.Drawing.Point(224, 93);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 40);
+            this.button2.Size = new System.Drawing.Size(70, 30);
             this.button2.TabIndex = 13;
             this.button2.Text = "x1.5";
             this.button2.UseVisualStyleBackColor = true;
@@ -299,96 +336,106 @@ namespace Sorting_Algorithms_Simulator
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 129);
+            this.label3.Location = new System.Drawing.Point(5, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 30);
+            this.label3.Size = new System.Drawing.Size(62, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "Speed";
             // 
-            // label2
+            // lbInput
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(177, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 30);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Next element:";
+            this.lbInput.AutoSize = true;
+            this.lbInput.Location = new System.Drawing.Point(155, 53);
+            this.lbInput.Name = "lbInput";
+            this.lbInput.Size = new System.Drawing.Size(120, 25);
+            this.lbInput.TabIndex = 4;
+            this.lbInput.Text = "Next element:";
             // 
-            // textBox1
+            // txtAmount
             // 
-            this.textBox1.Location = new System.Drawing.Point(398, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(44, 36);
-            this.textBox1.TabIndex = 3;
+            this.txtAmount.Location = new System.Drawing.Point(348, 21);
+            this.txtAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(39, 31);
+            this.txtAmount.TabIndex = 3;
             // 
-            // label1
+            // lbAmount
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(177, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 30);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Amount of elements:";
+            this.lbAmount.AutoSize = true;
+            this.lbAmount.Location = new System.Drawing.Point(155, 23);
+            this.lbAmount.Name = "lbAmount";
+            this.lbAmount.Size = new System.Drawing.Size(179, 25);
+            this.lbAmount.TabIndex = 2;
+            this.lbAmount.Text = "Amount of elements:";
             // 
-            // radioButton11
+            // rdManual
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(7, 69);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(121, 34);
-            this.radioButton11.TabIndex = 1;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "Manually";
-            this.radioButton11.UseVisualStyleBackColor = true;
+            this.rdManual.AutoSize = true;
+            this.rdManual.Location = new System.Drawing.Point(6, 52);
+            this.rdManual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdManual.Name = "rdManual";
+            this.rdManual.Size = new System.Drawing.Size(101, 29);
+            this.rdManual.TabIndex = 1;
+            this.rdManual.TabStop = true;
+            this.rdManual.Text = "Manually";
+            this.rdManual.UseVisualStyleBackColor = true;
+            this.rdManual.CheckedChanged += new System.EventHandler(this.rdManual_CheckedChanged);
             // 
-            // radioButton10
+            // rdAuto
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(7, 29);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(164, 34);
-            this.radioButton10.TabIndex = 0;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Automatically";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.rdAuto.AutoSize = true;
+            this.rdAuto.Location = new System.Drawing.Point(6, 22);
+            this.rdAuto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdAuto.Name = "rdAuto";
+            this.rdAuto.Size = new System.Drawing.Size(138, 29);
+            this.rdAuto.TabIndex = 0;
+            this.rdAuto.TabStop = true;
+            this.rdAuto.Text = "Automatically";
+            this.rdAuto.UseVisualStyleBackColor = true;
+            this.rdAuto.CheckedChanged += new System.EventHandler(this.rdAuto_CheckedChanged);
             // 
-            // button5
+            // btnStart
             // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(12, 491);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(370, 56);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Start";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnStart.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnStart.Location = new System.Drawing.Point(10, 368);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(324, 42);
+            this.btnStart.TabIndex = 8;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // button1
+            // btnPause
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(12, 553);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(370, 56);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Pause";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPause.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPause.Location = new System.Drawing.Point(10, 415);
+            this.btnPause.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(324, 42);
+            this.btnPause.TabIndex = 10;
+            this.btnPause.Text = "Pause";
+            this.btnPause.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnReset
             // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(12, 615);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(370, 56);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Reset";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnReset.Location = new System.Drawing.Point(10, 461);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(324, 42);
+            this.btnReset.TabIndex = 11;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(235, 42);
+            this.label4.Location = new System.Drawing.Point(206, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 30);
+            this.label4.Size = new System.Drawing.Size(95, 25);
             this.label4.TabIndex = 9;
             this.label4.Text = "Quick Sort";
             // 
@@ -396,9 +443,9 @@ namespace Sorting_Algorithms_Simulator
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(11, 100);
+            this.label5.Location = new System.Drawing.Point(10, 75);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 30);
+            this.label5.Size = new System.Drawing.Size(121, 25);
             this.label5.TabIndex = 12;
             this.label5.Text = "Selection Sort";
             // 
@@ -406,9 +453,9 @@ namespace Sorting_Algorithms_Simulator
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(235, 158);
+            this.label6.Location = new System.Drawing.Point(206, 118);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 30);
+            this.label6.Size = new System.Drawing.Size(101, 25);
             this.label6.TabIndex = 13;
             this.label6.Text = "Merge Sort";
             // 
@@ -416,9 +463,9 @@ namespace Sorting_Algorithms_Simulator
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(235, 100);
+            this.label7.Location = new System.Drawing.Point(206, 75);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(174, 30);
+            this.label7.Size = new System.Drawing.Size(143, 25);
             this.label7.TabIndex = 14;
             this.label7.Text = "Interchange Sort";
             // 
@@ -426,9 +473,9 @@ namespace Sorting_Algorithms_Simulator
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(11, 158);
+            this.label8.Location = new System.Drawing.Point(10, 118);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 30);
+            this.label8.Size = new System.Drawing.Size(119, 25);
             this.label8.TabIndex = 15;
             this.label8.Text = "Insertion Sort";
             // 
@@ -436,9 +483,9 @@ namespace Sorting_Algorithms_Simulator
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(484, 45);
+            this.label9.Location = new System.Drawing.Point(424, 34);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(111, 30);
+            this.label9.Size = new System.Drawing.Size(92, 25);
             this.label9.TabIndex = 16;
             this.label9.Text = "Heap Sort";
             // 
@@ -446,9 +493,9 @@ namespace Sorting_Algorithms_Simulator
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(11, 42);
+            this.label10.Location = new System.Drawing.Point(10, 32);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(124, 30);
+            this.label10.Size = new System.Drawing.Size(103, 25);
             this.label10.TabIndex = 17;
             this.label10.Text = "Bubble sort";
             // 
@@ -470,9 +517,11 @@ namespace Sorting_Algorithms_Simulator
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.label5);
             this.groupBox5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox5.Location = new System.Drawing.Point(395, 475);
+            this.groupBox5.Location = new System.Drawing.Point(346, 356);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(781, 200);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Size = new System.Drawing.Size(683, 150);
             this.groupBox5.TabIndex = 18;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Sorting time (second)";
@@ -480,76 +529,85 @@ namespace Sorting_Algorithms_Simulator
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(562, 122);
+            this.button4.Location = new System.Drawing.Point(492, 92);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(115, 56);
+            this.button4.Size = new System.Drawing.Size(101, 42);
             this.button4.TabIndex = 25;
             this.button4.Text = "Display";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(663, 45);
+            this.textBox9.Location = new System.Drawing.Point(580, 34);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(44, 36);
+            this.textBox9.Size = new System.Drawing.Size(39, 31);
             this.textBox9.TabIndex = 24;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(165, 161);
+            this.textBox8.Location = new System.Drawing.Point(144, 116);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(44, 36);
+            this.textBox8.Size = new System.Drawing.Size(39, 31);
             this.textBox8.TabIndex = 23;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(414, 161);
+            this.textBox7.Location = new System.Drawing.Point(362, 118);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(44, 36);
+            this.textBox7.Size = new System.Drawing.Size(39, 31);
             this.textBox7.TabIndex = 22;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(414, 45);
+            this.textBox6.Location = new System.Drawing.Point(362, 34);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(44, 36);
+            this.textBox6.Size = new System.Drawing.Size(39, 31);
             this.textBox6.TabIndex = 21;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(414, 103);
+            this.textBox5.Location = new System.Drawing.Point(362, 77);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(44, 36);
+            this.textBox5.Size = new System.Drawing.Size(39, 31);
             this.textBox5.TabIndex = 20;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(165, 103);
+            this.textBox4.Location = new System.Drawing.Point(144, 77);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(44, 36);
+            this.textBox4.Size = new System.Drawing.Size(39, 31);
             this.textBox4.TabIndex = 19;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(165, 45);
+            this.textBox3.Location = new System.Drawing.Point(144, 34);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(44, 36);
+            this.textBox3.Size = new System.Drawing.Size(39, 31);
             this.textBox3.TabIndex = 18;
             // 
-            // Form1
+            // SortProject
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1188, 687);
+            this.ClientSize = new System.Drawing.Size(1040, 515);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnPause);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "SortProject";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sorting Algorithms Simulator";
             this.groupBox2.ResumeLayout(false);
@@ -567,33 +625,33 @@ namespace Sorting_Algorithms_Simulator
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rdIncrease;
+        private System.Windows.Forms.RadioButton rdDecrease;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton rdInterchange;
+        private System.Windows.Forms.RadioButton rdHeap;
+        private System.Windows.Forms.RadioButton rdMerge;
+        private System.Windows.Forms.RadioButton rdQuick;
+        private System.Windows.Forms.RadioButton rdInsertion;
+        private System.Windows.Forms.RadioButton rdSelection;
+        private System.Windows.Forms.RadioButton rdBubble;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lbInput;
+        private System.Windows.Forms.TextBox txtAmount;
+        private System.Windows.Forms.Label lbAmount;
+        private System.Windows.Forms.RadioButton rdManual;
+        private System.Windows.Forms.RadioButton rdAuto;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.TextBox txtInput;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnPause;
+        private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -610,6 +668,7 @@ namespace Sorting_Algorithms_Simulator
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button btnAdd;
     }
 }
 
