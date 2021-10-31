@@ -1,4 +1,4 @@
 # Visual-progamming-project
 # Visual-progamming-project
 
-Thay máu toàn bộ file form, tạo ra class item để quản lý, tạm disable các thuật toán sort để tập trung làm graphic trước.
+Thay máu toàn bộ file form, tạo ra class item và visualizer để quản lý, chỉnh sửa duy nhất selection sort để chạy.
