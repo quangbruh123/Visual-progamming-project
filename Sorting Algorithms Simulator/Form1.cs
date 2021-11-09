@@ -177,7 +177,7 @@ namespace Sorting_Algorithms_Simulator
                 MessageBox.Show("Bạn chưa chọn thứ tự sắp xếp!!!");
                 return;
             }
-
+            
             if (rdSelection.Checked == true)
             {
                 SortEngine se = new SelectionSort();
