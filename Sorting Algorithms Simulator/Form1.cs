@@ -39,7 +39,7 @@ namespace Sorting_Algorithms_Simulator
             btnReset.Enabled = false;
             btnPause.Enabled = false;
             rdAuto.Checked = true;
-
+            rdIncrease.Checked = true;
             instance = this;
             Control.CheckForIllegalCrossThreadCalls = false;
             acceleration = trackBar1.Value;
@@ -220,6 +220,14 @@ namespace Sorting_Algorithms_Simulator
                 thread.IsBackground = true;
                 thread.Start();
             }
+            else if (rdMerge.Checked == true)
+            {
+                SortEngine se = new MergeSort();
+
+                thread = new Thread(new ThreadStart(se.Sort));
+                thread.IsBackground = true;
+                thread.Start();
+            }    
             rdIncrease.Enabled = false;
             rdDecrease.Enabled = false;
             btnAdd.Enabled = false;
