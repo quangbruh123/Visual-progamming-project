@@ -40,6 +40,7 @@ namespace Sorting_Algorithms_Simulator
                     vslz.DrawAllItems();
 
                     Thread.Sleep(form.speed());
+                    
                     if (form.list[i].data * form.sortOrder > form.list[j].data * form.sortOrder)
                     {
                         int temp = form.list[j].data;
@@ -51,10 +52,13 @@ namespace Sorting_Algorithms_Simulator
                     }
 
                     vslz.ResetColor(form.list[j]);
+                    
                 }
+                
                 vslz.ResetColor(form.list[i]);
                 vslz.DrawAllItems();
                 Thread.Sleep(form.speed());
+                
             }
 
             vslz.Reset();
