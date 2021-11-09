@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Downloads\\Sorting_Algorithms_Simulator\\Sorting Algorithms Simulator\\Sorting Algorithms Simulator.csproj": {}
+    "C:\\Users\\nhokb\\OneDrive\\Desktop\\Git Project\\Visual-progamming-project\\Visual-progamming-project\\Sorting Algorithms Simulator\\Sorting Algorithms Simulator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Downloads\\Sorting_Algorithms_Simulator\\Sorting Algorithms Simulator\\Sorting Algorithms Simulator.csproj": {
+    "C:\\Users\\nhokb\\OneDrive\\Desktop\\Git Project\\Visual-progamming-project\\Visual-progamming-project\\Sorting Algorithms Simulator\\Sorting Algorithms Simulator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Downloads\\Sorting_Algorithms_Simulator\\Sorting Algorithms Simulator\\Sorting Algorithms Simulator.csproj",
+        "projectUniqueName": "C:\\Users\\nhokb\\OneDrive\\Desktop\\Git Project\\Visual-progamming-project\\Visual-progamming-project\\Sorting Algorithms Simulator\\Sorting Algorithms Simulator.csproj",
         "projectName": "Sorting Algorithms Simulator",
-        "projectPath": "C:\\Users\\Admin\\Downloads\\Sorting_Algorithms_Simulator\\Sorting Algorithms Simulator\\Sorting Algorithms Simulator.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Downloads\\Sorting_Algorithms_Simulator\\Sorting Algorithms Simulator\\obj\\",
+        "projectPath": "C:\\Users\\nhokb\\OneDrive\\Desktop\\Git Project\\Visual-progamming-project\\Visual-progamming-project\\Sorting Algorithms Simulator\\Sorting Algorithms Simulator.csproj",
+        "packagesPath": "C:\\Users\\nhokb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nhokb\\OneDrive\\Desktop\\Git Project\\Visual-progamming-project\\Visual-progamming-project\\Sorting Algorithms Simulator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nhokb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -61,7 +61,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

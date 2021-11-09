@@ -143,7 +143,7 @@ namespace Sorting_Algorithms_Simulator
                     return;
                 }
 
-                Item item = new Item(rand.Next(0, 100));
+                Item item = new Item(int.Parse(txtInput.Text), new Point(list.Count * 60, 60));
 
                 list.Add(item);
             }
@@ -191,6 +191,14 @@ namespace Sorting_Algorithms_Simulator
             else if (rdInsertion.Checked == true)
             {
                 SortEngine se = new InsertionSort();
+
+                thread = new Thread(new ThreadStart(se.Sort));
+                thread.IsBackground = true;
+                thread.Start();
+            }
+            else if (rdQuick.Checked==true)
+            {
+                SortEngine se = new QuickSort();
 
                 thread = new Thread(new ThreadStart(se.Sort));
                 thread.IsBackground = true;
