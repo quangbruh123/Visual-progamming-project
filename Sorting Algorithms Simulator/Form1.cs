@@ -143,7 +143,7 @@ namespace Sorting_Algorithms_Simulator
                     return;
                 }
 
-                Item item = new Item(rand.Next(0, 100));
+                Item item = new Item(int.Parse(txtInput.Text), new Point(list.Count * 60, 60));
 
                 list.Add(item);
             }
