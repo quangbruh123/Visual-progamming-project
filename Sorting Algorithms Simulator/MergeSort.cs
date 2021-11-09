@@ -90,8 +90,6 @@ namespace Sorting_Algorithms_Simulator
                     j++;
                 }
                 k++;
-
-
             }
 
             while (i < n1)
