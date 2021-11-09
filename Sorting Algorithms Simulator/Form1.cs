@@ -174,7 +174,7 @@ namespace Sorting_Algorithms_Simulator
             
             if (rdDecrease.Checked == false && rdIncrease.Checked == false)
             {
-                MessageBox.Show("Bạn chưa chọn thứ tự sắp xếp!!!");
+                MessageBox.Show("Bạn chưa chọn thứ tự sắp xếp!!!", "Chú ý");
                 return;
             }
             
