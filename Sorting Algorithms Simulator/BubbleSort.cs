@@ -11,40 +11,55 @@ namespace Sorting_Algorithms_Simulator
     class BubbleSort : SortEngine
     {
         SortProject form;
+        Visualizer vslz;
+        
         public BubbleSort()
         {
             form = SortProject.instance;
+            vslz = form.vslz;
         }
 
         public void Sort()
         {
-            /*
-            for (int i = 0; i < form.n; i++)
-            {
-                for (int j = 0; j < form.n - i - 1; j++)
+            vslz.Reset();
+
+            Font f = new Font(FontFamily.GenericSansSerif, 20f, FontStyle.Regular, GraphicsUnit.Pixel);
+            vslz.WriteString("Màu đỏ: i đang xét.\nMàu lam: j đang xét.\nMàu lục: Đã sắp xếp xong", f, Color.Black, new Point(0, 100));
+
+            for (int i = 0; i < form.list.Count; i++)
+            {  
+                for (int j = 0; j < form.list.Count - i - 1; j++)
                 {
-                    form.array[j].BackColor = Color.Red;
-                    form.array[j].ForeColor = Color.White;
+                    vslz.ChangeColor(form.list[j], Color.Red);
+                    vslz.ChangeColor(form.list[j + 1], Color.LightBlue);
+                    vslz.DrawAllItems();
+                    Thread.Sleep(form.speed());
 
-                    form.array[j + 1].BackColor = Color.Red;
-                    form.array[j + 1].ForeColor = Color.White;
-
-                    form.lbi.Location = new Point(i * 60, 100);
-                    form.lbj.Location = new Point(j * 60, 80);
-                    form.lbj1.Location = new Point((j + 1) * 60, 80);
-                    Thread.Sleep(form.speed * 100);
-                    if (int.Parse(form.array[j].Text) * form.sortOrder > int.Parse(form.array[j + 1].Text) * form.sortOrder)
+                    if (form.list[j].data * form.sortOrder > form.list[j + 1].data * form.sortOrder)
                     {
-                        SwitchLabel(ref form.array[j], ref form.array[j + 1]);
+                        int temp = form.list[j + 1].data;
+                        form.list[j + 1].data = form.list[j].data;
+                        form.list[j].data = temp;
+
+                        vslz.ResetColor(form.list[j]);
+                        vslz.ResetColor(form.list[j + 1]);
                     }
-                    form.array[j].BackColor = Color.Yellow;
-                    form.array[j].ForeColor = Color.Black;
-                    form.array[j + 1].BackColor = Color.Yellow;
-                    form.array[j + 1].ForeColor = Color.Black;
+                    
+                    vslz.ResetColor(form.list[j]);
+                    vslz.ResetColor(form.list[j + 1]);
+
                 }
+                vslz.ChangeColor(form.list[form.list.Count - i - 1], Color.Green);
             }
+
+            for (int i = 0; i < form.list.Count; i++)
+            {
+                vslz.ResetColor(form.list[i]);
+            }
+
+            vslz.Reset();
+            vslz.DrawAllItems();
             MessageBox.Show("Đã sắp xếp xong!", "Thông báo!");
-            */
         }
     }
 }
