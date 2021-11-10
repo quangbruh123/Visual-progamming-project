@@ -171,7 +171,13 @@ namespace Sorting_Algorithms_Simulator
                 MessageBox.Show("Bạn hãy khởi tạo dữ liệu trước khi bắt đầu!", "Chú ý!");
                 return;
             }
-
+            
+            if (rdDecrease.Checked == false && rdIncrease.Checked == false)
+            {
+                MessageBox.Show("Bạn chưa chọn thứ tự sắp xếp!!!", "Chú ý");
+                return;
+            }
+            
             if (rdSelection.Checked == true)
             {
                 SortEngine se = new SelectionSort();
@@ -191,6 +197,24 @@ namespace Sorting_Algorithms_Simulator
             else if (rdInsertion.Checked == true)
             {
                 SortEngine se = new InsertionSort();
+
+                thread = new Thread(new ThreadStart(se.Sort));
+                thread.IsBackground = true;
+                thread.Start();
+            }
+            
+            else if (rdInterchange.Checked == true)
+            {
+                SortEngine se = new InterchangeSort();
+
+                thread = new Thread(new ThreadStart(se.Sort));
+                thread.IsBackground = true;
+                thread.Start();
+            }
+            
+            else if (rdQuick.Checked==true)
+            {
+                SortEngine se = new QuickSort();
 
                 thread = new Thread(new ThreadStart(se.Sort));
                 thread.IsBackground = true;

@@ -21,25 +21,40 @@ namespace Sorting_Algorithms_Simulator
 
         public void Sort()
         {
-            //vslz.Reset();
-            //Font f = new Font(FontFamily.GenericSansSerif, 20f, FontStyle.Regular, GraphicsUnit.Pixel);
+            vslz.Reset();
+            vslz.DrawAllItems();
+            Font f = new Font(FontFamily.GenericSansSerif, 20f, FontStyle.Regular, GraphicsUnit.Pixel);
+            vslz.WriteString("Màu đỏ: i đang xét.\nMàu lục: j đang xét", f, Color.Black, new Point(0, 100));
+            int i, key, j;
 
-            //int i, key, j;
-            //for (i = 1; i < n; i++)
-            //{
-            //    key = arr[i];
-            //    j = i - 1;
+            for (i = 1; i < form.list.Count; i++)
+            {
+                key = form.list[i].data;
+                vslz.ChangeColor(form.list[i], Color.Red);
+                vslz.DrawAllItems();
+                Thread.Sleep(form.speed());
+                j = i - 1;
 
-            //    /* Move elements of arr[0..i-1], that are
-            //    greater than key, to one position ahead
-            //    of their current position */
-            //    while (j >= 0 && arr[j] > key)
-            //    {
-            //        arr[j + 1] = arr[j];
-            //        j = j - 1;
-            //    }
-            //    arr[j + 1] = key;
-            //}
+                /* Move elements of arr[0..i-1], that are  
+                greater than key, to one position ahead  
+                of their current position */
+                while (j >= 0 && form.list[j].data * form.sortOrder > key*form.sortOrder)
+                {
+
+                    form.list[j+1].data = form.list[j].data;
+                    vslz.ChangeColor(form.list[j], Color.Green);
+                    vslz.DrawAllItems();
+                    Thread.Sleep(form.speed());
+                    vslz.ResetColor(form.list[j]);
+                    j = j - 1;
+                }
+                form.list[j+1].data = key;
+                vslz.ResetColor(form.list[i]);
+                Thread.Sleep(form.speed());
+            }
+            vslz.Reset();
+            vslz.DrawAllItems();
+            MessageBox.Show("Đã sắp xếp xong!", "Thông báo!");
         }
     }
 }
