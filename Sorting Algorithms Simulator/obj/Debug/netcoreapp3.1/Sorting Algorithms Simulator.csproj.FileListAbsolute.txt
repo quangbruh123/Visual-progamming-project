@@ -78,3 +78,19 @@ C:\Users\Admin\Desktop\New folder (2)\Visual-progamming-project\Sorting Algorith
 C:\Users\Admin\Desktop\New folder (2)\Visual-progamming-project\Sorting Algorithms Simulator\obj\Debug\netcoreapp3.1\Sorting Algorithms Simulator.dll
 C:\Users\Admin\Desktop\New folder (2)\Visual-progamming-project\Sorting Algorithms Simulator\obj\Debug\netcoreapp3.1\Sorting Algorithms Simulator.pdb
 C:\Users\Admin\Desktop\New folder (2)\Visual-progamming-project\Sorting Algorithms Simulator\obj\Debug\netcoreapp3.1\Sorting Algorithms Simulator.genruntimeconfig.cache
+C:\Users\Admin\Desktop\New folder\Visual-progamming-project\Sorting Algorithms Simulator\bin\Debug\netcoreapp3.1\Sorting Algorithms Simulator.exe
+C:\Users\Admin\Desktop\New folder\Visual-progamming-project\Sorting Algorithms Simulator\bin\Debug\netcoreapp3.1\Sorting Algorithms Simulator.deps.json
+C:\Users\Admin\Desktop\New folder\Visual-progamming-project\Sorting Algorithms Simulator\bin\Debug\netcoreapp3.1\Sorting Algorithms Simulator.runtimeconfig.json
+C:\Users\Admin\Desktop\New folder\Visual-progamming-project\Sorting Algorithms Simulator\bin\Debug\netcoreapp3.1\Sorting Algorithms Simulator.runtimeconfig.dev.json
+C:\Users\Admin\Desktop\New folder\Visual-progamming-project\Sorting Algorithms Simulator\bin\Debug\netcoreapp3.1\Sorting Algorithms Simulator.dll
+C:\Users\Admin\Desktop\New folder\Visual-progamming-project\Sorting Algorithms Simulator\bin\Debug\netcoreapp3.1\Sorting Algorithms Simulator.pdb
+C:\Users\Admin\Desktop\New folder\Visual-progamming-project\Sorting Algorithms Simulator\obj\Debug\netcoreapp3.1\Sorting Algorithms Simulator.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\New folder\Visual-progamming-project\Sorting Algorithms Simulator\obj\Debug\netcoreapp3.1\Sorting_Algorithms_Simulator.SortProject.resources
+C:\Users\Admin\Desktop\New folder\Visual-progamming-project\Sorting Algorithms Simulator\obj\Debug\netcoreapp3.1\Sorting Algorithms Simulator.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\New folder\Visual-progamming-project\Sorting Algorithms Simulator\obj\Debug\netcoreapp3.1\Sorting Algorithms Simulator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\New folder\Visual-progamming-project\Sorting Algorithms Simulator\obj\Debug\netcoreapp3.1\Sorting Algorithms Simulator.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\New folder\Visual-progamming-project\Sorting Algorithms Simulator\obj\Debug\netcoreapp3.1\Sorting Algorithms Simulator.AssemblyInfo.cs
+C:\Users\Admin\Desktop\New folder\Visual-progamming-project\Sorting Algorithms Simulator\obj\Debug\netcoreapp3.1\Sorting Algorithms Simulator.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\New folder\Visual-progamming-project\Sorting Algorithms Simulator\obj\Debug\netcoreapp3.1\Sorting Algorithms Simulator.dll
+C:\Users\Admin\Desktop\New folder\Visual-progamming-project\Sorting Algorithms Simulator\obj\Debug\netcoreapp3.1\Sorting Algorithms Simulator.pdb
+C:\Users\Admin\Desktop\New folder\Visual-progamming-project\Sorting Algorithms Simulator\obj\Debug\netcoreapp3.1\Sorting Algorithms Simulator.genruntimeconfig.cache
