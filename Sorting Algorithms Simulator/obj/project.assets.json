@@ -8,19 +8,26 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Code\\Project\\Visual-progamming-project\\Sorting Algorithms Simulator\\Sorting Algorithms Simulator.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\New folder\\Visual-progamming-project\\Sorting Algorithms Simulator\\Sorting Algorithms Simulator.csproj",
       "projectName": "Sorting Algorithms Simulator",
-      "projectPath": "F:\\Code\\Project\\Visual-progamming-project\\Sorting Algorithms Simulator\\Sorting Algorithms Simulator.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\New folder\\Visual-progamming-project\\Sorting Algorithms Simulator\\Sorting Algorithms Simulator.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "F:\\Code\\Project\\Visual-progamming-project\\Sorting Algorithms Simulator\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\New folder\\Visual-progamming-project\\Sorting Algorithms Simulator\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
