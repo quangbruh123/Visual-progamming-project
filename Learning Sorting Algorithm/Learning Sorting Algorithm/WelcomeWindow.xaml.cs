@@ -22,6 +22,7 @@ namespace Learning_Sorting_Algorithm
         {
             InitializeComponent();
             instance = this;
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
         private void Button_Guess_Login_Click(object sender, RoutedEventArgs e)
