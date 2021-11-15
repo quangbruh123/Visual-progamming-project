@@ -6,3 +6,5 @@ Thay máu toàn bộ file form, tạo ra class item và visualizer để quản 
 09/11/2021: Thêm InterchangeSort, sửa một bug liên quan đến việc chương trình vẫn chạy sort dù chưa chọn thứ tự sắp xếp, thêm MergeSort.
 
 10/11/2021: Thêm BubbleSort.
+
+15/11/2021: New UI
