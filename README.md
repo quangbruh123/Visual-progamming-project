@@ -9,4 +9,4 @@ Thay máu toàn bộ file form, tạo ra class item và visualizer để quản 
 
 15/11/2021: New UI
 
-16/11/2021: Sử dụng Page thay vì tạo thêm Window mới, sử dụng thêm DockPanel cho các button ở Page2
+16/11/2021: Sử dụng Page thay vì tạo thêm Window mới, sử dụng thêm DockPanel cho các button ở Page2, thêm Page cho Đăng nhập và Đăng ký.
