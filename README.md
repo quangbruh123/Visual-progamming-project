@@ -8,3 +8,5 @@ Thay máu toàn bộ file form, tạo ra class item và visualizer để quản 
 10/11/2021: Thêm BubbleSort.
 
 15/11/2021: New UI
+
+16/11/2021: Sử dụng Page thay cho Window, sử dụng thêm DockPanel cho các button ở Page2
