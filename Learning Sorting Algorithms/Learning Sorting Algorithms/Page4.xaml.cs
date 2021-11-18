@@ -16,27 +16,22 @@ using System.Windows.Shapes;
 namespace Learning_Sorting_Algorithms
 {
     /// <summary>
-    /// Interaction logic for Page1.xaml
+    /// Interaction logic for Page4.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class Page4 : Page
     {
-        public Page1()
+        public Page4()
         {
             InitializeComponent();
         }
-        private void Button_Guess_Login_Click(object sender, RoutedEventArgs e)
+        private void btnSignUp_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.instance.MainContentFrame.Content = new Page2();
+
         }
 
-        private void Button_Login_Click(object sender, RoutedEventArgs e)
+        private void btnReturn_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.instance.MainContentFrame.Content = new Page3();
-        }
-
-        private void Button_Sign_Up_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow.instance.MainContentFrame.Content = new Page4();
+            MainWindow.instance.MainContentFrame.Content = new Page1();
         }
     }
 }
