@@ -16,19 +16,18 @@ using System.Windows.Shapes;
 namespace Da_projekt
 {
     /// <summary>
-    /// Interaction logic for Page1.xaml
+    /// Interaction logic for LearnCode.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class LearnCode : Page
     {
-        public Page1()
+        public LearnCode()
         {
             InitializeComponent();
-            this.RenderSize = Window1.instance.MainContentFrame.RenderSize;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Selection_Click(object sender, RoutedEventArgs e)
         {
-            Window1.instance.MainContentFrame.Content = new Page2();
+            Window1.instance.MainContentFrame.Content = new LearnSortPanel();
         }
     }
 }

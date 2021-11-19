@@ -11,6 +11,6 @@
 
     <Grid>
         <Image Source="1.png" HorizontalAlignment="Center" Stretch="Fill" Height="200" Margin="0,0,0,0" VerticalAlignment="Center" Width="200" />
-        <Button Content="Bắt đầu" HorizontalAlignment="Center" Margin="0,342,0,0" VerticalAlignment="Top" Height="42" Width="114" FontSize="24" Click="Button_Click"/>
+        <Button Content="Bắt đầu" HorizontalAlignment="Center" Margin="0,380,0,0" VerticalAlignment="Top" Height="42" Width="114" FontSize="24" Click="Button_Click"/>
     </Grid>
 </Page>

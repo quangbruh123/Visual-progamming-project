@@ -25,3 +25,8 @@ C:\Users\Admin\source\repos\Da projekt\obj\Debug\net5.0-windows\Page2.g.cs
 C:\Users\Admin\source\repos\Da projekt\obj\Debug\net5.0-windows\Page2.baml
 C:\Users\Admin\source\repos\Da projekt\bin\Debug\net5.0-windows\1.png
 C:\Users\Admin\source\repos\Da projekt\obj\Debug\net5.0-windows\Da projekt_Content.g.cs
+C:\Users\Admin\source\repos\Da projekt\obj\Debug\net5.0-windows\Da projekt.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\Da projekt\obj\Debug\net5.0-windows\LearnSortPanel.g.cs
+C:\Users\Admin\source\repos\Da projekt\obj\Debug\net5.0-windows\LearnSortPanel.baml
+C:\Users\Admin\source\repos\Da projekt\obj\Debug\net5.0-windows\LearnCode.g.cs
+C:\Users\Admin\source\repos\Da projekt\obj\Debug\net5.0-windows\LearnCode.baml
