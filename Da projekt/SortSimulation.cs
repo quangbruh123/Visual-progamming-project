@@ -134,6 +134,7 @@ namespace Da_projekt
     }
 
     //dùng để lưu lại cái câu lệnh liên quan đến xuất ra màn hình sort.
+    //sẽ lưu vào đatabase sau này
     public class Todo
     {
         string type;
