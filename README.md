@@ -1,12 +1,7 @@
-# Visual-progamming-project
-# Visual-progamming-project
-
-Thay máu toàn bộ file form, tạo ra class item và visualizer để quản lý, chỉnh sửa duy nhất selection sort để chạy.
-
-09/11/2021: Thêm InterchangeSort, sửa một bug liên quan đến việc chương trình vẫn chạy sort dù chưa chọn thứ tự sắp xếp, thêm MergeSort.
-
-10/11/2021: Thêm BubbleSort.
-
-15/11/2021: New UI
-
-16/11/2021: Sử dụng Page thay vì tạo thêm Window mới, sử dụng thêm DockPanel cho các button ở Page2, thêm Page cho Đăng nhập và Đăng ký.
+15/11/2021: 
+ Tạo mới UI không dựa trên UI mới của TheStarGazer, sử dụng duy nhất 1 window để load các page (form) lên thay vì mở 1 window mới mỗi lần đổi form.
+            Chưa nhất trí được phong cách cho UI
+15/11/2021: 
+  Xoá thread, thay bằng chạy hàm bình thường do lag. Thêm sort simulator và 1 page chọn thuật toán trước khi sort trong learn.
+            todo: thay grid trong ui
+main
