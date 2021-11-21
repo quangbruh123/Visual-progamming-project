@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Code\\Project\\Visual-progamming-project\\Sorting Algorithms Simulator\\Sorting Algorithms Simulator.csproj",
+      "projectUniqueName": "F:\\Code\\Visual-progamming-project-DMT\\Visual-progamming-project2\\Sorting Algorithms Simulator\\Sorting Algorithms Simulator.csproj",
       "projectName": "Sorting Algorithms Simulator",
-      "projectPath": "F:\\Code\\Project\\Visual-progamming-project\\Sorting Algorithms Simulator\\Sorting Algorithms Simulator.csproj",
+      "projectPath": "F:\\Code\\Visual-progamming-project-DMT\\Visual-progamming-project2\\Sorting Algorithms Simulator\\Sorting Algorithms Simulator.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "F:\\Code\\Project\\Visual-progamming-project\\Sorting Algorithms Simulator\\obj\\",
+      "outputPath": "F:\\Code\\Visual-progamming-project-DMT\\Visual-progamming-project2\\Sorting Algorithms Simulator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -63,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
