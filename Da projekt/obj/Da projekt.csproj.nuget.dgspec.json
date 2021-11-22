@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\source\\repos\\Da projekt\\Da projekt.csproj": {}
+    "C:\\Users\\Admin\\Downloads\\Visual-progamming-project-main\\Visual-progamming-project-main\\Da projekt\\Da projekt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\source\\repos\\Da projekt\\Da projekt.csproj": {
+    "C:\\Users\\Admin\\Downloads\\Visual-progamming-project-main\\Visual-progamming-project-main\\Da projekt\\Da projekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Da projekt\\Da projekt.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Downloads\\Visual-progamming-project-main\\Visual-progamming-project-main\\Da projekt\\Da projekt.csproj",
         "projectName": "Da projekt",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\Da projekt\\Da projekt.csproj",
+        "projectPath": "C:\\Users\\Admin\\Downloads\\Visual-progamming-project-main\\Visual-progamming-project-main\\Da projekt\\Da projekt.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\Da projekt\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Downloads\\Visual-progamming-project-main\\Visual-progamming-project-main\\Da projekt\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

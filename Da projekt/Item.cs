@@ -46,5 +46,16 @@ namespace Da_projekt
         {
             return new SolidColorBrush(color);
         }
+
+        public void drawItemSelectionSort(DrawingContext dc, Rect rect)
+        {
+            float spacing = ((float)rect.Width);
+            dc.DrawRectangle(brush(), new Pen(Brushes.Black, 0.5f), rect);
+
+            FormattedText text = new FormattedText(data.ToString(), new System.Globalization.CultureInfo("en-us"),
+                FlowDirection.RightToLeft, new Typeface("Verdana"), spacing / 5, Brushes.White);
+            Point textLoc = new Point(rect.X + spacing / 2, rect.Y - spacing / 2.5);
+            dc.DrawText(text, textLoc);
+        }
     }
 }

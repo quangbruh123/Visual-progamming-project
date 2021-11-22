@@ -31,7 +31,7 @@ namespace Da_projekt
             InitializeComponent();
 
             instance = this;
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 20; i++)
             {
                 Item item = new Item(rand.Next(10, 100));
 
@@ -51,7 +51,19 @@ namespace Da_projekt
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            sm.startSort();
+            sm.MethodSort();
+            sm.FancyReplay();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (sm.isPausing)
+            {
+                sm.isPausing = false;
+            } else
+            {
+                sm.isPausing = true;
+            }
         }
     }
 }
