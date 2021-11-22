@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Da_projekt</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="1.png" />
+    <None Remove="CbGwZ31.jpg" />
+    <None Remove="d5c58141a1cd5938fe50f96f7bd9b17a.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="CbGwZ31.jpg" />
+    <Resource Include="d5c58141a1cd5938fe50f96f7bd9b17a.gif" />
+  </ItemGroup>
+
+</Project>
