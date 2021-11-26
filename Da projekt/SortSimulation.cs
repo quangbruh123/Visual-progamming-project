@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -119,7 +119,7 @@ namespace Da_projekt
                 //Vsync phiên bản dbrr. Sync tần số quét màn hình sort và animation.
                 if (td.Gettype() == "Refresh")
                 {
-                    td.Execute(localcopy);
+                    td.Execute(localcopy, this);
                     a.Stop();
                     if (a.ElapsedMilliseconds < (1000f / FPS))
                     {
@@ -129,10 +129,10 @@ namespace Da_projekt
                     a.Restart();
                 }
                 else
-                    td.Execute(localcopy);
+                    td.Execute(localcopy, this);
             }
             //vẽ lại lần cuối sau khi xong.
-            LearnSortPanel.instance.refresh(localcopy);
+            refresh(localcopy);
             //MessageBox.Show("Đã sort xong");
         }
 
@@ -155,10 +155,10 @@ namespace Da_projekt
                     a.Restart();
                 }
                 else
-                    td.Execute(localcopy);
+                    td.Execute(localcopy, this);
             }
             //vẽ lại lần cuối sau khi xong.
-            LearnSortPanel.instance.refresh(localcopy);
+            refresh(localcopy);
             //MessageBox.Show("Đã sort xong");
         }
 
@@ -172,7 +172,7 @@ namespace Da_projekt
                 //Vsync phiên bản dbrr. Sync tần số quét màn hình sort và animation.
                 if (td.Gettype() == "Refresh")
                 {
-                    td.Execute(localcopy);
+                    td.Execute(localcopy, this);
                     isPausing = true;
                     while (isPausing)
                     {
@@ -180,10 +180,10 @@ namespace Da_projekt
                     }
                 }
                 else
-                    td.Execute(localcopy);
+                    td.Execute(localcopy, this);
             }
             //vẽ lại lần cuối sau khi xong.
-            LearnSortPanel.instance.refresh(localcopy);
+            refresh(localcopy);
             MessageBox.Show("Đã sort xong");
         }
 
@@ -208,8 +208,8 @@ namespace Da_projekt
                         localcopy = CreateCopy(itemsCopy);
                         foreach (Todo tda in a)
                         {
-                            if (td.Gettype() != "Refresh")
-                                tda.Execute(localcopy);
+                            if (tda.Gettype() != "Refresh")
+                                tda.Execute(localcopy, this);
                         }
                         foreach (Todo tdb in b)
                         {
@@ -220,38 +220,40 @@ namespace Da_projekt
                             if (tdb.Gettype() == "Switch")
                             {
                                 sw.Stop();
-                                LearnSortPanel.instance.refresh(localcopy);
-                                await Task.Delay(500);
-                                tdb.Execute(localcopy);
-                                LearnSortPanel.instance.refresh(localcopy);
-                                await Task.Delay(500);
+                                
+                                refresh(localcopy);
+                                await Task.Delay(100);
+                                tdb.Execute(localcopy, this);
+                                refresh(localcopy);
+                                await Task.Delay(100);
                                 sw.Restart();
                             } else if (tdb.Gettype() != "ResetColor")
                             {
-                                tdb.Execute(localcopy);
+                                tdb.Execute(localcopy, this);
                                 sw.Stop();
                                 if (sw.ElapsedMilliseconds < (1000f / FPS))
                                 {
-                                    LearnSortPanel.instance.refresh(localcopy);
+                                    refresh(localcopy);
                                     await Task.Delay(((int)(1000f / FPS - sw.ElapsedMilliseconds)));
                                 }
                                 sw.Restart();
                             } else
                             {
-                                tdb.Execute(localcopy);
+                                if (tdb.Gettype() != "Refresh")
+                                tdb.Execute(localcopy, this);
                             }
                         }
                     }
+                    a.AddRange(b);
                     b.Clear();
                 }
                 else
                 {
-                    a.Add(td);
                     b.Add(td);
                 }
             }
             //vẽ lại lần cuối sau khi xong.
-            LearnSortPanel.instance.refresh(itemsCopy);
+            
             MessageBox.Show("Đã sort xong");
         }
 
@@ -305,7 +307,6 @@ namespace Da_projekt
             for (int i = 0; i < refitems.Count; i++)
             {
                 Rect drawspace = new Rect(new Point(spacing * i, holder.Height - refitems[i].data - 1), new Point(spacing * (i + 1), holder.Height));
-
                 refitems[i].drawItemSelectionSort(drawingContext, drawspace);
             }
             drawingContext.Close();
@@ -367,12 +368,12 @@ namespace Da_projekt
             item2 = refitemindex2;
         }
 
-        public void Execute(List<Item> items)
+        public void Execute(List<Item> items, SortSimulation sm)
         {
             switch (type)
             {
                 case "Refresh":
-                    LearnSortPanel.instance.refresh(items);
+                    sm.refresh(items);
                     break;
                 case "ResetColor":
                     items[item1].ResetColor();
