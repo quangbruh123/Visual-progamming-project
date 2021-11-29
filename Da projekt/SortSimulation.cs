@@ -29,7 +29,7 @@ namespace Da_projekt
 
         List<Item> items = new List<Item>();
         List<Todo> todos = new List<Todo>();
-        List<Item> itemsCopy;
+            List<Item> itemsCopy;
         
         Thread thread;
         Thread thread1;
@@ -41,7 +41,7 @@ namespace Da_projekt
             holder = p; //màn hình sort.
             items = new List<Item>(refitems); //mảng sort lấy thời gian.
             itemsCopy = CreateCopy(refitems); //bản copy sử dụng để minh họa.
-            RefreshMerge(items, 0, items.Count - 1, 1); //vẽ ra mảng trước khi sort.
+            refresh(items); //vẽ ra mảng trước khi sort.
         }
 
         public SortSimulation(Panel p, List<Item> refitems, List<Todo> reftodo)
@@ -85,7 +85,7 @@ namespace Da_projekt
         {
             if (firstsort)
             {
-                SortEngine se = new SelectionSort(this, items, ref todos);
+                SortEngine se = new BubbleSort(this, items, ref todos);
                 int kq = se.SortAsMethod();
                 MessageBox.Show(kq.ToString());
                 firstsort = false;
@@ -93,7 +93,7 @@ namespace Da_projekt
             } else
             {
                 todos = new List<Todo>();
-                SortEngine se = new SelectionSort(this, CreateCopy(itemsCopy), ref todos);
+                SortEngine se = new BubbleSort(this, CreateCopy(itemsCopy), ref todos);
                 int kq = se.SortAsMethod();
                 MessageBox.Show(kq.ToString());
                 return kq;
@@ -304,7 +304,7 @@ namespace Da_projekt
 
             for (int i = 0; i < refitems.Count; i++)
             {
-                Rect drawspace = new Rect(new Point(spacing * i, holder.Height - refitems[i].data), new Point(spacing * (i + 1), holder.Height));
+                Rect drawspace = new Rect(new Point(spacing * i, holder.Height - refitems[i].data - 1), new Point(spacing * (i + 1), holder.Height));
 
                 refitems[i].drawItemSelectionSort(drawingContext, drawspace);
             }
@@ -313,38 +313,6 @@ namespace Da_projekt
             DrawingBrush db = new DrawingBrush(drawingVisual.Drawing);
             holder.Background = db;
         }
-        public void RefreshMerge(List<Item> refitems, int start, int end, int row)
-        {
-            DrawingVisual drawingVisual = new DrawingVisual();
-            DrawingContext drawingContext = drawingVisual.RenderOpen();
-
-            Rect background = new Rect(0, 0, holder.Width, holder.Height);
-            drawingContext.DrawRectangle(Brushes.Black, new Pen(Brushes.White, 0f), background);
-
-            int starting = (int)(holder.Width - 50 * refitems.Count) / 2;
-
-            for (int i = start; i <= end; i++)
-            {
-                Rect drawspace = new Rect(i * 50 + starting, 20 * row, 50, 25);
-
-                refitems[i].DrawItemMergeSort(drawingContext, drawspace);
-            }
-            drawingContext.Close();
-
-            DrawingBrush db = new DrawingBrush(drawingVisual.Drawing);
-            holder.Background = db;
-        }
-        public void DrawSubArray(List<Item> refitems, int start, int end, int row, int leftStart, int rightStart)
-        {
-            DrawingVisual drawingVisual = new DrawingVisual();
-            DrawingContext drawingContext = drawingVisual.RenderOpen();
-
-            Rect background = new Rect(0, 0, holder.Width, holder.Height);
-            drawingContext.DrawRectangle(Brushes.Black, new Pen(Brushes.White, 0f), background);
-
-            int starting = (int)(holder.Width - 50 * refitems.Count) / 2;
-        }    
-
 
         private void Test()
         {

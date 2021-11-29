@@ -30,7 +30,7 @@ namespace Da_projekt
             InitializeComponent();
             instance = this;
 
-            MainContentFrame.Content = new LearnSortPanel();
+            MainContentFrame.Content = new Page1();
         }
 
         private void Frame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)

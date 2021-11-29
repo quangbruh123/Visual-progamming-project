@@ -22,8 +22,8 @@ namespace Da_projekt
     public partial class LearnSortPanel : Page
     {
         public static LearnSortPanel instance;
-        public MergeSortSimulation mergeSortSimulation;
         public SortSimulation sm;
+        public MergeSortSimulation mergeSortSimulation;
         Random rand = new Random();
         public List<Item> items = new List<Item>();
 
@@ -32,53 +32,44 @@ namespace Da_projekt
             InitializeComponent();
 
             instance = this;
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Item item = new Item(rand.Next(10, 100));
 
                 items.Add(item);
             }
-            //Item item = new Item(12);
-            //items.Add(item);
-            //Item item2 = new Item(11);
-            //items.Add(item2);
-            //Item item3 = new Item(13);
-            //items.Add(item3);
-            //Item item4 = new Item(5);
-            //items.Add(item4);
-            mergeSortSimulation = new MergeSortSimulation(MainCanvas, items);
+            sm = new SortSimulation(MainCanvas, items);
         }
 
         //bắt buộc phải sử dụng LearnSortPanel.instance.refresh() thay vì sm.refresh() nếu sort bằng thread. ko cần thiết nếu ko dùng thread
-        public void Refresh(List<SubArray> subArrays)//vẽ ra màn hình mảng đã sort hay mang đang minh họa sort?
-        {
-            Application.Current.Dispatcher.BeginInvoke(
-            DispatcherPriority.Background,new Action(() => {
-                mergeSortSimulation.DrawSubArray(subArrays);
-            }));
-        }
         public void refresh(List<Item> refitems)//vẽ ra màn hình mảng đã sort hay mang đang minh họa sort?
         {
             Application.Current.Dispatcher.BeginInvoke(
-            DispatcherPriority.Background, new Action(() => {
+            DispatcherPriority.Background,new Action(() => {
                 sm.refresh(refitems);
             }));
         }
-
+        public void Refresh(List<SubArray> subArrays)//vẽ ra màn hình mảng đã sort hay mang đang minh họa sort?
+        {
+            Application.Current.Dispatcher.BeginInvoke(
+            DispatcherPriority.Background, new Action(() => {
+                mergeSortSimulation.DrawSubArray(subArrays);
+            }));
+        }
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            mergeSortSimulation.MethodSort();
+            sm.MethodSort();
+            sm.ManualReplay();
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (mergeSortSimulation.isPaused)
+            if (sm.isPausing)
             {
-                mergeSortSimulation.isPaused = false;
-            }
-            else
+                sm.isPausing = false;
+            } else
             {
-                mergeSortSimulation.isPaused = true;
+                sm.isPausing = true;
             }
         }
     }
