@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -244,11 +244,11 @@ namespace Da_projekt
                             }
                         }
                     }
-                    a.AddRange(b);
                     b.Clear();
                 }
                 else
                 {
+                    a.Add(td);
                     b.Add(td);
                 }
             }

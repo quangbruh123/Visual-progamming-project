@@ -20,7 +20,8 @@ namespace Da_projekt
     public partial class Window1 : Window
     {
         public static Window1 instance;
-
+        
+        public FileManager fm = new FileManager("E:\\Test");
 
         public Window1()
         {

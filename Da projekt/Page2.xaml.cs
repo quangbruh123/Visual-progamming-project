@@ -45,5 +45,10 @@ namespace Da_projekt
         {
 
         }
+
+        private void Simulate_Click(object sender, RoutedEventArgs e)
+        {
+            Window1.instance.MainContentFrame.Content = new CompareSelection();
+        }
     }
 }
