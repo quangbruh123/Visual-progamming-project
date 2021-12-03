@@ -32,13 +32,13 @@ namespace Da_projekt
             InitializeComponent();
 
             instance = this;
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 6; i++)
             {
                 Item item = new Item(rand.Next(10, 100));
 
                 items.Add(item);
             }
-            sm = new SortSimulation(MainCanvas, items);
+            sm = new SortSimulation(MainCanvas, items, tb);
         }
 
         //bắt buộc phải sử dụng LearnSortPanel.instance.refresh() thay vì sm.refresh() nếu sort bằng thread. ko cần thiết nếu ko dùng thread

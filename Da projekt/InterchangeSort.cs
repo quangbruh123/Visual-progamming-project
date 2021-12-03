@@ -39,21 +39,27 @@ namespace Da_projekt
         public int SortAsMethod()
         {
             Stopwatch sw = new Stopwatch();
+            todos.Add(new Todo("IntroIS"));
             todos.Add(new Todo("Refresh"));
-            for (int i = 0; i < items.Count; i++)
+            for (int i = 0; i < items.Count - 1; i++)
             { 
-                todos.Add(new Todo("FancyPause"));
-                todos.Add(new Todo("ChangeColor", i, Colors.Red));
-                todos.Add(new Todo("FancyPause"));
+                //todos.Add(new Todo("FancyPause"));
+                todos.Add(new Todo("ChangeColor", i, Colors.Red)); // starting index i
+                todos.Add(new Todo("Starting", i));
+                //todos.Add(new Todo("FancyPause"));
                 for (int j = i + 1; j < items.Count; j++) 
                 {
-                    todos.Add(new Todo("ChangeColor", j, Colors.Green));
+                    todos.Add(new Todo("ChangeColor", j, Colors.Orchid)); // starting index j
+                    todos.Add(new Todo("Starting", j));
                     todos.Add(new Todo("Refresh"));
 
                     if (items[i].data * sortOder > items[j].data * sortOder)
                     {
-                        todos.Add(new Todo("ChangeColor", j, Colors.Blue));
-                        todos.Add(new Todo("Switch", i, j));
+                        todos.Add(new Todo("ChangeColor", i, Colors.Green));
+                        todos.Add(new Todo("ChangeColor", j, Colors.Green));
+                        todos.Add(new Todo("Refresh"));
+                        todos.Add(new Todo("Switch", i, j)); // swap i j
+                        todos.Add(new Todo("ChangeColor", i, Colors.Red));
                         int Backup = items[i].data;
                         items[i].data = items[j].data;
                         items[j].data = Backup;
@@ -61,9 +67,10 @@ namespace Da_projekt
                     todos.Add(new Todo("ResetColor", j));
                     todos.Add(new Todo("Refresh"));
                 }
-                todos.Add(new Todo("FancyPause"));
-                todos.Add(new Todo("Refresh"));
+                //todos.Add(new Todo("FancyPause"));
                 todos.Add(new Todo("ResetColor", i));
+                todos.Add(new Todo("Done", i)); // xong vòng lặp của thứ i
+                todos.Add(new Todo("Refresh"));
             }
 
             sw.Stop();

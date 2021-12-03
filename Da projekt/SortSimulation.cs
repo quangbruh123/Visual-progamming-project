@@ -26,6 +26,7 @@ namespace Da_projekt
 
         SortEngine se;
         Panel holder;
+        TextBox textBox;
 
         List<Item> items = new List<Item>();
         List<Todo> todos = new List<Todo>();
@@ -36,9 +37,10 @@ namespace Da_projekt
 
         float FPS = 144;//số fps của animation minh họa lại
 
-        public SortSimulation(Panel p, List<Item> refitems)
+        public SortSimulation(Panel p, List<Item> refitems, TextBox t)
         {
             holder = p; //màn hình sort.
+            textBox = t; // text box
             items = new List<Item>(refitems); //mảng sort lấy thời gian.
             itemsCopy = CreateCopy(refitems); //bản copy sử dụng để minh họa.
             refresh(items); //vẽ ra mảng trước khi sort.
@@ -59,7 +61,7 @@ namespace Da_projekt
             if (firstsort)
             {
                 //không sử dụng thread vì -lag -thread.sleep làm sai thời gian sort ghi được.
-                SortEngine se = new SelectionSort(this, items, ref todos);
+                SortEngine se = new BubbleSort(this, items, ref todos, textBox);
                 thread = new Thread(se.SortAsThread);
                 thread.IsBackground = true;
                 thread.Start();
@@ -70,7 +72,7 @@ namespace Da_projekt
                 firstsort = false;
             } else
             {
-                SortEngine se = new SelectionSort(this, CreateCopy(itemsCopy), ref todos);
+                SortEngine se = new BubbleSort(this, CreateCopy(itemsCopy), ref todos, textBox);
                 thread = new Thread(se.SortAsThread);
                 thread.IsBackground = true;
                 thread.Start();
@@ -85,7 +87,7 @@ namespace Da_projekt
         {
             if (firstsort)
             {
-                SortEngine se = new BubbleSort(this, items, ref todos);
+                SortEngine se = new BubbleSort(this, items, ref todos, textBox);
                 int kq = se.SortAsMethod();
                 MessageBox.Show(kq.ToString());
                 firstsort = false;
@@ -93,7 +95,7 @@ namespace Da_projekt
             } else
             {
                 todos = new List<Todo>();
-                SortEngine se = new BubbleSort(this, CreateCopy(itemsCopy), ref todos);
+                SortEngine se = new BubbleSort(this, CreateCopy(itemsCopy), ref todos, textBox);
                 int kq = se.SortAsMethod();
                 MessageBox.Show(kq.ToString());
                 return kq;
@@ -221,10 +223,10 @@ namespace Da_projekt
                             {
                                 sw.Stop();
                                 LearnSortPanel.instance.refresh(localcopy);
-                                await Task.Delay(500);
+                                await Task.Delay(1000);
                                 tdb.Execute(localcopy);
                                 LearnSortPanel.instance.refresh(localcopy);
-                                await Task.Delay(500);
+                                await Task.Delay(1000);
                                 sw.Restart();
                             } else if (tdb.Gettype() != "ResetColor")
                             {
@@ -334,63 +336,5 @@ namespace Da_projekt
         }
     }
 
-    //dùng để lưu lại cái câu lệnh liên quan đến xuất ra màn hình sort.
-    public class Todo
-    {
-        string type;
-        int item1 = 0;
-        int item2 = 0;
-        Color color = Colors.White;
-
-        public Todo(string reftype)
-        {
-            type = reftype;
-        }
-
-        public Todo(string reftype, int refitemindex)
-        {
-            type = reftype;
-            item1 = refitemindex;
-        }
-
-        public Todo(string reftype, int refitemindex, Color refcolor)
-        {
-            type = reftype;
-            item1 = refitemindex;
-            color = refcolor;
-        }
-
-        public Todo(string reftype, int refitemindex1, int refitemindex2)
-        {
-            type = reftype;
-            item1 = refitemindex1;
-            item2 = refitemindex2;
-        }
-
-        public void Execute(List<Item> items)
-        {
-            switch (type)
-            {
-                case "Refresh":
-                    LearnSortPanel.instance.refresh(items);
-                    break;
-                case "ResetColor":
-                    items[item1].ResetColor();
-                    break;
-                case "ChangeColor":
-                    items[item1].changeColor(color);
-                    break;
-                case "Switch":
-                    int Backup = items[item1].data;
-                    items[item1].data = items[item2].data;
-                    items[item2].data = Backup;
-                    break;
-            }
-        }
-
-        public string Gettype()
-        {
-            return type;
-        }
-    }
+    
 }

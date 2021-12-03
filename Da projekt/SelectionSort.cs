@@ -37,15 +37,18 @@ namespace Da_projekt
         {
             Stopwatch sw = new Stopwatch();
             todos.Add(new Todo("Refresh"));
+            todos.Add(new Todo("IntroSS")); // intro giải thích sơ bộ về selection sort
             for (int i = 0; i < items.Count; i++)
             {
                 int min = i;
-                todos.Add(new Todo("FancyPause"));
+                //todos.Add(new Todo("FancyPause"));
                 todos.Add(new Todo("ChangeColor", i, Colors.Red));
-
+                todos.Add(new Todo("Starting", i)); // starting index i;
+                todos.Add(new Todo("Refresh"));
                 for (int j = i + 1; j < items.Count; j++)
                 {
-                    todos.Add(new Todo("ChangeColor", j, Colors.Green));
+                    todos.Add(new Todo("ChangeColor", j, Colors.Orchid));
+                    todos.Add(new Todo("Finding")); // đang đi tìm phần tử nhỏ hơn min
                     todos.Add(new Todo("Refresh"));
 
                     if (items[min].data > items[j].data)
@@ -62,18 +65,19 @@ namespace Da_projekt
                 }
                 if (i != min)
                 {
-                    todos.Add(new Todo("ResetColor", min));
-                    todos.Add(new Todo("Refresh"));
+                    todos.Add(new Todo("ChangeColor", min, Colors.Green));
+                    todos.Add(new Todo("ChangeColor", i, Colors.Green));
 
-                    todos.Add(new Todo("FancyPause"));
+                    //todos.Add(new Todo("FancyPause"));
 
                     todos.Add(new Todo("Refresh"));
-                    todos.Add(new Todo("Switch", i, min));
+                    todos.Add(new Todo("Switch", i, min)); // thông báo đã swap
                     int Backup = items[i].data;
                     items[i].data = items[min].data;
                     items[min].data = Backup;
                 }
                 todos.Add(new Todo("ResetColor", i));
+                todos.Add(new Todo("ResetColor", min));
             }
             sw.Stop();
             return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
