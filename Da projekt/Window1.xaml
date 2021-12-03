@@ -6,9 +6,11 @@
         xmlns:local="clr-namespace:Da_projekt"
         mc:Ignorable="d"
         Title="Window1" Height="500" Width="800"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        >
+   
     <Grid>
-        <Frame x:Name="MainContentFrame" Navigated="Frame_Navigated" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="MainContentFrame" NavigationUIVisibility="Hidden"/>
 
     </Grid>
 </Window>

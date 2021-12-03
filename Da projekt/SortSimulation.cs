@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,8 +29,8 @@ namespace Da_projekt
 
         List<Item> items = new List<Item>();
         List<Todo> todos = new List<Todo>();
-            List<Item> itemsCopy;
-        
+        List<Item> itemsCopy;
+
         Thread thread;
         Thread thread1;
 
@@ -68,7 +68,8 @@ namespace Da_projekt
                 thread1.IsBackground = true;
                 thread1.Start();
                 firstsort = false;
-            } else
+            }
+            else
             {
                 SortEngine se = new SelectionSort(this, CreateCopy(itemsCopy), ref todos);
                 thread = new Thread(se.SortAsThread);
@@ -87,15 +88,14 @@ namespace Da_projekt
             {
                 SortEngine se = new SelectionSort(this, items, ref todos);
                 int kq = se.SortAsMethod();
-                MessageBox.Show(kq.ToString());
                 firstsort = false;
                 return kq;
-            } else
+            }
+            else
             {
                 todos = new List<Todo>();
                 SortEngine se = new SelectionSort(this, CreateCopy(itemsCopy), ref todos);
                 int kq = se.SortAsMethod();
-                MessageBox.Show(kq.ToString());
                 return kq;
             }
         }
@@ -214,20 +214,21 @@ namespace Da_projekt
                         foreach (Todo tdb in b)
                         {
                             //await Task.Delay(100);
-                            
+
 
 
                             if (tdb.Gettype() == "Switch")
                             {
                                 sw.Stop();
-                                
+
                                 refresh(localcopy);
                                 await Task.Delay(100);
                                 tdb.Execute(localcopy, this);
                                 refresh(localcopy);
                                 await Task.Delay(100);
                                 sw.Restart();
-                            } else if (tdb.Gettype() != "ResetColor")
+                            }
+                            else if (tdb.Gettype() != "ResetColor")
                             {
                                 tdb.Execute(localcopy, this);
                                 sw.Stop();
@@ -237,10 +238,11 @@ namespace Da_projekt
                                     await Task.Delay(((int)(1000f / FPS - sw.ElapsedMilliseconds)));
                                 }
                                 sw.Restart();
-                            } else
+                            }
+                            else
                             {
                                 if (tdb.Gettype() != "Refresh")
-                                tdb.Execute(localcopy, this);
+                                    tdb.Execute(localcopy, this);
                             }
                         }
                     }
@@ -253,7 +255,7 @@ namespace Da_projekt
                 }
             }
             //vẽ lại lần cuối sau khi xong.
-            
+
             MessageBox.Show("Đã sort xong");
         }
 
@@ -285,7 +287,7 @@ namespace Da_projekt
 
         public List<Item> CreateCopy(List<Item> refitems)
         {
-            List<Item>  copy = new List<Item>();
+            List<Item> copy = new List<Item>();
             foreach (Item i in refitems)
             {
                 Item k = new Item(i.data);

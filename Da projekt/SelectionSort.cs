@@ -42,6 +42,7 @@ namespace Da_projekt
                 int min = i;
                 todos.Add(new Todo("FancyPause"));
                 todos.Add(new Todo("ChangeColor", i, Colors.Red));
+                todos.Add(new Todo("FancyPause"));
 
                 for (int j = i + 1; j < items.Count; j++)
                 {

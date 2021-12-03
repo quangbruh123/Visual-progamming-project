@@ -6,31 +6,150 @@
       xmlns:local="clr-namespace:Da_projekt"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="LearnCode"
-      Background="DarkSlateBlue">
+      Title="LearnCode">
 
+    <Page.Background>
+        <ImageBrush ImageSource="/learn_code.jpg" Stretch="UniformToFill"></ImageBrush>
+    </Page.Background>
+   
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="23*"/>
-            <RowDefinition Height="38*"/>
-            <RowDefinition Height="389*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="25*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="247*"/>
-            <ColumnDefinition Width="324*"/>
-            <ColumnDefinition Width="229*"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Button x:Name="Selection" BorderBrush="Transparent" Background="#00000001" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="31,1,0,0" Height="78" Width="283" Click="Selection_Click" Grid.ColumnSpan="2" Grid.Row="2">
-            <Grid Height="78" Width="283">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="78"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Image Source="d5c58141a1cd5938fe50f96f7bd9b17a.gif" Stretch="Fill" DockPanel.Dock="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Height="78" Width="92"/>
-                <TextBlock x:Name="Title" DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="0,10,0,0" Text="Selection Sort" TextWrapping="Wrap" VerticalAlignment="Center" Height="36" Width="205" FontSize="24" FontWeight="Bold" Grid.Column="1" TextAlignment="Center"/>
-
-            </Grid>
+        
+        <Button x:Name="Selection" BorderBrush="Transparent" 
+                Click="Selection_Click" 
+                Grid.Row="2"
+                Style="{StaticResource btnDesign}">
+            <TextBlock x:Name="Title" 
+                           DockPanel.Dock="Top" 
+                           HorizontalAlignment="Center" 
+                           Text="Selection Sort" 
+                           TextWrapping="WrapWithOverflow" 
+                           VerticalAlignment="Center" 
+                           FontSize="24" 
+                           FontWeight="Bold" 
+                           Grid.Column="1" 
+                           TextAlignment="Center"/>
         </Button>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="1" Text="Chọn thuật toán muốn học:" TextWrapping="Wrap" VerticalAlignment="Stretch" Height="38" Width="324" TextAlignment="Center" FontFamily="Segoe UI" FontSize="22"/>
+        
+        <Label Grid.Column="0" 
+               Grid.ColumnSpan="3"
+               Grid.Row="1" 
+               Content="Chọn thuật toán muốn học"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               Style="{StaticResource lblDesign}"
+               FontWeight="Bold"/>
+
+        <Button x:Name="Merge" BorderBrush="Transparent" 
+                Click="Selection_Click" 
+                Grid.Row="2"
+                Grid.Column="1"
+                Style="{StaticResource btnDesign}">
+            <TextBlock x:Name="Title1" 
+                DockPanel.Dock="Top" 
+                HorizontalAlignment="Center" 
+                Text="Merge Sort" 
+                TextWrapping="WrapWithOverflow" 
+                VerticalAlignment="Center" 
+                FontSize="24" 
+                FontWeight="Bold" 
+                Grid.Column="1" 
+                TextAlignment="Center"/>
+        </Button>
+        
+        <Button x:Name="Bubble" BorderBrush="Transparent" 
+                Click="Selection_Click" 
+                Grid.Row="2"
+                Grid.Column="2" 
+                Style="{StaticResource btnDesign}">
+            <TextBlock x:Name="Title2" 
+                DockPanel.Dock="Top" 
+                HorizontalAlignment="Center" 
+                Text="Bubble Sort" 
+                TextWrapping="WrapWithOverflow" 
+                VerticalAlignment="Center" 
+                FontSize="24" 
+                FontWeight="Bold" 
+                Grid.Column="1" 
+                TextAlignment="Center"/>
+        </Button>
+        
+        <Button x:Name="Insertion" BorderBrush="Transparent" 
+                Click="Selection_Click" 
+                Grid.Row="3"
+                Grid.Column="2"
+                Style="{StaticResource btnDesign}">
+            <TextBlock x:Name="Title3" 
+                DockPanel.Dock="Top" 
+                HorizontalAlignment="Center" 
+                Text="Insertion Sort" 
+                TextWrapping="WrapWithOverflow" 
+                VerticalAlignment="Center" 
+                FontSize="24" 
+                FontWeight="Bold" 
+                Grid.Column="1" 
+                TextAlignment="Center"/>
+        </Button>
+        
+        <Button x:Name="Interchange" BorderBrush="Transparent" 
+                Click="Selection_Click" 
+                Grid.Row="3"
+                Grid.Column="0"
+                Style="{StaticResource btnDesign}">
+            <TextBlock x:Name="Title4" 
+                DockPanel.Dock="Top" 
+                HorizontalAlignment="Center" 
+                Text="Interchange Sort" 
+                TextWrapping="WrapWithOverflow" 
+                VerticalAlignment="Center" 
+                FontSize="24" 
+                FontWeight="Bold" 
+                Grid.Column="1" 
+                TextAlignment="Center"/>
+        </Button>
+        
+        <Button x:Name="Quick" BorderBrush="Transparent" 
+                Click="Selection_Click" 
+                Grid.Row="3"
+                Grid.Column="1"
+                Style="{StaticResource btnDesign}">
+            <TextBlock x:Name="Title5" 
+                DockPanel.Dock="Top" 
+                HorizontalAlignment="Center" 
+                Text="Quick Sort" 
+                TextWrapping="WrapWithOverflow" 
+                VerticalAlignment="Center" 
+                FontSize="24" 
+                FontWeight="Bold" 
+                Grid.Column="1" 
+                TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="Return" BorderBrush="Transparent" 
+                Click="Return_Click" 
+                Grid.Row="4"
+                Grid.Column="1"
+                Style="{StaticResource btnDesign}">
+            <TextBlock x:Name="TitleX" 
+                DockPanel.Dock="Top" 
+                HorizontalAlignment="Center" 
+                Text="   Trở về trang trước" 
+                TextWrapping="WrapWithOverflow" 
+                VerticalAlignment="Center" 
+                FontSize="24" 
+                Grid.Column="1" 
+                TextAlignment="Center"/>
+        </Button>
     </Grid>
 </Page>

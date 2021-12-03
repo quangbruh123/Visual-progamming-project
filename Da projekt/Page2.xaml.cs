@@ -26,24 +26,21 @@ namespace Da_projekt
             this.RenderSize = Window1.instance.MainContentFrame.RenderSize;
         }
 
-        private void ComparisionGroup_MouseEnter(object sender, MouseEventArgs e)
-        {
 
-        }
-
-        private void Exit_Click(object sender, RoutedEventArgs e)
+        private void btnReturn_Click(object sender, RoutedEventArgs e)
         {
             Window1.instance.MainContentFrame.Content = new Page1();
         }
 
-        private void Learn_Click(object sender, RoutedEventArgs e)
+
+        private void btnSVisualizer_Click(object sender, RoutedEventArgs e)
         {
             Window1.instance.MainContentFrame.Content = new LearnCode();
         }
 
-        private void LearnGroup_MouseUp(object sender, MouseButtonEventArgs e)
+        private void btnSimulation_Click(object sender, RoutedEventArgs e)
         {
-
+            Window1.instance.MainContentFrame.Content = new CompareSelection();
         }
     }
 }

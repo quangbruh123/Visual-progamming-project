@@ -26,16 +26,11 @@ namespace Da_projekt
         {
             //Tắt Splashscreen
             App.ss.Close(TimeSpan.FromSeconds(0.2));
-
             InitializeComponent();
             instance = this;
 
             MainContentFrame.Content = new Page1();
         }
 
-        private void Frame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
-        {
-
-        }
     }
 }

@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="CompareSelection.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="LearnCode.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,11 +22,17 @@
     <Compile Update="Page2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="SelectionSortSim.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Window1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="CompareSelection.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="LearnCode.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -34,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Page2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SelectionSortSim.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Window1.xaml">
