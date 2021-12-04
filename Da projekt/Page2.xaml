@@ -18,7 +18,7 @@
             </DockPanel>
         </Button>
 
-        <Button x:Name="Simulate" BorderBrush="Transparent" Background="#00000001" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150,0,0" Height="100" Width="700">
+        <Button x:Name="Simulate" BorderBrush="Transparent" Background="#00000001" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150,0,0" Height="100" Width="700" Click="Simulate_Click">
             <DockPanel x:Name="SimulateGroup" LastChildFill="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="700" Margin="0,0,0,0">
                 <Image Source="d5c58141a1cd5938fe50f96f7bd9b17a.gif" Stretch="Fill" DockPanel.Dock="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100"/>
                 <TextBlock x:Name="Title1" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20,10,0,0" Text="Sort Simulation" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="419" FontSize="24" FontWeight="Bold"/>
