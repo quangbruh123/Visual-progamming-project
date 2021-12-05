@@ -6,37 +6,120 @@
       xmlns:local="clr-namespace:Da_projekt"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page2"
-      Background="DarkSlateBlue">
+      Title="Page2">
 
-    <Grid>
-        <Button x:Name="Learn" BorderBrush="Transparent" Background="#00000001" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" Height="100" Width="700" Click="Learn_Click">
-            <DockPanel x:Name="LearnGroup" LastChildFill="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="700" Margin="0,0,0,0">
-                <Image Source="d5c58141a1cd5938fe50f96f7bd9b17a.gif" Stretch="Fill" DockPanel.Dock="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100"/>
-                <TextBlock x:Name="Title" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20,10,0,0" Text="Sort visualizer" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="419" FontSize="24" FontWeight="Bold"/>
-                <TextBlock x:Name="Description" HorizontalAlignment="Left" Margin="20,0,0,0" Text="Bạn mù tịt về kiến thức các thuật toán sort? Tính năng này sẽ chỉ bạn cách thuật toán hoạt động từng bước một!" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="419" FontSize="13" FontWeight="Normal" DockPanel.Dock="Left"/>
+
+    <Page.Background>
+        <ImageBrush ImageSource="/Page2.jpg" Stretch="UniformToFill"></ImageBrush>
+    </Page.Background>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140*" />
+            <RowDefinition Height="140*" />
+            <RowDefinition Height="140*" />
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="15*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130*" />
+            <ColumnDefinition Width="410*" />
+            <ColumnDefinition Width="130*" />
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="btnSVisualizer"  
+                Grid.Column="1" Click="btnSVisualizer_Click"
+                Style="{StaticResource btnDesign}">
+            <DockPanel x:Name="LearnGroup" 
+                       LastChildFill="False" 
+                       HorizontalAlignment="Stretch" 
+                       VerticalAlignment="Stretch" >
+
+                <TextBlock x:Name="Title" 
+                           VerticalAlignment="Stretch" 
+                           DockPanel.Dock="Top"  
+                           Text="Sort visualizer" 
+                           TextWrapping="Wrap" 
+                           FontSize="24" 
+                           FontWeight="Bold">
+
+                </TextBlock>
+
+
+                <TextBlock x:Name="Description" 
+                           Width="419" 
+                           HorizontalAlignment="Stretch" 
+                           DockPanel.Dock="Bottom"
+                           Text="Bạn mù tịt về kiến thức các thuật toán sort?
+                                          Tính năng này sẽ chỉ bạn cách thuật toán hoạt động từng bước một!" 
+                           TextWrapping="WrapWithOverflow"      
+                           FontSize="13"/>
             </DockPanel>
         </Button>
 
-        <Button x:Name="Simulate" BorderBrush="Transparent" Background="#00000001" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150,0,0" Height="100" Width="700" Click="Simulate_Click">
-            <DockPanel x:Name="SimulateGroup" LastChildFill="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="700" Margin="0,0,0,0">
-                <Image Source="d5c58141a1cd5938fe50f96f7bd9b17a.gif" Stretch="Fill" DockPanel.Dock="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100"/>
-                <TextBlock x:Name="Title1" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20,10,0,0" Text="Sort Simulation" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="419" FontSize="24" FontWeight="Bold"/>
-                <TextBlock x:Name="Description1" HorizontalAlignment="Left" Margin="20,0,0,0" Text="Bạn tò mò muốn xem thuật toán này hoạt động trong thời gian thực? Tính năng này chính là thứ bạn cần!" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="419" FontSize="13" FontWeight="Normal" DockPanel.Dock="Left"/>
+        <Button x:Name="btnSimulation" 
+                Grid.Row="1" 
+                Grid.Column="1" Click="btnSimulation_Click"
+                Style="{StaticResource btnDesign}">
+            <DockPanel x:Name="SimulateGroup" 
+                       LastChildFill="False" 
+                       HorizontalAlignment="Stretch" 
+                       VerticalAlignment="Stretch" >
+
+                <TextBlock x:Name="Title1" 
+                           VerticalAlignment="Stretch"  
+                           DockPanel.Dock="Top" 
+                           Text="Sort Simulation" 
+                           TextWrapping="Wrap" 
+                           FontSize="24" 
+                           FontWeight="Bold"/>
+
+                <TextBlock x:Name="Description1"
+                           Width="419"
+                           HorizontalAlignment="Stretch"
+                           DockPanel.Dock="Bottom"
+                           Text="Bạn tò mò muốn xem thuật toán này hoạt động trong thời gian thực? Tính năng này chính là thứ bạn cần!" 
+                           TextWrapping="WrapWithOverflow" 
+                           FontSize="13"/>
             </DockPanel>
         </Button>
 
-        <Button x:Name="Compare" BorderBrush="Transparent" Background="#00000001" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,250,0,0" Height="100" Width="700">
-            <DockPanel x:Name="ComparisionGroup" LastChildFill="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="700" Margin="0,0,0,0" MouseEnter="ComparisionGroup_MouseEnter">
-                <Image Source="d5c58141a1cd5938fe50f96f7bd9b17a.gif" Stretch="Fill" DockPanel.Dock="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100"/>
-                <TextBlock x:Name="Title2" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20,10,0,0" Text="Sort Comparision" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="419" FontSize="24" FontWeight="Bold"/>
-                <TextBlock x:Name="Description2" HorizontalAlignment="Left" Margin="20,0,0,0" Text="Bạn tò mò muốn xem các thuật toán sort chạy như thế nào so với nhau? Tính năng này sẽ cho bạn thấy!" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="419" FontSize="13" FontWeight="Normal" DockPanel.Dock="Left"/>
+        <Button x:Name="btnAutomatic" 
+                Grid.Row="2"
+                Grid.Column="1"
+                Style="{StaticResource btnDesign}">
+            <DockPanel x:Name="ComparisionGroup" 
+                       LastChildFill="False" 
+                       HorizontalAlignment="Stretch" 
+                       VerticalAlignment="Stretch">
+
+                <TextBlock x:Name="Title2" 
+                           VerticalAlignment="Stretch" 
+                           DockPanel.Dock="Top" 
+                           Text="Sort Comparision" 
+                           TextWrapping="Wrap" 
+                           FontSize="24" 
+                           FontWeight="Bold"/>
+
+                <TextBlock x:Name="Description2" 
+                           Width="419" 
+                           HorizontalAlignment="Stretch" 
+                           DockPanel.Dock="Bottom"
+                           Text="Bạn tò mò muốn xem các thuật toán sort chạy như thế nào so với nhau? Tính năng này sẽ cho bạn thấy!" 
+                           TextWrapping="Wrap" 
+                           FontSize="13" 
+                           FontWeight="Normal"/>
             </DockPanel>
         </Button>
 
-        <Button x:Name="Exit" BorderBrush="Transparent" Background="#00000001" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,380,0,0" Height="30" Width="100" Click="Exit_Click">
-            <TextBlock Text="Quay lại" FontSize="20"/>
-        </Button>
-
+        <Button x:Name="btnReturn" 
+                Content="Trở về màn hình bắt đầu" 
+                Grid.Row="3"
+                Grid.Column="1" 
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" 
+                Click="btnReturn_Click" 
+                Margin="100,0,100,0"
+                Style="{StaticResource btnDesign}"/>
     </Grid>
 </Page>

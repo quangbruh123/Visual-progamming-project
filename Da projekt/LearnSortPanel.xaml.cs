@@ -25,13 +25,14 @@ namespace Da_projekt
         public SortSimulation sm;
         Random rand = new Random();
         public List<Item> items = new List<Item>();
+        public bool isStarted = false;
 
         public LearnSortPanel()
         {
             InitializeComponent();
 
             instance = this;
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Item item = new Item(rand.Next(10, 100));
 
@@ -49,21 +50,38 @@ namespace Da_projekt
             }));
         }
 
+
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            sm.MethodSort();
-            sm.FancyReplay();
+            if (Start.Content.ToString() == "Hoàn tất")
+            {
+                return;
+            }    
+            if (isStarted == false)
+            {
+                Start.Content = "Bước tiếp ";
+                sm.MethodSort();
+                sm.ManualReplay();
+                isStarted = true;
+            }
+            else
+            {
+                if (sm.isPausing)
+                {
+                    sm.isPausing = false;
+                }
+                else
+                {
+                    sm.isPausing = true;
+                }
+
+            }
+
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Return_Click(object sender, RoutedEventArgs e)
         {
-            if (sm.isPausing)
-            {
-                sm.isPausing = false;
-            } else
-            {
-                sm.isPausing = true;
-            }
+            Window1.instance.MainContentFrame.Content = new LearnCode();
         }
     }
 }

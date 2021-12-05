@@ -17,7 +17,7 @@ namespace Da_projekt
 
         App()
         {
-            ss = new SplashScreen("CbGwZ31.jpg");
+            ss = new SplashScreen("splash_screen.jpg");
             ss.Show(true);
         }
     }

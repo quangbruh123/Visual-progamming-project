@@ -29,5 +29,9 @@ namespace Da_projekt
         {
             Window1.instance.MainContentFrame.Content = new LearnSortPanel();
         }
+        private void Return_Click(object sender, RoutedEventArgs e)
+        {
+            Window1.instance.MainContentFrame.Content = new Page2();
+        }
     }
 }
