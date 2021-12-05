@@ -9,19 +9,21 @@
   },
   "packageFolders": {
     "C:\\Users\\Admin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Downloads\\Visual-progamming-project-main\\Visual-progamming-project-main\\Da projekt\\Da projekt.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\New folder (4)\\Visual-progamming-project\\Da projekt\\Da projekt.csproj",
       "projectName": "Da projekt",
-      "projectPath": "C:\\Users\\Admin\\Downloads\\Visual-progamming-project-main\\Visual-progamming-project-main\\Da projekt\\Da projekt.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\New folder (4)\\Visual-progamming-project\\Da projekt\\Da projekt.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Downloads\\Visual-progamming-project-main\\Visual-progamming-project-main\\Da projekt\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\New folder (4)\\Visual-progamming-project\\Da projekt\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -68,7 +70,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

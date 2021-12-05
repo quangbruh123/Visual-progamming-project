@@ -21,7 +21,7 @@ namespace Da_projekt
     {
         public static Window1 instance;
         
-        public FileManager fm = new FileManager("E:\\Test");
+        public FileManager fm = new FileManager("D:");
 
         public Window1()
         {
@@ -32,11 +32,6 @@ namespace Da_projekt
             instance = this;
 
             MainContentFrame.Content = new Page1();
-        }
-
-        private void Frame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
-        {
-
         }
     }
 }

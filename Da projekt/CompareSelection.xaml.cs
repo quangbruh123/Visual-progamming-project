@@ -26,17 +26,16 @@ namespace Da_projekt
         bool ignore = false;
         int sortIndex = 0, 
             inputIndex = 0;
+        bool changed = false;
         TextBox t;
         string input = "";
-
         public CompareSelection()
         {
             InitializeComponent();
-            SortView.ScrollToVerticalOffset(0);
-            SwitchTo(0);
+            SortList.SelectedIndex = 0;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnConfirm_Click(object sender, RoutedEventArgs e)
         {
             List<Item> items = new List<Item>();
 
@@ -44,9 +43,12 @@ namespace Da_projekt
             {
                 case 0:
                     {
+                        string[] txt;
                         items = new List<Item>();
-
-                        string[] txt = t.Text.Split(' ');
+                        if (changed == false)
+                            txt = tbxInput.Text.Split(' ');
+                        else
+                            txt = t.Text.Split(' ');
                         foreach (string str in txt)
                         {
                             Item item = new Item(int.Parse(str));
@@ -57,10 +59,15 @@ namespace Da_projekt
                     break;
                 case 1:
                     {
+                        int n;
                         items = new List<Item>();
+                        if (changed == false)
+                            n = int.Parse(tbxInput.Text);
+                        else
+                            n = int.Parse(t.Text);
 
                         Random rand = new Random();
-                        int n = int.Parse(t.Text);
+                       
                         for (int i = 0; i < n; i++)
                         {
                             Item item = new Item(rand.Next(10, 100));
@@ -118,86 +125,65 @@ namespace Da_projekt
             if (first)
             {
                 first = false;
+                changed = false;
                 return;
             }
-            SwitchTo(Selection.SelectedIndex);
-        }
-
-        private void SwitchTo(int index)
-        {
-            switch (index)
+            changed = true;
+            tbxInput.Clear();
+            switch (Selection.SelectedIndex)
             {
                 case 0:
                     {
-                        InputContainer.Children.Clear();
+                        ComboBox cbx = (ComboBox)FindName("cbFile");
+                        Grid.Children.Remove(cbx);
+                        t = new TextBox();
+                        t.Name = "tbxInput";
+                        t.SetValue(Grid.RowProperty, 2);
+                        t.SetValue(Grid.ColumnProperty, 2);
+                        var style = Application.Current.TryFindResource("txblDesign") as Style;
+                        t.Style = style;
+                        t.VerticalContentAlignment = VerticalAlignment.Center;
+
+
                         inputIndex = 0;
-
-                        Label lb = new Label();
-                        lb.Content = "Nhập dữ liệu vào: ";
-                        lb.Margin = new Thickness(0, 10, 0, 0);
-
-                        TextBox tb = new TextBox();
-                        tb.HorizontalAlignment = HorizontalAlignment.Stretch;
-                        tb.TextWrapping = TextWrapping.NoWrap;
-                        tb.Margin = new Thickness(0, 10, 0, 0);
-                        tb.Height = 20;
-
-                        t = tb;
-
-                        InputContainer.Children.Add(lb);
-                        InputContainer.Children.Add(tb);
+                        lbInput.Content = "Nhập các số cần xếp:";
+                        Grid.Children.Add(t);
                     }
                     break;
                 case 1:
                     {
-                        InputContainer.Children.Clear();
+                        ComboBox cbx = (ComboBox)FindName("cbFile");
+                        Grid.Children.Remove(cbx);
+                        t = new TextBox();
+                        t.Name = "tbxInput";
+                        t.SetValue(Grid.RowProperty, 2);
+                        t.SetValue(Grid.ColumnProperty, 2);
+                        var style = Application.Current.TryFindResource("txblDesign") as Style;
+                        t.Style = style;
+                        t.VerticalContentAlignment = VerticalAlignment.Center;
+                        t.SetValue(NameProperty, "tbxInput");
+                        
                         inputIndex = 1;
-
-                        Label lb = new Label();
-                        lb.Content = "Nhập số lượng phần tử dữ liệu vào: ";
-                        lb.Margin = new Thickness(0, 10, 0, 0);
-
-                        TextBox tb = new TextBox();
-                        tb.HorizontalAlignment = HorizontalAlignment.Stretch;
-                        tb.TextWrapping = TextWrapping.NoWrap;
-                        tb.Margin = new Thickness(0, 10, 0, 0);
-                        tb.Height = 20;
-                        tb.TextAlignment = TextAlignment.Right;
-
-                        t = tb;
-
-                        InputContainer.Children.Add(lb);
-                        InputContainer.Children.Add(tb);
+                        lbInput.Content = "Nhập số lượng phần tử cần sắp xếp:";
+                        Grid.Children.Add(t);
                     }
                     break;
                 case 2:
                     {
-                        /*InputContainer.Children.Clear();
                         inputIndex = 2;
-
-                        Label lb = new Label();
-                        lb.Content = "Chọn đường dẫn file";
-                        lb.Margin = new Thickness(0, 10, 0, 0);
-
-                        Button btn = new Button();
-                        btn.Background = Brushes.White;
-                        btn.Content = "Chọn file:";
-                        btn.HorizontalContentAlignment = HorizontalAlignment.Left;
-                        btn.Margin = new Thickness(0, 10, 0, 0);
-                        btn.Click += Open_click;
-
-                        InputContainer.Children.Add(lb);
-                        InputContainer.Children.Add(btn);*/
-
-                        InputContainer.Children.Clear();
-                        inputIndex = 2;
-
-                        Label lb = new Label();
-                        lb.Content = "Chọn đường dẫn file";
-                        lb.Margin = new Thickness(0, 10, 0, 0);
-
+                        TextBox tb = (TextBox)FindName("tbxInput");
+                        if (tb != null)
+                        {
+                            Grid.Children.Remove(tb);
+                        }
+                        lbInput.Content = "Chọn đường dẫn file";
                         ComboBox cb = new ComboBox();
-                        
+                        cb.Name = "cbFile";
+                        cb.SetValue(Grid.RowProperty, 2);
+                        cb.SetValue(Grid.ColumnProperty, 2);
+                        var style = Application.Current.TryFindResource("cbxlDesign") as Style;
+                        cb.VerticalContentAlignment = VerticalAlignment.Center;
+                        cb.Style = style;
                         foreach (string s in Window1.instance.fm.files)
                         {
                             ComboBoxItem cbi = new ComboBoxItem();
@@ -208,13 +194,13 @@ namespace Da_projekt
                         cbl.Content = "Chọn file khác...";
                         cb.Items.Add(cbl);
                         cb.SelectionChanged += cb_SelectionChanged;
-
-                        InputContainer.Children.Add(lb);
-                        InputContainer.Children.Add(cb);
+                        Grid.Children.Add(cb);
                     }
                     break;
             }
         }
+        
+
 
         private void cb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -246,37 +232,27 @@ namespace Da_projekt
                 }
             }
         }
-
-        /*private void Open_click(object sender, RoutedEventArgs e)
+        private void btnNext_Click(object sender, RoutedEventArgs e)
         {
-            Button btn = sender as Button;
-
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
-
-            if (openFileDialog.ShowDialog() == true)
-            {
-                btn.Content = openFileDialog.FileName;
-                input = System.IO.File.ReadAllText(openFileDialog.FileName);
-            }
-        }   */
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            if (SortView.VerticalOffset < SortView.ScrollableHeight)
-            {
-                sortIndex++;
-                SortView.ScrollToVerticalOffset(SortView.VerticalOffset + SortList.ActualHeight / 3);
-            }
+            if (SortList.SelectedIndex == 1)
+                return;
+            sortIndex++;
+            SortList.SelectedIndex++;
+            SortList.ScrollIntoView(SortList.SelectedItem);
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void btnReturn_Click(object sender, RoutedEventArgs e)
         {
-            if (SortView.VerticalOffset > 0)
-            {
-                sortIndex--;
-                SortView.ScrollToVerticalOffset(SortView.VerticalOffset - SortList.ActualHeight / 3);
-            }
+            Window1.instance.MainContentFrame.Content = new Page2();
+        }
+
+        private void btnPrevious_Click(object sender, RoutedEventArgs e)
+        {
+            if (SortList.SelectedIndex == 0)
+                return;
+            sortIndex--;
+            SortList.SelectedIndex--;
+            SortList.ScrollIntoView(SortList.SelectedItem);
         }
     }
 }

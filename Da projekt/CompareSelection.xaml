@@ -6,47 +6,102 @@
       xmlns:local="clr-namespace:Da_projekt"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="CompareSelection"
-      Background="DarkSlateBlue">
-
-    <Grid>
+      Title="CompareSelection">
+    <Page.Background>
+        <ImageBrush x:Name="ibSource" ImageSource="/CompareSelection.jpg" Stretch="UniformToFill"></ImageBrush>
+    </Page.Background>
+    <Grid x:Name="Grid"> 
         <Grid.RowDefinitions>
-            <RowDefinition Height="282*"/>
-            <RowDefinition Height="113*"/>
-            <RowDefinition Height="55*"/>
+            <RowDefinition Height="275*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="27*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="211*"/>
-            <ColumnDefinition Width="344*"/>
-            <ColumnDefinition Width="245*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="74*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="25*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="1" Grid.Row="1">
+        <Label  Content="Chọn phương pháp nhập dữ liệu vào:" 
+                VerticalAlignment="Center"
+                Grid.Column="1" 
+                Grid.Row="1"
+                Style="{StaticResource lblDesign}"  />
 
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Chọn phương pháp nhập dữ liệu vào:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="210" Grid.Column="1" Height="26" Grid.Row="1"/>
-                <ComboBox x:Name="Selection" Width="120" Height="22" SelectionChanged="ComboBox_SelectionChanged" IsSynchronizedWithCurrentItem="True" SelectedIndex="0">
-                    <ComboBoxItem Content="Nhập bằng tay"/>
-                    <ComboBoxItem Content="Ngẫu nhiên"/>
-                    <ComboBoxItem Content="Nhập từ file / DTB"/>
-                </ComboBox>
-            </StackPanel>
+        <Label  x:Name="lbInput"
+                Content="Nhập các số cần xếp:" 
+                VerticalAlignment="Center"
+                Grid.Column="1" 
+                Grid.Row="2"
+                Style="{StaticResource lblDesign}"/>
 
-            <DockPanel x:Name="InputContainer">
-                <Label  Content="Nhập dữ liệu vào:" Margin="0,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="210" Grid.Column="1" Height="26" Grid.Row="1"/>
-                <TextBox Margin="0,10,0,0" TextWrapping="NoWrap" Width="121" Height="20"/>
-            </DockPanel>
+        <ComboBox   x:Name="Selection" 
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    IsSynchronizedWithCurrentItem="True" 
+                    SelectedIndex="0"
+                    SelectionChanged="ComboBox_SelectionChanged" 
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource cbxlDesign}">
+            <ComboBoxItem Content="Nhập bằng tay" />
+            <ComboBoxItem Content="Ngẫu nhiên" />
+            <ComboBoxItem Content="Nhập từ file / DTB" />
+        </ComboBox>
 
-            <Button Margin="0,10,0,0" Height="24" Width="116" Click="Button_Click" Content="Tiếp tục"/>
-        </StackPanel>
 
-        <ScrollViewer x:Name="SortView" Grid.Column="1" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" Margin="38,30,38,30" >
-            <ListBox x:Name="SortList" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="SelectionSort ImageGoesHere" HorizontalAlignment="Center" VerticalAlignment="Center" Height="222" Width="268"/>
-                <TextBlock Text="MergeSort ImageGoesHere" HorizontalAlignment="Center" VerticalAlignment="Center" Height="222" Width="268"/>
-                <TextBlock Text="HeapSort ImageGoesHere" HorizontalAlignment="Center" VerticalAlignment="Center" Height="222" Width="268"/>
-            </ListBox>
-        </ScrollViewer>
-        <Button Content="Button" Grid.Column="2" HorizontalAlignment="Left" Margin="34,141,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="136,141,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
+        <TextBox x:Name="tbxInput" 
+                 Grid.Column="2"
+                 Grid.Row="2"
+                 TextWrapping="NoWrap"
+                 Style="{StaticResource txblDesign}"
+                 VerticalContentAlignment="Center"  />
+
+
+        <ListBox x:Name="SortList"  
+                 Grid.Column="1" 
+                 Grid.ColumnSpan="2"
+                 HorizontalContentAlignment="Stretch"
+                 ScrollViewer.HorizontalScrollBarVisibility="Hidden" 
+                 ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,50,0,50" >
+
+            <ListBoxItem Content="Selection Sort" 
+                         Height="{Binding Path=ActualHeight, ElementName=SortList}" 
+                         Style="{StaticResource lbIDesign}"/>
+            <ListBoxItem Content="Merge Sort" 
+                         Height="{Binding Path=ActualHeight, ElementName=SortList}"
+                         Style="{StaticResource lbIDesign}"/>
+        </ListBox>
+
+        <Button Content="Kế tiếp" 
+                Grid.Column="3" 
+                VerticalAlignment="Center" 
+                Click="btnNext_Click" 
+                Style="{StaticResource btnDesign}"
+                />
+
+        <Button Content="Trước"
+                VerticalAlignment="Center"
+                Click="btnPrevious_Click" 
+                Style="{StaticResource btnDesign}"
+                 />
+
+        <Button Content="Bắt đầu"
+                Grid.Column="2"
+                Grid.Row="3"
+                Click="btnConfirm_Click" 
+                Style="{StaticResource btnDesign}">
+
+        </Button>
+        <Button Content="        Trở về trang trước      "
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                HorizontalAlignment="Left"
+                Click="btnReturn_Click" 
+                Style="{StaticResource btnDesign}">
+
+        </Button>
     </Grid>
 </Page>

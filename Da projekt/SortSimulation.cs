@@ -87,7 +87,7 @@ namespace Da_projekt
             {
                 SortEngine se = new SelectionSort(this, items, ref todos);
                 int kq = se.SortAsMethod();
-                MessageBox.Show(kq.ToString());
+
                 firstsort = false;
                 return kq;
             } else
@@ -95,7 +95,6 @@ namespace Da_projekt
                 todos = new List<Todo>();
                 SortEngine se = new SelectionSort(this, CreateCopy(itemsCopy), ref todos);
                 int kq = se.SortAsMethod();
-                MessageBox.Show(kq.ToString());
                 return kq;
             }
         }
@@ -104,6 +103,7 @@ namespace Da_projekt
         {
             thread.Join();
             MessageBox.Show("Đã sort xong");
+            
         }
 
         //minh họa lại quá trình sort.
@@ -184,7 +184,10 @@ namespace Da_projekt
             }
             //vẽ lại lần cuối sau khi xong.
             refresh(localcopy);
+            LearnSortPanel.instance.isStarted = false;
+            LearnSortPanel.instance.Start.Content = "Hoàn tất";
             MessageBox.Show("Đã sort xong");
+            
         }
 
         public async void FancyReplay()

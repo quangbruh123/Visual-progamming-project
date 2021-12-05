@@ -40,16 +40,9 @@ namespace Da_projekt
             sm.Replay();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Return_Click(object sender, RoutedEventArgs e)
         {
-            if (sm.isPausing)
-            {
-                sm.isPausing = false;
-            }
-            else
-            {
-                sm.isPausing = true;
-            }
+            Window1.instance.MainContentFrame.Content = new CompareSelection();
         }
     }
 }
