@@ -10,7 +10,7 @@ namespace Da_projekt
 {
     public class FileManager
     {
-        public string outputDir; //Thư mục chứa save files;
+        public string inputDir; //Thư mục chứa save files;
         public List<string> files = new List<string>(); //Danh sách save file có trong thư mục
         public static FileManager fileManager;
 
@@ -21,14 +21,22 @@ namespace Da_projekt
 
         public FileManager(string directory)
         {
-            outputDir = directory;
+            inputDir = directory;
             fileManager = this;
+            this.Update();
+        }
+
+        public void SetNewInputDir(string path)
+        {
+            inputDir = path;
+
+            files = new List<string>();
             this.Update();
         }
 
         public void Update()
         {
-            DirectoryInfo d = new DirectoryInfo(outputDir);
+            DirectoryInfo d = new DirectoryInfo(inputDir);
             FileInfo[] Files = d.GetFiles("*.txt");
 
             foreach (FileInfo file in Files)
@@ -39,7 +47,7 @@ namespace Da_projekt
 
         public string GetDirectory(string name)
         {
-            return outputDir + "\\" + name;
+            return inputDir + "\\" + name;
         }
 
         public string Open(ref string name)
