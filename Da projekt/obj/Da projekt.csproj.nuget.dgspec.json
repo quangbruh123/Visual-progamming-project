@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Code\\Visual-progamming-project-DMT\\Visual-progamming-project\\Da projekt\\Da projekt.csproj": {}
+    "F:\\Code\\Visual-progamming-project-DMT\\Visual-progamming-project-FBK\\Visual-progamming-project-FBK\\Visual-progamming-project-DMT\\Da projekt\\Da projekt.csproj": {}
   },
   "projects": {
-    "F:\\Code\\Visual-progamming-project-DMT\\Visual-progamming-project\\Da projekt\\Da projekt.csproj": {
+    "F:\\Code\\Visual-progamming-project-DMT\\Visual-progamming-project-FBK\\Visual-progamming-project-FBK\\Visual-progamming-project-DMT\\Da projekt\\Da projekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Code\\Visual-progamming-project-DMT\\Visual-progamming-project\\Da projekt\\Da projekt.csproj",
+        "projectUniqueName": "F:\\Code\\Visual-progamming-project-DMT\\Visual-progamming-project-FBK\\Visual-progamming-project-FBK\\Visual-progamming-project-DMT\\Da projekt\\Da projekt.csproj",
         "projectName": "Da projekt",
-        "projectPath": "F:\\Code\\Visual-progamming-project-DMT\\Visual-progamming-project\\Da projekt\\Da projekt.csproj",
+        "projectPath": "F:\\Code\\Visual-progamming-project-DMT\\Visual-progamming-project-FBK\\Visual-progamming-project-FBK\\Visual-progamming-project-DMT\\Da projekt\\Da projekt.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "F:\\Code\\Visual-progamming-project-DMT\\Visual-progamming-project\\Da projekt\\obj\\",
+        "outputPath": "F:\\Code\\Visual-progamming-project-DMT\\Visual-progamming-project-FBK\\Visual-progamming-project-FBK\\Visual-progamming-project-DMT\\Da projekt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -21,6 +21,7 @@ namespace Da_projekt
     public class MergeSortSimulation
     {
         public bool isPaused = true;
+        TextBox textBox;
         Panel holder;
         public List<SubArray> subArrays = new List<SubArray>();
         List<Item> items = new List<Item>();
@@ -28,8 +29,9 @@ namespace Da_projekt
         List<Item> itemsCopy;
         int row;
         float FPS = 144;//số fps của animation minh họa lại
-        public MergeSortSimulation(Panel p, List<Item> refitems)
+        public MergeSortSimulation(Panel p, List<Item> refitems, TextBox t)
         {
+            textBox = t;
             holder = p; //màn hình sort.
             items = new List<Item>(refitems); //mảng sort lấy thời gian.
             itemsCopy = CreateCopy(refitems); //bản copy sử dụng để minh họa.
@@ -50,7 +52,7 @@ namespace Da_projekt
         }
         public int MethodSort()
         {
-            SortEngine se = new MergeSort(this, ref itemsCopy, ref todos, ref subArrays);
+            SortEngine se = new MergeSort(this, ref itemsCopy, ref todos, ref subArrays, textBox);
             int kq = se.SortAsMethod();
             MessageBox.Show("Started");
             ManualReplay();
@@ -222,6 +224,7 @@ namespace Da_projekt
         string type;
         int arrange, row, start, end;
         List<Item> items1 = null;
+        TextBox textBox;
 
         public MergeTodo(string reftype, int start, int end, int arrange, int row)
         {
@@ -235,6 +238,12 @@ namespace Da_projekt
         public MergeTodo(string reftype)
         {
             type = reftype;
+        }
+
+        public MergeTodo(string reftype, TextBox t)
+        {
+            type = reftype;
+            textBox = t;
         }
 
         public MergeTodo(string reftype, int arrange)
@@ -271,6 +280,36 @@ namespace Da_projekt
                 case "Update":
                     {
                         subArrays[arrange].items = new List<Item>(items1);
+                        break;
+                    }
+                case "SelectL":
+                    {
+                        textBox.Text = "Chọn nửa mảng bên trái.";
+                        break;
+                    }
+                case "SelectR":
+                    {
+                        textBox.Text = "Chọn nửa mảng bên phải";
+                        break;
+                    }
+                case "Ready":
+                    {
+                        textBox.Text = "Mảng chỉ còn chứa 1 phần tử không thể chia được nữa, chuẩn bị merge.";
+                        break;
+                    }
+                case "Split":
+                    {
+                        textBox.Text = "Chia mảng ra làm 2 nửa.";
+                        break;
+                    }
+                case "Merge":
+                    {
+                        textBox.Text = "Merge 2 mảng con lại, theo thứ tự tăng dần";
+                        break;
+                    }
+                case "MergeInfo":
+                    {
+                        textBox.Text = "Đây là merge sort";
                         break;
                     }
             }

@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace Da_projekt
@@ -15,8 +16,10 @@ namespace Da_projekt
         MergeSortSimulation sm;
         List<List<Item>> capture = new List<List<Item>>();
         List<Item> copy;
-        public MergeSort(MergeSortSimulation sortsim, ref List<Item> refitem, ref List<MergeTodo> reftodo, ref List<SubArray> subs)
+        TextBox textBox;
+        public MergeSort(MergeSortSimulation sortsim, ref List<Item> refitem, ref List<MergeTodo> reftodo, ref List<SubArray> subs, TextBox t)
         {
+            textBox = t;
             itemsCopy = new List<Item>(refitem);
             todos = reftodo;
             sm = sortsim;
@@ -29,6 +32,7 @@ namespace Da_projekt
         public int SortAsMethod()
         {
             Stopwatch sw = new Stopwatch();
+            todos.Add(new MergeTodo("MergeInfo", textBox));
             todos.Add(new MergeTodo("Refresh"));
             MS(itemsCopy, 0, itemsCopy.Count - 1, 1, 0);
             sw.Stop();
@@ -37,12 +41,26 @@ namespace Da_projekt
 
         private void MS(List<Item> items, int l, int r, int row, int arrange)
         {
+            if (arrange == 0)
+            { }
+            else if (arrange % 2 == 0)
+            {
+                todos.Add(new MergeTodo("SelectR", textBox));
+            }
+            else
+            {
+                todos.Add(new MergeTodo("SelectL", textBox));
+            }
+
+            if (arrange != 0)
+                todos.Add(new MergeTodo("Refresh"));
             // arrage là để định xem 2 mảng con đó là mảng con bên trái hay phải CỦA MẢNG MẸ NÀO
             // row là tính số dòng
             if (l < r)
             {
                 int m = l + (r - l) / 2;
 
+                todos.Add(new MergeTodo("Split", textBox));
                 todos.Add(new MergeTodo("AddSubArray", l, m, 2 * arrange + 1, row + 1));
                 todos.Add(new MergeTodo("AddSubArray", m + 1, r, 2 * arrange + 2, row + 1));
                 //subArrays[2 * arrage + 1] = new SubArray(items, l, m, row + 1);
@@ -52,6 +70,8 @@ namespace Da_projekt
 
                 MS(items, m + 1, r, row + 1, 2 * arrange + 2);
 
+                todos.Add(new MergeTodo("Merge", textBox));
+                todos.Add(new MergeTodo("Refresh"));
                 merge(items, l, m, r);
                 Copy(items);
                 AddItemsIntoCapture(copy, arrange);
@@ -65,8 +85,9 @@ namespace Da_projekt
             else
             {
                 row--;
-            }    
-                
+                todos.Add(new MergeTodo("Ready", textBox));
+                todos.Add(new MergeTodo("Refresh"));
+            }
         }
 
         private void merge(List<Item> items, int l, int m, int r)

@@ -21,12 +21,14 @@ namespace Da_projekt
         List<Item> items;
         List<Todo> todos;
         SortSimulation sm;
+        TextBox textBox;
 
-        public QuickSort(SortSimulation sortsim, List<Item> refitem, ref List<Todo> reftodo)
+        public QuickSort(SortSimulation sortsim, List<Item> refitem, ref List<Todo> reftodo, TextBox t)
         {
             items = refitem;
             todos = reftodo;
             sm = sortsim;
+            textBox = t;
         }
 
         //bắt buộc phải sử dụng LearnSortPanel.instance.refresh()
@@ -38,6 +40,7 @@ namespace Da_projekt
         public int SortAsMethod()
         {
             Stopwatch sw = new Stopwatch();
+            todos.Add(new Todo("IntroQS", textBox));
             todos.Add(new Todo("Refresh"));
             QSort(items, 0, items.Count - 1);
             sw.Stop();
@@ -65,6 +68,7 @@ namespace Da_projekt
             todos.Add(new Todo("ChangeColor", high, Colors.Blue));
             todos.Add(new Todo("ChangeColor", left, Colors.Red));
             todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
+            todos.Add(new Todo("DescriptQS", high, left, right, textBox));
             todos.Add(new Todo("Refresh"));
             while (true)
             {
@@ -72,27 +76,35 @@ namespace Da_projekt
                 {
                     todos.Add(new Todo("ResetColor", left));
                     left++;
-                    if (left <= high)
+                    if (left < high)
                     {
                         todos.Add(new Todo("ChangeColor", left, Colors.Red));
+                        todos.Add(new Todo("StartingLeft", left, textBox));
+                        todos.Add(new Todo("Refresh"));
                     }
-                    todos.Add(new Todo("Refresh"));
                 }
                 while (right >= left && items[right].data > pivot)
                 {
                     todos.Add(new Todo("ResetColor", right));
                     right--;
-                    if (right >= low)
+                    if (right > low)
                     {
                         todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
+                        todos.Add(new Todo("StartingRight", right, textBox));
+                        todos.Add(new Todo("Refresh"));
                     }
-                    todos.Add(new Todo("Refresh"));
                 }
                 if (left >= right) break;
                 int temp = items[left].data;
                 items[left].data = items[right].data;
                 items[right].data = temp;
-                todos.Add(new Todo("Switch", left, right));
+                todos.Add(new Todo("Switch", left, right, textBox));
+                //todos.Add(new Todo("ResetColor", left));
+                //todos.Add(new Todo("ResetColor", right));
+                todos.Add(new Todo("ChangeColor", left, Colors.Orange));
+                todos.Add(new Todo("ChangeColor", right, Colors.Orange));
+                todos.Add(new Todo("Refresh"));
+
                 todos.Add(new Todo("ResetColor", left));
                 todos.Add(new Todo("ResetColor", right));
 
@@ -101,22 +113,27 @@ namespace Da_projekt
 
                 todos.Add(new Todo("ChangeColor", left, Colors.Red));
                 todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
+                todos.Add(new Todo("DiffQS", textBox));
                 todos.Add(new Todo("Refresh"));
             }
             int tmp = items[left].data;
             items[left].data = items[high].data;
             items[high].data = tmp;
-            todos.Add(new Todo("Switch", left, high));
+            todos.Add(new Todo("Switch", left, high, textBox));
+
             if (left <= high)
             {
-                todos.Add(new Todo("ResetColor", left));
+                todos.Add(new Todo("ChangeColor", left, Colors.Orange));
             }
             if (right >= low)
             {
                 todos.Add(new Todo("ResetColor", right));
             }
-            todos.Add(new Todo("ResetColor", high));
+            todos.Add(new Todo("ChangeColor", high, Colors.Orange));
             todos.Add(new Todo("Refresh"));
+            if (left <= high)
+                todos.Add(new Todo("ResetColor", left));
+            todos.Add(new Todo("ResetColor", high));
             return left;
         }
 

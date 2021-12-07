@@ -23,12 +23,14 @@ namespace Da_projekt
         List<Item> items;
         List<Todo> todos;
         SortSimulation sm;
+        TextBox textBox;
 
-        public SelectionSort(SortSimulation sortsim, List<Item> refitem, ref List<Todo> reftodo)
+        public SelectionSort(SortSimulation sortsim, List<Item> refitem, ref List<Todo> reftodo, TextBox t)
         {
             items = refitem;
             todos = reftodo;
             sm = sortsim;
+            textBox = t;
         }
 
         //bắt buộc phải sử dụng LearnSortPanel.instance.refresh() thay vì sm.refresh() nếu sort bằng thread. ko cần thiết nếu ko dùng thread
@@ -37,27 +39,28 @@ namespace Da_projekt
         {
             Stopwatch sw = new Stopwatch();
             todos.Add(new Todo("Refresh"));
-            todos.Add(new Todo("IntroSS")); // intro giải thích sơ bộ về selection sort
-            for (int i = 0; i < items.Count; i++)
+            todos.Add(new Todo("IntroSS", textBox)); // intro giải thích sơ bộ về selection sort
+            for (int i = 0; i < items.Count-1; i++)
             {
                 int min = i;
                 //todos.Add(new Todo("FancyPause"));
                 todos.Add(new Todo("ChangeColor", i, Colors.Red));
-                todos.Add(new Todo("Starting", i)); // starting index i;
+                todos.Add(new Todo("Starting", i, textBox)); // starting index i;
                 todos.Add(new Todo("Refresh"));
                 for (int j = i + 1; j < items.Count; j++)
                 {
                     todos.Add(new Todo("ChangeColor", j, Colors.Orchid));
-                    todos.Add(new Todo("Finding")); // đang đi tìm phần tử nhỏ hơn min
+                    todos.Add(new Todo("StartingSub", j, textBox)); // đang đi tìm phần tử nhỏ hơn min
                     todos.Add(new Todo("Refresh"));
 
                     if (items[min].data > items[j].data)
                     {
                         if (min != i)
                             todos.Add(new Todo("ResetColor", min));
-
                         min = j;
                         todos.Add(new Todo("ChangeColor", min, Colors.Blue));
+                        todos.Add(new Todo("ConfirmMin", min, textBox));
+                        todos.Add(new Todo("Refresh"));
                     } else
                     {
                         todos.Add(new Todo("ResetColor", j));
@@ -67,14 +70,12 @@ namespace Da_projekt
                 {
                     todos.Add(new Todo("ChangeColor", min, Colors.Green));
                     todos.Add(new Todo("ChangeColor", i, Colors.Green));
-
                     //todos.Add(new Todo("FancyPause"));
-
-                    todos.Add(new Todo("Refresh"));
-                    todos.Add(new Todo("Switch", i, min)); // thông báo đã swap
+                    todos.Add(new Todo("Switch", i, min, textBox)); // thông báo đã swap
                     int Backup = items[i].data;
                     items[i].data = items[min].data;
                     items[min].data = Backup;
+                    todos.Add(new Todo("Refresh"));
                 }
                 todos.Add(new Todo("ResetColor", i));
                 todos.Add(new Todo("ResetColor", min));

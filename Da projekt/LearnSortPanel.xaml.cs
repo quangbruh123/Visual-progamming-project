@@ -39,6 +39,7 @@ namespace Da_projekt
                 items.Add(item);
             }
             sm = new SortSimulation(MainCanvas, items, tb);
+            mergeSortSimulation = new MergeSortSimulation(MainCanvas, items, tb);
         }
 
         //bắt buộc phải sử dụng LearnSortPanel.instance.refresh() thay vì sm.refresh() nếu sort bằng thread. ko cần thiết nếu ko dùng thread
@@ -58,18 +59,20 @@ namespace Da_projekt
         }
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            sm.MethodSort();
-            sm.ManualReplay();
+            mergeSortSimulation.MethodSort();
+            //sm.ManualReplay();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
             if (sm.isPausing)
             {
-                sm.isPausing = false;
+                mergeSortSimulation.isPaused = false;
+                //sm.isPausing = false;
             } else
             {
-                sm.isPausing = true;
+                mergeSortSimulation.isPaused = true;
+                //sm.isPausing = true;
             }
         }
     }

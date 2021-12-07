@@ -61,7 +61,7 @@ namespace Da_projekt
             if (firstsort)
             {
                 //không sử dụng thread vì -lag -thread.sleep làm sai thời gian sort ghi được.
-                SortEngine se = new BubbleSort(this, items, ref todos, textBox);
+                SortEngine se = new QuickSort(this, items, ref todos, textBox);
                 thread = new Thread(se.SortAsThread);
                 thread.IsBackground = true;
                 thread.Start();
@@ -72,7 +72,7 @@ namespace Da_projekt
                 firstsort = false;
             } else
             {
-                SortEngine se = new BubbleSort(this, CreateCopy(itemsCopy), ref todos, textBox);
+                SortEngine se = new QuickSort(this, CreateCopy(itemsCopy), ref todos, textBox);
                 thread = new Thread(se.SortAsThread);
                 thread.IsBackground = true;
                 thread.Start();
@@ -87,7 +87,7 @@ namespace Da_projekt
         {
             if (firstsort)
             {
-                SortEngine se = new BubbleSort(this, items, ref todos, textBox);
+                SortEngine se = new QuickSort(this, items, ref todos, textBox);
                 int kq = se.SortAsMethod();
                 MessageBox.Show(kq.ToString());
                 firstsort = false;
@@ -95,7 +95,7 @@ namespace Da_projekt
             } else
             {
                 todos = new List<Todo>();
-                SortEngine se = new BubbleSort(this, CreateCopy(itemsCopy), ref todos, textBox);
+                SortEngine se = new QuickSort(this, CreateCopy(itemsCopy), ref todos, textBox);
                 int kq = se.SortAsMethod();
                 MessageBox.Show(kq.ToString());
                 return kq;
