@@ -21,7 +21,7 @@ namespace Da_projekt
     {
         public static Window1 instance;
         
-        public FileManager fm = new FileManager("D:");
+        public FileManager fm = new FileManager("E:\\");
 
         public Window1()
         {

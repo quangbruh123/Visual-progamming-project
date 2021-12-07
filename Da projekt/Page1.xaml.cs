@@ -26,7 +26,7 @@ namespace Da_projekt
         {
             InitializeComponent();
             this.RenderSize = Window1.instance.MainContentFrame.RenderSize;
-            output.Content = FileManager.fileManager.outputDir;
+            output.Content = FileManager.fileManager.inputDir;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -43,7 +43,7 @@ namespace Da_projekt
 
             if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
             {
-                FileManager.fileManager.outputDir = fbd.SelectedPath;
+                FileManager.fileManager.SetNewInputDir(fbd.SelectedPath);
                 btn.Content = fbd.SelectedPath;
             }
         }
