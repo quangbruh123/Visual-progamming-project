@@ -76,6 +76,7 @@ namespace Da_projekt
                 Copy(items);
                 AddItemsIntoCapture(copy, arrange);
                 todos.Add(new MergeTodo("Update", arrange, capture[arrange]));
+                todos.Add(new MergeTodo("ChangeColor", l, r, arrange, row));
                 todos.Add(new MergeTodo("DeleteSubArray", 2 * arrange + 1));
                 todos.Add(new MergeTodo("DeleteSubArray", 2 * arrange + 2));
                 //subArrays[2 * arrage + 1] = null;
@@ -86,6 +87,7 @@ namespace Da_projekt
             {
                 row--;
                 todos.Add(new MergeTodo("Ready", textBox));
+                todos.Add(new MergeTodo("ChangeColor", l, r, arrange, row));
                 todos.Add(new MergeTodo("Refresh"));
             }
         }

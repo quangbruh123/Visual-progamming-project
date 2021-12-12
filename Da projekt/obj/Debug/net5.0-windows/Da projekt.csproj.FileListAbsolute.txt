@@ -158,3 +158,35 @@ F:\Code\Visual-progamming-project-DMT\Visual-progamming-project-FBK\Visual-proga
 F:\Code\Visual-progamming-project-DMT\Visual-progamming-project-FBK\Visual-progamming-project-FBK\Visual-progamming-project-DMT\Da projekt\obj\Debug\net5.0-windows\ref\Da projekt.dll
 F:\Code\Visual-progamming-project-DMT\Visual-progamming-project-FBK\Visual-progamming-project-FBK\Visual-progamming-project-DMT\Da projekt\obj\Debug\net5.0-windows\Da projekt.pdb
 F:\Code\Visual-progamming-project-DMT\Visual-progamming-project-FBK\Visual-progamming-project-FBK\Visual-progamming-project-DMT\Da projekt\obj\Debug\net5.0-windows\Da projekt.genruntimeconfig.cache
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\bin\Debug\net5.0-windows\1.png
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\bin\Debug\net5.0-windows\Da projekt.exe
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\bin\Debug\net5.0-windows\Da projekt.deps.json
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\bin\Debug\net5.0-windows\Da projekt.runtimeconfig.json
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\bin\Debug\net5.0-windows\Da projekt.runtimeconfig.dev.json
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\bin\Debug\net5.0-windows\Da projekt.dll
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\bin\Debug\net5.0-windows\ref\Da projekt.dll
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\bin\Debug\net5.0-windows\Da projekt.pdb
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt.csproj.AssemblyReference.cache
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\LearnCode.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\LearnSortPanel.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Page1.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Page2.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Window1.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\App.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt_Content.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt_MarkupCompile.cache
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt_MarkupCompile.lref
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\LearnCode.baml
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\LearnSortPanel.baml
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Page1.baml
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Page2.baml
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Window1.baml
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt.g.resources
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt.GeneratedMSBuildEditorConfig.editorconfig
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt.AssemblyInfoInputs.cache
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt.AssemblyInfo.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt.csproj.CoreCompileInputs.cache
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt.dll
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\ref\Da projekt.dll
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt.pdb
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt.genruntimeconfig.cache

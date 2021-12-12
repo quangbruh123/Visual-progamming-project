@@ -202,11 +202,15 @@ namespace Da_projekt
         public int start, end;
         public int firstX, lastX;
         public int row;
-        public List<Item> items;
+        public List<Item> items = null;
 
         public SubArray(List<Item> a, int s, int e, int r)
         {
-            items = new List<Item>(a);
+            items = new List<Item>();
+            for (int i = 0; i < a.Count; i++)
+            {
+                items.Add(new Item(a[i]));
+            }    
             start = s;
             end = e;
             row = r;
@@ -310,6 +314,15 @@ namespace Da_projekt
                 case "MergeInfo":
                     {
                         textBox.Text = "Đây là merge sort";
+                        break;
+                    }
+                case "ChangeColor":
+                    {
+                        for (int i = start; i <= end; i++)
+                        {
+                            subArrays[arrange].items[i].changeColor(Colors.Green);// = Colors.Green;
+                        }
+                        LearnSortPanel.instance.Refresh(subArrays);
                         break;
                     }
             }
