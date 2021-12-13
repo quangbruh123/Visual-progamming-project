@@ -8,7 +8,8 @@ namespace Da_projekt
 {
     public interface SortEngine
     {
+        void SortWithDescription();
         int SortAsMethod();
-        void SortAsThread();
+        int SortWithResult(ref List<Item> returnItems);
     }
 }

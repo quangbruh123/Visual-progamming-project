@@ -31,7 +31,7 @@ namespace Da_projekt
             InitializeComponent();
             instance = this;
 
-            MainContentFrame.Content = new Page1();
+            MainContentFrame.Content = new WelcomePage();
         }
     }
 }
