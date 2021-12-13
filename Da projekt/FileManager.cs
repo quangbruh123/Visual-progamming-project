@@ -64,6 +64,32 @@ namespace Da_projekt
                 return null;
         }
 
+        public void SaveText(string str)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                File.WriteAllText(saveFileDialog.FileName, str);
+            }
+            else
+                return;
+        }
+
+        public void Save(string[] str)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                File.WriteAllLines(saveFileDialog.FileName, str);
+            }
+            else
+                return;
+        }
+
         public string Read(string directory)
         {
             return System.IO.File.ReadAllText(directory);

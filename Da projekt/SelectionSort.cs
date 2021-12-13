@@ -33,6 +33,54 @@ namespace Da_projekt
 
         //bắt buộc phải sử dụng LearnSortPanel.instance.refresh() thay vì sm.refresh() nếu sort bằng thread. ko cần thiết nếu ko dùng thread
         //do được viết trước khi bỏ dùng thread nên LearnSortPanel.instance.refresh() nên chưa thay. xài cái nào cũng đc
+
+        public void SortWithDescription()
+        {
+            todos.Add(new Todo("Refresh"));
+            todos.Add(new Todo("IntroSS")); // intro giải thích sơ bộ về selection sort
+            for (int i = 0; i < items.Count - 1; i++)
+            {
+                int min = i;
+                //todos.Add(new Todo("FancyPause"));
+                todos.Add(new Todo("ChangeColor", i, Colors.Red));
+                todos.Add(new Todo("Starting", i)); // starting index i;
+                todos.Add(new Todo("Refresh"));
+                for (int j = i + 1; j < items.Count; j++)
+                {
+                    todos.Add(new Todo("ChangeColor", j, Colors.Orchid));
+                    todos.Add(new Todo("StartingSub", j)); // đang đi tìm phần tử nhỏ hơn min
+                    todos.Add(new Todo("Refresh"));
+
+                    if (items[min].data > items[j].data)
+                    {
+                        if (min != i)
+                            todos.Add(new Todo("ResetColor", min));
+                        min = j;
+                        todos.Add(new Todo("ChangeColor", min, Colors.Blue));
+                        todos.Add(new Todo("ConfirmMin", min));
+                        todos.Add(new Todo("Refresh"));
+                    }
+                    else
+                    {
+                        todos.Add(new Todo("ResetColor", j));
+                    }
+                }
+                if (i != min)
+                {
+                    todos.Add(new Todo("ChangeColor", min, Colors.Green));
+                    todos.Add(new Todo("ChangeColor", i, Colors.Green));
+                    //todos.Add(new Todo("FancyPause"));
+                    todos.Add(new Todo("Switch", i, min)); // thông báo đã swap
+                    int Backup = items[i].data;
+                    items[i].data = items[min].data;
+                    items[min].data = Backup;
+                    todos.Add(new Todo("Refresh"));
+                }
+                todos.Add(new Todo("ResetColor", i));
+                todos.Add(new Todo("ResetColor", min));
+            }
+        }
+
         public int SortAsMethod()
         {
             Stopwatch sw = new Stopwatch();
@@ -80,52 +128,52 @@ namespace Da_projekt
             return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
         }
 
-        public void SortAsThread()
+        public int SortWithResult(ref List<Item> returnItems)
         {
-            LearnSortPanel.instance.refresh(items);
-            MessageBox.Show("Is sorting...");
+            returnItems = sm.CreateCopy(items);
 
-            for (int i = 0; i < items.Count - 1; i++)
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
+            todos.Add(new Todo("Refresh"));
+            for (int i = 0; i < returnItems.Count; i++)
             {
                 int min = i;
+                todos.Add(new Todo("ChangeColor", i, Colors.Red));
 
-                items[i].changeColor(Colors.Red);
-                for (int j = i + 1; j < items.Count; j++)
+                for (int j = i + 1; j < returnItems.Count; j++)
                 {
-                    items[j].changeColor(Colors.Green);
-                    //...................................
-                    LearnSortPanel.instance.refresh(items);
-                    sm.isPausing = true;
-                    while (sm.isPausing)
-                    {
-                        Thread.Sleep((int)(1000f / 144));
-                    }
-                    //...................................
-                    if (items[min].data > items[j].data)
+                    todos.Add(new Todo("ChangeColor", j, Colors.Green));
+                    todos.Add(new Todo("Refresh"));
+
+                    if (returnItems[min].data > returnItems[j].data)
                     {
                         if (min != i)
-                            items[min].ResetColor();
-                        min = j;
+                            todos.Add(new Todo("ResetColor", min));
 
-                        items[min].changeColor(Colors.Blue);
+                        min = j;
+                        todos.Add(new Todo("ChangeColor", min, Colors.Blue));
                     }
                     else
                     {
-                        items[j].ResetColor();
+                        todos.Add(new Todo("ResetColor", j));
                     }
                 }
                 if (i != min)
                 {
-                    items[min].ResetColor();
-                    int Backup = items[i].data;
-                    items[i].data = items[min].data;
-                    items[min].data = Backup;
+                    todos.Add(new Todo("ResetColor", min));
+                    todos.Add(new Todo("Refresh"));
+
+                    todos.Add(new Todo("Refresh"));
+                    todos.Add(new Todo("Switch", i, min));
+                    int Backup = returnItems[i].data;
+                    returnItems[i].data = returnItems[min].data;
+                    returnItems[min].data = Backup;
                 }
-
-                items[i].ResetColor();
+                todos.Add(new Todo("ResetColor", i));
             }
-
-            LearnSortPanel.instance.refresh(items);
+            sw.Stop();
+            return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
         }
     }
 }

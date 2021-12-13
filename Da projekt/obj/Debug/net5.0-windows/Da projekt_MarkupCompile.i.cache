@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\Admin\Downloads\Final\Visual-progamming-project-main\Da projekt\App.xaml
-8705000324
+7-1850617714
 
-171377017254
+211814577864
 2021211560773
-CompareSelection.xaml;LearnCode.xaml;LearnSortPanel.xaml;Page1.xaml;Page2.xaml;Page3.xaml;SelectionSortSim.xaml;Window1.xaml;
+LearnSortMenu.xaml;LearnSortPage.xaml;MainMenuPage.xaml;RunSortPage.xaml;SelectionSortSim.xaml;WelcomePage.xaml;Window1.xaml;
 
-False
+True
 

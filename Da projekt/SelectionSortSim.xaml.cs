@@ -24,25 +24,85 @@ namespace Da_projekt
         public SortSimulation sm;
         Random rand = new Random();
         List<Item> items;
+        List<Item> result; //mảng lưu kq sau khi sort.
+        int kq; //thời gian sort.
 
-        public SelectionSortSim(List<Item> Refitems)
+        public SelectionSortSim(List<Item> Refitems, SortType type)
         {
             InitializeComponent();
             instance = this;
 
             items = Refitems;
-            sm = new SortSimulation(MainCanvas, items);
+            switch (type)
+            {
+                case SortType.BubbleSort:
+                    PageLabel.Content = "Bubble Sort";
+                    sm = new SortSimulation(SortType.BubbleSort, MainCanvas, items);
+                    break;
+                case SortType.InsertionSort:
+                    PageLabel.Content = "Insertion Sort";
+                    sm = new SortSimulation(SortType.InsertionSort, MainCanvas, items);
+                    break;
+                case SortType.InterchangeSort:
+                    PageLabel.Content = "Interchange Sort";
+                    sm = new SortSimulation(SortType.InterchangeSort, MainCanvas, items);
+                    break;
+                case SortType.MergeSort:
+                    PageLabel.Content = "Merge Sort";
+                    MessageBox.Show("Tính năng chưa sẵn sàng.");
+                    break;
+                case SortType.Quicksort:
+                    PageLabel.Content = "Quick Sort";
+                    sm = new SortSimulation(SortType.Quicksort, MainCanvas, items);
+                    break;
+                case SortType.SelectionSort:
+                    PageLabel.Content = "Selection Sort";
+                    sm = new SortSimulation(SortType.SelectionSort, MainCanvas, items);
+                    break;
+                default:
+                    return;
+            }
+            Save.IsEnabled = false;
         }
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            sm.MethodSort();
+            kq = sm.SortWithResult(ref result);
+            MessageBox.Show(kq.ToString());
             sm.Replay();
+            Save.IsEnabled = true;
+
+            string s = "";
+            foreach (Item i in result)
+            {
+                s += i.data.ToString() + " ";
+            }
         }
 
         private void Return_Click(object sender, RoutedEventArgs e)
         {
-            Window1.instance.MainContentFrame.Content = new CompareSelection();
+            sm.Stop;
+            Window1.instance.MainContentFrame.Content = new RunSortPage();
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            List<string> Save = new List<string>();
+            string str = "";
+            foreach (Item i in items)
+            {
+                str += i.data.ToString() + " ";
+            }
+            Save.Add(str);
+            str = "";
+            foreach (Item i in result)
+            {
+                str += i.data.ToString() + " ";
+            }
+            Save.Add(str);
+            str = "Thời gian sort: " + kq.ToString() + "ms.";
+            Save.Add(str);
+            FileManager.fileManager.Save(Save.ToArray());
         }
     }
 }

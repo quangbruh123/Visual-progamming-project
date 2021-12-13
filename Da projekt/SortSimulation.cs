@@ -18,148 +18,178 @@ using System.Diagnostics;
 
 namespace Da_projekt
 {
+    public enum SortType
+    {
+        BubbleSort,
+        InsertionSort,
+        InterchangeSort,
+        SelectionSort,
+        MergeSort,
+        Quicksort,
+    }
+
     public class SortSimulation
     {
-        public bool isPausing = true;
+        bool isPausing = true;
         public bool isReplaying = false;
         bool firstsort = true;
-
-        SortEngine se;
-        Panel holder;
+        Panel screen;
+        public TextBox tb;
+        SortType st;
 
         List<Item> items = new List<Item>();
         List<Todo> todos = new List<Todo>();
             List<Item> itemsCopy;
-        
-        Thread thread;
-        Thread thread1;
 
         float FPS = 144;//số fps của animation minh họa lại
 
-        public SortSimulation(Panel p, List<Item> refitems)
+        public SortSimulation(SortType type, Panel p, List<Item> refitems)
         {
-            holder = p; //màn hình sort.
+            screen = p; //màn hình sort.
             items = new List<Item>(refitems); //mảng sort lấy thời gian.
             itemsCopy = CreateCopy(refitems); //bản copy sử dụng để minh họa.
             refresh(items); //vẽ ra mảng trước khi sort.
+            st = type;
         }
 
-        public SortSimulation(Panel p, List<Item> refitems, List<Todo> reftodo)
+        public SortSimulation(SortType type, Panel p, List<Item> refitems, TextBox t)
         {
-            holder = p; //màn hình sort.
+            screen = p; //màn hình sort.
+            items = new List<Item>(refitems); //mảng sort lấy thời gian.
+            itemsCopy = CreateCopy(refitems); //bản copy sử dụng để minh họa.
+            refresh(items); //vẽ ra mảng trước khi sort.
+            tb = t;
+            st = type;
+        }
+
+        public SortSimulation(SortType type, Panel p, List<Item> refitems, List<Todo> reftodo)
+        {
+            screen = p; //màn hình sort.
             todos = reftodo;
             items = new List<Item>(refitems); //mảng sort lấy thời gian.
             itemsCopy = CreateCopy(refitems); //bản copy sử dụng để minh họa.
             refresh(items); //vẽ ra mảng trước khi sort.
+            st = type;
+        }
+
+        public SortSimulation(SortType type, Panel p, List<Item> refitems, List<Todo> reftodo, TextBox t)
+        {
+            screen = p; //màn hình sort.
+            todos = reftodo;
+            items = new List<Item>(refitems); //mảng sort lấy thời gian.
+            itemsCopy = CreateCopy(refitems); //bản copy sử dụng để minh họa.
+            refresh(items); //vẽ ra mảng trước khi sort.
+            tb = t;
+            st = type;
         }
 
         //trả về thời gian sort theo mili-giây. mảng 1000 phần tử sort hết 282ms.
-        public void ThreadSort()
+        public int MethodSort()
         {
-            if (firstsort)
+            int kq = 0;
+            SortEngine se = new BubbleSort(this, CreateCopy(itemsCopy), ref todos);
+            todos = new List<Todo>();
+            switch (st)
             {
-                //không sử dụng thread vì -lag -thread.sleep làm sai thời gian sort ghi được.
-                SortEngine se = new SelectionSort(this, items, ref todos);
-                thread = new Thread(se.SortAsThread);
-                thread.IsBackground = true;
-                thread.Start();
+                case SortType.BubbleSort:
+                    se = new BubbleSort(this, CreateCopy(itemsCopy), ref todos);
+                    kq = se.SortAsMethod();
+                    break;
+                case SortType.InsertionSort:
+                    se = new InsertionSort(this, CreateCopy(itemsCopy), ref todos);
+                    kq = se.SortAsMethod();
+                    break;
+                case SortType.InterchangeSort:
+                    se = new InterchangeSort(this, CreateCopy(itemsCopy), ref todos);
+                    kq = se.SortAsMethod();
+                    break;
+                case SortType.MergeSort:
+                    break;
+                case SortType.Quicksort:
+                    se = new QuickSort(this, CreateCopy(itemsCopy), ref todos);
+                    kq = se.SortAsMethod();
+                    break;
+                case SortType.SelectionSort:
+                    se = new SelectionSort(this, CreateCopy(itemsCopy), ref todos);
+                    kq = se.SortAsMethod();
+                    break;
+                default:
+                    return 0;
+            }
+            return kq;
+        }
 
-                thread1 = new Thread(waitForThreadsort);
-                thread1.IsBackground = true;
-                thread1.Start();
-                firstsort = false;
-            } else
+        public void LearnSort()
+        {
+            todos = new List<Todo>();
+            SortEngine se = new SelectionSort(this, CreateCopy(itemsCopy), ref todos);
+            switch (st)
             {
-                SortEngine se = new SelectionSort(this, CreateCopy(itemsCopy), ref todos);
-                thread = new Thread(se.SortAsThread);
-                thread.IsBackground = true;
-                thread.Start();
-
-                thread1 = new Thread(waitForThreadsort);
-                thread1.IsBackground = true;
-                thread1.Start();
+                case SortType.BubbleSort:
+                    se = new BubbleSort(this, CreateCopy(itemsCopy), ref todos);
+                    se.SortWithDescription();
+                    break;
+                case SortType.InsertionSort:
+                    se = new InsertionSort(this, CreateCopy(itemsCopy), ref todos);
+                    se.SortWithDescription();
+                    break;
+                case SortType.InterchangeSort:
+                    se = new InterchangeSort(this, CreateCopy(itemsCopy), ref todos);
+                    se.SortWithDescription();
+                    break;
+                case SortType.Quicksort:
+                    se = new QuickSort(this, CreateCopy(itemsCopy), ref todos);
+                    se.SortWithDescription();
+                    break;
+                case SortType.SelectionSort:
+                    se = new SelectionSort(this, CreateCopy(itemsCopy), ref todos);
+                    se.SortWithDescription();
+                    break;
+                default:
+                    return;
             }
         }
 
-        public int MethodSort()
+        public int SortWithResult(ref List<Item> returnItems)
         {
             if (firstsort)
             {
                 SortEngine se = new SelectionSort(this, items, ref todos);
-                int kq = se.SortAsMethod();
+                int kq = se.SortWithResult(ref returnItems);
 
                 firstsort = false;
                 return kq;
-            } else
+            }
+            else
             {
                 todos = new List<Todo>();
                 SortEngine se = new SelectionSort(this, CreateCopy(itemsCopy), ref todos);
-                int kq = se.SortAsMethod();
+                int kq = se.SortWithResult(ref returnItems);
                 return kq;
             }
-        }
-
-        private void waitForThreadsort()
-        {
-            thread.Join();
-            MessageBox.Show("Đã sort xong");
-            
         }
 
         //minh họa lại quá trình sort.
         public async void Replay()
         {
             List<Item> localcopy = CreateCopy(itemsCopy);
+            MessageBox.Show(todos.Count.ToString());
 
-            Stopwatch a = new Stopwatch();
-            //MessageBox.Show("Replaying");
-            a.Start();
+            isReplaying = true;
             foreach (Todo td in todos)
             {
-                //Vsync phiên bản dbrr. Sync tần số quét màn hình sort và animation.
                 if (td.Gettype() == "Refresh")
                 {
                     td.Execute(localcopy, this);
-                    a.Stop();
-                    if (a.ElapsedMilliseconds < (1000f / FPS))
-                    {
-                        await Task.Delay(((int)(1000f / FPS - a.ElapsedMilliseconds)));
-                        //đợi đến lần quét màn hình tiếp theo
-                    }
-                    a.Restart();
+                    await Task.Delay(((int)(1000f / FPS)));
                 }
                 else
                     td.Execute(localcopy, this);
+                if (!isReplaying)
+                    break;
             }
             //vẽ lại lần cuối sau khi xong.
             refresh(localcopy);
-            //MessageBox.Show("Đã sort xong");
-        }
-
-        public async void Replay(List<Todo> reftodo)
-        {
-            List<Item> localcopy = CreateCopy(itemsCopy);
-            Stopwatch a = new Stopwatch();
-            //MessageBox.Show("Replaying");
-            foreach (Todo td in reftodo)
-            {
-                //Vsync phiên bản dbrr. Sync tần số quét màn hình sort và animation.
-                if (td.Gettype() == "Refresh")
-                {
-                    a.Stop();
-                    if (a.ElapsedMilliseconds < (1000f / FPS))
-                    {
-                        await Task.Delay(((int)(1000f / FPS - a.ElapsedMilliseconds)));
-                        //đợi đến lần quét màn hình tiếp theo
-                    }
-                    a.Restart();
-                }
-                else
-                    td.Execute(localcopy, this);
-            }
-            //vẽ lại lần cuối sau khi xong.
-            refresh(localcopy);
-            //MessageBox.Show("Đã sort xong");
         }
 
         public async void ManualReplay()
@@ -184,8 +214,8 @@ namespace Da_projekt
             }
             //vẽ lại lần cuối sau khi xong.
             refresh(localcopy);
-            LearnSortPanel.instance.isStarted = false;
-            LearnSortPanel.instance.Start.Content = "Hoàn tất";
+            LearnSortPage.instance.isStarted = false;
+            LearnSortPage.instance.Start.Content = "Hoàn tất";
             MessageBox.Show("Đã sort xong");
             
         }
@@ -214,12 +244,10 @@ namespace Da_projekt
                             if (tda.Gettype() != "Refresh")
                                 tda.Execute(localcopy, this);
                         }
+                        refresh(localcopy);
                         foreach (Todo tdb in b)
                         {
                             //await Task.Delay(100);
-                            
-
-
                             if (tdb.Gettype() == "Switch")
                             {
                                 sw.Stop();
@@ -268,22 +296,23 @@ namespace Da_projekt
             }
         }
 
-        public void pause()
+        public void Pause()
         {
-            if (thread.IsAlive)
+            isPausing = !isPausing;
+        }
+
+        public void Stop()
+        {
+            if (isReplaying)
             {
-                Thread.Sleep(Timeout.Infinite);
+                isReplaying = false;
                 isPausing = true;
             }
         }
 
-        public void resume()
+        public void Pause(bool status)
         {
-            if (thread.IsAlive)
-            {
-                thread.Interrupt();
-                isPausing = false;
-            }
+            isPausing = status;
         }
 
         public List<Item> CreateCopy(List<Item> refitems)
@@ -302,20 +331,20 @@ namespace Da_projekt
             DrawingVisual drawingVisual = new DrawingVisual();
             DrawingContext drawingContext = drawingVisual.RenderOpen();
 
-            Rect background = new Rect(new Point(0, 0), new Point(holder.Width, holder.Height));
+            Rect background = new Rect(new Point(0, 0), new Point(screen.Width, screen.Height));
             drawingContext.DrawRectangle(Brushes.Black, new Pen(Brushes.White, 0f), background);
 
-            float spacing = ((float)holder.Width) / ((float)(refitems.Count));
+            float spacing = ((float)screen.Width) / ((float)(refitems.Count));
 
             for (int i = 0; i < refitems.Count; i++)
             {
-                Rect drawspace = new Rect(new Point(spacing * i, holder.Height - refitems[i].data - 1), new Point(spacing * (i + 1), holder.Height));
+                Rect drawspace = new Rect(new Point(spacing * i, screen.Height - refitems[i].data - 1), new Point(spacing * (i + 1), screen.Height));
                 refitems[i].drawItemSelectionSort(drawingContext, drawspace);
             }
             drawingContext.Close();
 
             DrawingBrush db = new DrawingBrush(drawingVisual.Drawing);
-            holder.Background = db;
+            screen.Background = db;
         }
 
         private void Test()
@@ -324,7 +353,7 @@ namespace Da_projekt
 
             DrawingContext drawingContext = drawingVisual.RenderOpen();
 
-            Rect background = new Rect(new Point(0, 0), new Point(holder.Width, holder.Height));
+            Rect background = new Rect(new Point(0, 0), new Point(screen.Width, screen.Height));
 
             drawingContext.DrawRectangle(Brushes.White, new Pen(Brushes.White, 1f), background);
 
@@ -334,27 +363,24 @@ namespace Da_projekt
             drawingContext.Close();
 
             DrawingBrush db = new DrawingBrush(drawingVisual.Drawing);
-            holder.Background = db;
+            screen.Background = db;
         }
     }
 
     //dùng để lưu lại cái câu lệnh liên quan đến xuất ra màn hình sort.
     public class Todo
     {
+        Description d = new Description();
+
         string type;
         int item1 = 0;
         int item2 = 0;
+        int item3 = 0;
         Color color = Colors.White;
 
         public Todo(string reftype)
         {
             type = reftype;
-        }
-
-        public Todo(string reftype, int refitemindex)
-        {
-            type = reftype;
-            item1 = refitemindex;
         }
 
         public Todo(string reftype, int refitemindex, Color refcolor)
@@ -364,11 +390,25 @@ namespace Da_projekt
             color = refcolor;
         }
 
+        public Todo(string reftype, int refitemindex)
+        {
+            type = reftype;
+            item1 = refitemindex;
+        }
+
         public Todo(string reftype, int refitemindex1, int refitemindex2)
         {
             type = reftype;
             item1 = refitemindex1;
             item2 = refitemindex2;
+        }
+
+        public Todo(string reftype, int refitemindex1, int refitemindex2, int refitemindex3)
+        {
+            type = reftype;
+            item1 = refitemindex1;
+            item2 = refitemindex2;
+            item3 = refitemindex3;
         }
 
         public void Execute(List<Item> items, SortSimulation sm)
@@ -388,6 +428,11 @@ namespace Da_projekt
                     int Backup = items[item1].data;
                     items[item1].data = items[item2].data;
                     items[item2].data = Backup;
+                    break;
+                default:
+
+                    if (sm.tb != null)
+                        sm.tb.Text = d.GetAction(type, item1, item2, item3);
                     break;
             }
         }
