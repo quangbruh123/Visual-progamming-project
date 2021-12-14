@@ -30,14 +30,14 @@ namespace Da_projekt
 
         List<Item> items = new List<Item>();
         List<Todo> todos = new List<Todo>();
-            List<Item> itemsCopy;
+        List<Item> itemsCopy;
         
         Thread thread;
         Thread thread1;
 
         float FPS = 144;//số fps của animation minh họa lại
 
-        public SortSimulation(Panel p, List<Item> refitems, TextBox t)
+        public SortSimulation(Panel p, List<Item> refitems, TextBox t = null)
         {
             holder = p; //màn hình sort.
             textBox = t; // text box

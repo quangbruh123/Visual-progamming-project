@@ -23,7 +23,7 @@ namespace Da_projekt
         SortSimulation sm;
         int sortOder = 1;
         TextBox textBox;
-        public InterchangeSort(SortSimulation sortsim, List<Item> refitem, ref List<Todo> reftodo, TextBox t)
+        public InterchangeSort(SortSimulation sortsim, List<Item> refitem, ref List<Todo> reftodo, TextBox t = null)
         {
             items = refitem;
             todos = reftodo;

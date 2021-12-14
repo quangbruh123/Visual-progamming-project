@@ -15,7 +15,7 @@ namespace Da_projekt
         List<Todo> todos;
         SortSimulation sm;
         TextBox textBox;
-        public BubbleSort(SortSimulation sortsim, List<Item> refitem, ref List<Todo> reftodo, TextBox t)
+        public BubbleSort(SortSimulation sortsim, List<Item> refitem, ref List<Todo> reftodo, TextBox t = null)
         {
             items = refitem;
             todos = reftodo;

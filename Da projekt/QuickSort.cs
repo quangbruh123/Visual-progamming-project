@@ -23,7 +23,7 @@ namespace Da_projekt
         SortSimulation sm;
         TextBox textBox;
 
-        public QuickSort(SortSimulation sortsim, List<Item> refitem, ref List<Todo> reftodo, TextBox t)
+        public QuickSort(SortSimulation sortsim, List<Item> refitem, ref List<Todo> reftodo, TextBox t = null)
         {
             items = refitem;
             todos = reftodo;

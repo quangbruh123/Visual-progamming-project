@@ -25,7 +25,7 @@ namespace Da_projekt
         SortSimulation sm;
         TextBox textBox;
 
-        public SelectionSort(SortSimulation sortsim, List<Item> refitem, ref List<Todo> reftodo, TextBox t)
+        public SelectionSort(SortSimulation sortsim, List<Item> refitem, ref List<Todo> reftodo, TextBox t = null)
         {
             items = refitem;
             todos = reftodo;

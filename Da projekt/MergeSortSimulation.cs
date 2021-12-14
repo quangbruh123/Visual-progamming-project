@@ -29,7 +29,7 @@ namespace Da_projekt
         List<Item> itemsCopy;
         int row;
         float FPS = 144;//số fps của animation minh họa lại
-        public MergeSortSimulation(Panel p, List<Item> refitems, TextBox t)
+        public MergeSortSimulation(Panel p, List<Item> refitems, TextBox t = null)
         {
             textBox = t;
             holder = p; //màn hình sort.

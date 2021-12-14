@@ -17,7 +17,7 @@ namespace Da_projekt
         List<List<Item>> capture = new List<List<Item>>();
         List<Item> copy;
         TextBox textBox;
-        public MergeSort(MergeSortSimulation sortsim, ref List<Item> refitem, ref List<MergeTodo> reftodo, ref List<SubArray> subs, TextBox t)
+        public MergeSort(MergeSortSimulation sortsim, ref List<Item> refitem, ref List<MergeTodo> reftodo, ref List<SubArray> subs, TextBox t = null)
         {
             textBox = t;
             itemsCopy = new List<Item>(refitem);

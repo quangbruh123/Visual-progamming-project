@@ -24,7 +24,7 @@ namespace Da_projekt
         int sortOder = 1;
         TextBox textBox;
 
-        public InsertionSort(SortSimulation sortsim, List<Item> refitem, ref List<Todo> reftodo, TextBox t)
+        public InsertionSort(SortSimulation sortsim, List<Item> refitem, ref List<Todo> reftodo, TextBox t = null)
         {
             items = refitem;
             todos = reftodo;
