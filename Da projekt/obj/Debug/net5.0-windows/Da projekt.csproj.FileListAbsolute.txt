@@ -215,3 +215,23 @@ C:\Users\Admin\Downloads\Final\Visual-progamming-project-main\Da projekt\obj\Deb
 C:\Users\Admin\Downloads\Final\Visual-progamming-project-main\Da projekt\obj\Debug\net5.0-windows\ref\Da projekt.dll
 C:\Users\Admin\Downloads\Final\Visual-progamming-project-main\Da projekt\obj\Debug\net5.0-windows\Da projekt.pdb
 C:\Users\Admin\Downloads\Final\Visual-progamming-project-main\Da projekt\obj\Debug\net5.0-windows\Da projekt.genruntimeconfig.cache
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt.dll
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\ref\Da projekt.dll
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt.pdb
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt.csproj.AssemblyReference.cache
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\CompareSelection.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\LearnCode.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\LearnSortMenu.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\LearnSortPage.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\LearnSortPanel.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\MainMenuPage.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Page1.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Page2.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Page3.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\RunSortPage.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\SelectionSortSim.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\WelcomePage.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Window1.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\App.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt_MarkupCompile.cache
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project\Da projekt\obj\Debug\net5.0-windows\Da projekt_MarkupCompile.lref

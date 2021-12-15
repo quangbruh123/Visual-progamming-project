@@ -81,7 +81,7 @@ namespace Da_projekt
 
         private void Return_Click(object sender, RoutedEventArgs e)
         {
-            sm.Stop;
+            //sm.Stop;
             Window1.instance.MainContentFrame.Content = new RunSortPage();
         }
 
