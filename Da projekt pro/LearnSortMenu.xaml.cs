@@ -37,7 +37,7 @@ namespace Da_projekt
 
         private void Merge_Click(object sender, RoutedEventArgs e)
         {
-            Window1.instance.MainContentFrame.Navigate(new LearnSortPage(SortType.MergeSort));
+           // Window1.instance.MainContentFrame.Navigate(new LearnSortPage(SortType.MergeSort));
         }
 
         private void Bubble_Click(object sender, RoutedEventArgs e)

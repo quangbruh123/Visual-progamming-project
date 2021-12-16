@@ -81,7 +81,7 @@ namespace Da_projekt
                        
                         for (int i = 0; i < n; i++)
                         {
-                            Item item = new Item(rand.Next(10, 100));
+                            Item item = new Item(rand.Next(Window1.instance.minValue, Window1.instance.maxValue));
 
                             items.Add(item);
                         }

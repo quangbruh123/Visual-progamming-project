@@ -25,6 +25,7 @@ namespace Da_projekt
         List<Item> items;
         List<Item> result; //mảng lưu kq sau khi sort.
         int kq; //thời gian sort.
+        bool first = true;
 
         ~SelectionSortSim()
         {
@@ -70,8 +71,8 @@ namespace Da_projekt
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
+            result = sm.CreateCopy(items);
             kq = sm.SortWithResult(ref result);
-            MessageBox.Show(kq.ToString());
             sm.Replay();
             Save.IsEnabled = true;
 
@@ -109,6 +110,15 @@ namespace Da_projekt
             str = "Thời gian sort: " + kq.ToString() + "ms.";
             Save.Add(str);
             FileManager.fileManager.Save(Save.ToArray());
+        }
+
+        private void MainCanvas_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (first)
+            {
+                sm.Initialize2();
+                first = false;
+            }
         }
     }
 }

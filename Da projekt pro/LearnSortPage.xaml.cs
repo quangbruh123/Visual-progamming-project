@@ -26,12 +26,13 @@ namespace Da_projekt
         Random rand = new Random();
         List<Item> items = new List<Item>();
         public bool isStarted = false;
+        bool first = true;
 
         public LearnSortPage(SortType st)
         {
             InitializeComponent();
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < Window1.instance.exampleCount; i++)
             {
                 Item item = new Item(rand.Next(10, 100));
 
@@ -78,8 +79,8 @@ namespace Da_projekt
             {
                 Start.Content = "Bước tiếp ";
                 List<Item> k = new List<Item>();
-                sm.SortWithResult(ref k);
-                sm.Replay();
+                sm.LearnSort();
+                sm.ManualReplay();
                 isStarted = true;
             }
             else
@@ -92,8 +93,17 @@ namespace Da_projekt
         {
             sm.Stop();
             sm = null;
-            Window1.instance.MainContentFrame = null;
+            Window1.instance.MainContentFrame.Content = null;
             Window1.instance.MainContentFrame.Navigate(new Uri("LearnSortMenu.xaml", UriKind.Relative));
+        }
+
+        private void MainCanvas_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (first)
+            {
+                sm.Initialize();
+                first = false;
+            }
         }
     }
 }

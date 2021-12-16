@@ -23,11 +23,11 @@
             <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="30"/>
             <ColumnDefinition Width="330*"/>
             <ColumnDefinition Width="200*"/>
             <ColumnDefinition Width="330*"/>
-            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="30"/>
         </Grid.ColumnDefinitions>
         <Label 
             x:Name="PageLabel"
@@ -43,12 +43,11 @@
         <Canvas x:Name="MainCanvas" 
                 Background="White" 
                 Grid.Row="2" 
-                Grid.Column="0" 
-                Grid.ColumnSpan="5" 
+                Grid.Column="1" 
+                Grid.ColumnSpan="3" 
                 HorizontalAlignment="Stretch" 
-                VerticalAlignment="Stretch"  
-                Height="250" 
-                Width="750"/>
+                VerticalAlignment="Stretch"
+                SizeChanged="MainCanvas_SizeChanged"/>
         <Button x:Name="Start" 
                 Content="Bắt đầu" 
                 Grid.Row="4" 

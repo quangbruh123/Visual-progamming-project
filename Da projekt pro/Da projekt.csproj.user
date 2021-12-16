@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="CompareSortPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="LearnSortMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -24,16 +27,25 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="CompareSortPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="LearnSortMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="LearnSortPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="SettingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="WelcomePage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainMenuPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SettingWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Window1.xaml">

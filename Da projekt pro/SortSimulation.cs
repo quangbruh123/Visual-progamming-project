@@ -38,8 +38,8 @@ namespace Da_projekt
         SortType st;
 
         List<Item> items = new List<Item>();
-        List<Todo> todos = new List<Todo>();
-            List<Item> itemsCopy;
+        List<Todo> todos;
+        List<Item> itemsCopy;
 
         float FPS = 144;//số fps của animation minh họa lại
 
@@ -53,7 +53,6 @@ namespace Da_projekt
             screen = p; //màn hình sort.
             items = new List<Item>(refitems); //mảng sort lấy thời gian.
             itemsCopy = CreateCopy(refitems); //bản copy sử dụng để minh họa.
-            refresh(items); //vẽ ra mảng trước khi sort.
             st = type;
         }
 
@@ -62,7 +61,6 @@ namespace Da_projekt
             screen = p; //màn hình sort.
             items = new List<Item>(refitems); //mảng sort lấy thời gian.
             itemsCopy = CreateCopy(refitems); //bản copy sử dụng để minh họa.
-            refresh(items); //vẽ ra mảng trước khi sort.
             tb = t;
             st = type;
         }
@@ -73,7 +71,6 @@ namespace Da_projekt
             todos = reftodo;
             items = new List<Item>(refitems); //mảng sort lấy thời gian.
             itemsCopy = CreateCopy(refitems); //bản copy sử dụng để minh họa.
-            refresh(items); //vẽ ra mảng trước khi sort.
             st = type;
         }
 
@@ -83,7 +80,6 @@ namespace Da_projekt
             todos = reftodo;
             items = new List<Item>(refitems); //mảng sort lấy thời gian.
             itemsCopy = CreateCopy(refitems); //bản copy sử dụng để minh họa.
-            refresh(items); //vẽ ra mảng trước khi sort.
             tb = t;
             st = type;
         }
@@ -92,30 +88,30 @@ namespace Da_projekt
         public int MethodSort()
         {
             int kq = 0;
-            SortEngine se = new BubbleSort(this, CreateCopy(itemsCopy), ref todos);
+            SortEngine se = new BubbleSort(this, itemsCopy, ref todos);
             todos = new List<Todo>();
             switch (st)
             {
                 case SortType.BubbleSort:
-                    se = new BubbleSort(this, CreateCopy(itemsCopy), ref todos);
+                    se = new BubbleSort(this, itemsCopy, ref todos);
                     kq = se.SortAsMethod();
                     break;
                 case SortType.InsertionSort:
-                    se = new InsertionSort(this, CreateCopy(itemsCopy), ref todos);
+                    se = new InsertionSort(this, itemsCopy, ref todos);
                     kq = se.SortAsMethod();
                     break;
                 case SortType.InterchangeSort:
-                    se = new InterchangeSort(this, CreateCopy(itemsCopy), ref todos);
+                    se = new InterchangeSort(this, itemsCopy, ref todos);
                     kq = se.SortAsMethod();
                     break;
                 case SortType.MergeSort:
                     break;
                 case SortType.Quicksort:
-                    se = new QuickSort(this, CreateCopy(itemsCopy), ref todos);
+                    se = new QuickSort(this, itemsCopy, ref todos);
                     kq = se.SortAsMethod();
                     break;
                 case SortType.SelectionSort:
-                    se = new SelectionSort(this, CreateCopy(itemsCopy), ref todos);
+                    se = new SelectionSort(this, itemsCopy, ref todos);
                     kq = se.SortAsMethod();
                     break;
                 default:
@@ -127,7 +123,7 @@ namespace Da_projekt
         public void LearnSort()
         {
             todos = new List<Todo>();
-            SortEngine se = new SelectionSort(this, CreateCopy(itemsCopy), ref todos);
+            SortEngine se = new SelectionSort(this, itemsCopy, ref todos);
             switch (st)
             {
                 case SortType.BubbleSort:
@@ -157,20 +153,34 @@ namespace Da_projekt
 
         public int SortWithResult(ref List<Item> returnItems)
         {
-            if (firstsort)
+            todos = new List<Todo>();
+            SortEngine se = new SelectionSort(this, CreateCopy(itemsCopy), ref todos);
+            int kq = 0;
+            switch (st)
             {
-                SortEngine se = new SelectionSort(this, items, ref todos);
-                int kq = se.SortWithResult(ref returnItems);
-
-                firstsort = false;
-                return kq;
-            }
-            else
-            {
-                todos = new List<Todo>();
-                SortEngine se = new SelectionSort(this, CreateCopy(itemsCopy), ref todos);
-                int kq = se.SortWithResult(ref returnItems);
-                return kq;
+                case SortType.BubbleSort:
+                    todos = new List<Todo>();
+                    se = new BubbleSort(this, CreateCopy(itemsCopy), ref todos);
+                    kq = se.SortWithResult(ref returnItems);
+                    return kq;
+                case SortType.InsertionSort:
+                    se = new InsertionSort(this, CreateCopy(itemsCopy), ref todos);
+                    kq = se.SortWithResult(ref returnItems);
+                    return kq;
+                case SortType.InterchangeSort:
+                    se = new InterchangeSort(this, CreateCopy(itemsCopy), ref todos);
+                    kq = se.SortWithResult(ref returnItems);
+                    return kq;
+                case SortType.Quicksort:
+                    se = new QuickSort(this, CreateCopy(itemsCopy), ref todos);
+                    kq = se.SortWithResult(ref returnItems);
+                    return kq;
+                case SortType.SelectionSort:
+                    se = new SelectionSort(this, CreateCopy(itemsCopy), ref todos);
+                    kq = se.SortWithResult(ref returnItems);
+                    return kq;
+                default:
+                    return 0;
             }
         }
 
@@ -178,23 +188,24 @@ namespace Da_projekt
         public async void Replay()
         {
             List<Item> localcopy = CreateCopy(itemsCopy);
-            MessageBox.Show(todos.Count.ToString());
 
             isReplaying = true;
             foreach (Todo td in todos)
             {
                 if (td.Gettype() == "Refresh")
                 {
-                    td.Execute(localcopy, this);
+                    refresh2(localcopy);
                     await Task.Delay(((int)(1000f / FPS)));
                 }
                 else
                     td.Execute(localcopy, this);
                 if (!isReplaying)
+                {
                     break;
+                }
             }
             //vẽ lại lần cuối sau khi xong.
-            refresh(localcopy);
+            refresh2(localcopy);
         }
 
         public async void ManualReplay()
@@ -222,7 +233,6 @@ namespace Da_projekt
             //LearnSortPage.instance.isStarted = false;
             //LearnSortPage.instance.Start.Content = "Hoàn tất";
             MessageBox.Show("Đã sort xong");
-            
         }
 
         public async void FancyReplay()
@@ -336,14 +346,14 @@ namespace Da_projekt
             DrawingVisual drawingVisual = new DrawingVisual();
             DrawingContext drawingContext = drawingVisual.RenderOpen();
 
-            Rect background = new Rect(new Point(0, 0), new Point(screen.Width, screen.Height));
-            drawingContext.DrawRectangle(Brushes.Black, new Pen(Brushes.White, 0f), background);
+            //Rect background = new Rect(new Point(0, 0), new Point(screen.ActualWidth, screen.ActualHeight));
+            //drawingContext.DrawRectangle(Brushes.Black, new Pen(Brushes.White, 0f), background);
 
-            float spacing = ((float)screen.Width) / ((float)(refitems.Count));
+            float spacing = ((float)screen.ActualWidth) / ((float)(refitems.Count));
 
             for (int i = 0; i < refitems.Count; i++)
             {
-                Rect drawspace = new Rect(new Point(spacing * i, screen.Height - refitems[i].data - 1), new Point(spacing * (i + 1), screen.Height));
+                Rect drawspace = new Rect(new Point(spacing * i, screen.ActualHeight - refitems[i].data - 1), new Point(spacing * (i + 1), screen.ActualHeight));
                 refitems[i].drawItemSelectionSort(drawingContext, drawspace);
             }
             drawingContext.Close();
@@ -352,23 +362,35 @@ namespace Da_projekt
             screen.Background = db;
         }
 
-        private void Test()
+        public void refresh2(List<Item> refitems)
         {
             DrawingVisual drawingVisual = new DrawingVisual();
-
             DrawingContext drawingContext = drawingVisual.RenderOpen();
 
-            Rect background = new Rect(new Point(0, 0), new Point(screen.Width, screen.Height));
+            //Rect background = new Rect(new Point(0, 0), new Point(screen.ActualWidth, screen.ActualHeight));
+            //drawingContext.DrawRectangle(Brushes.Black, new Pen(Brushes.White, 0f), background);
 
-            drawingContext.DrawRectangle(Brushes.White, new Pen(Brushes.White, 1f), background);
+            float spacing = ((float)screen.ActualWidth) / ((float)(refitems.Count));
 
-            drawingContext.DrawText(new FormattedText("Test", System.Globalization.CultureInfo.CurrentCulture,
-                FlowDirection.LeftToRight, new Typeface("Times New Roman"), 25, Brushes.Black), new System.Windows.Point(0, 0));
-
+            for (int i = 0; i < refitems.Count; i++)
+            {
+                Rect drawspace = new Rect(new Point(spacing * i, screen.ActualHeight - refitems[i].data - 1), new Point(spacing * (i + 1), screen.ActualHeight));
+                refitems[i].drawItemWithoutTextSelectionSort(drawingContext, drawspace);
+            }
             drawingContext.Close();
 
             DrawingBrush db = new DrawingBrush(drawingVisual.Drawing);
             screen.Background = db;
+        }
+
+        public void Initialize()
+        {
+            refresh(itemsCopy);
+        }
+
+        public void Initialize2()
+        {
+            refresh2(itemsCopy);
         }
     }
 
