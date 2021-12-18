@@ -21,46 +21,61 @@ namespace Da_projekt
         List<Item> items;
         List<Todo> todos;
         SortSimulation sm;
-        TextBox textBox;
+        int sortOder = 1;
 
-        public QuickSort(SortSimulation sortsim, List<Item> refitem, ref List<Todo> reftodo, TextBox t = null)
+        public QuickSort(SortSimulation sortsim, List<Item> refitem, ref List<Todo> reftodo)
         {
             items = refitem;
             todos = reftodo;
             sm = sortsim;
-            textBox = t;
         }
 
-        //bắt buộc phải sử dụng LearnSortPanel.instance.refresh()
-        //thay vì sm.refresh() nếu sort bằng thread.
-        //ko cần thiết nếu ko dùng thread
-        //do được viết trước khi bỏ dùng thread
-        //nên LearnSortPanel.instance.refresh() nên chưa thay.
-        //xài cái nào cũng đc
-        public int SortAsMethod()
+        public void SortWithDescription()
+        {
+            todos.Add(new Todo("IntroQS"));
+            todos.Add(new Todo("Refresh"));
+            QSort(ref items, 0, items.Count - 1);
+        }
+
+        public int SortWithResult(ref List<Item> returnItems)
         {
             Stopwatch sw = new Stopwatch();
-            todos.Add(new Todo("IntroQS", textBox));
+            sw.Start();
+
+            todos.Add(new Todo("IntroQS"));
             todos.Add(new Todo("Refresh"));
-            QSort(items, 0, items.Count - 1);
+            QSort(ref returnItems, 0, items.Count - 1);
+
             sw.Stop();
             return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
         }
-        public void QSort(List<Item> items, int low, int high)
+
+        public int SortAsMethod()
+        {
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+            todos.Add(new Todo("IntroQS"));
+            todos.Add(new Todo("Refresh"));
+            QSort(ref items, 0, items.Count - 1);
+            sw.Stop();
+            return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
+        }
+
+        public void QSort(ref List<Item> items, int low, int high)
         {
             if (low < high)
             {
                 /* pi là chỉ số nơi phần tử này đã đứng đúng vị trí
                  và là phần tử chia mảng làm 2 mảng con trái & phải */
-                int pi = partition(items, low, high);
+                int pi = partition(ref items, low, high);
 
                 // Gọi đệ quy sắp xếp 2 mảng con trái và phải
-                QSort(items, low, pi - 1);
-                QSort(items, pi + 1, high);
+                QSort(ref items, low, pi - 1);
+                QSort(ref items, pi + 1, high);
             }
-
         }
-        private int partition(List<Item> items, int low, int high)
+
+        private int partition(ref List<Item> items, int low, int high)
         {
             int pivot = items[high].data;    // pivot
             int left = low;
@@ -68,7 +83,7 @@ namespace Da_projekt
             todos.Add(new Todo("ChangeColor", high, Colors.Blue));
             todos.Add(new Todo("ChangeColor", left, Colors.Red));
             todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
-            todos.Add(new Todo("DescriptQS", high, left, right, textBox));
+            todos.Add(new Todo("DescriptQS", high, left, right));
             todos.Add(new Todo("Refresh"));
             while (true)
             {
@@ -79,7 +94,7 @@ namespace Da_projekt
                     if (left < high)
                     {
                         todos.Add(new Todo("ChangeColor", left, Colors.Red));
-                        todos.Add(new Todo("StartingLeft", left, textBox));
+                        todos.Add(new Todo("StartingLeft", left));
                         todos.Add(new Todo("Refresh"));
                     }
                 }
@@ -90,7 +105,7 @@ namespace Da_projekt
                     if (right > low)
                     {
                         todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
-                        todos.Add(new Todo("StartingRight", right, textBox));
+                        todos.Add(new Todo("StartingRight", right));
                         todos.Add(new Todo("Refresh"));
                     }
                 }
@@ -98,7 +113,7 @@ namespace Da_projekt
                 int temp = items[left].data;
                 items[left].data = items[right].data;
                 items[right].data = temp;
-                todos.Add(new Todo("Switch", left, right, textBox));
+                todos.Add(new Todo("Switch", left, right));
                 //todos.Add(new Todo("ResetColor", left));
                 //todos.Add(new Todo("ResetColor", right));
                 todos.Add(new Todo("ChangeColor", left, Colors.Orange));
@@ -113,13 +128,13 @@ namespace Da_projekt
 
                 todos.Add(new Todo("ChangeColor", left, Colors.Red));
                 todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
-                todos.Add(new Todo("DiffQS", textBox));
+                todos.Add(new Todo("DiffQS"));
                 todos.Add(new Todo("Refresh"));
             }
             int tmp = items[left].data;
             items[left].data = items[high].data;
             items[high].data = tmp;
-            todos.Add(new Todo("Switch", left, high, textBox));
+            todos.Add(new Todo("Switch", left, high));
 
             if (left <= high)
             {
@@ -136,88 +151,5 @@ namespace Da_projekt
             todos.Add(new Todo("ResetColor", high));
             return left;
         }
-
-        public void SortAsThread()
-        { }
     }
 }
-//public void QSortAsMethod(List<Item> items, int leftModule, int rightModule)
-//{
-//    //todos.Add(new Todo("FancyPause"));
-//    int i, j, pivot, mid;
-//    mid = (leftModule + rightModule) / 2;
-//    pivot = items[mid].data;
-//    i = leftModule;
-//    j = rightModule;
-//    todos.Add(new Todo("ChangeColor", i, Colors.Red));
-//    todos.Add(new Todo("ChangeColor", j, Colors.Green));
-//    todos.Add(new Todo("ChangeColor", mid, Colors.Blue));
-//    todos.Add(new Todo("Refresh"));
-//    //todos.Add(new Todo("FancyPause"));
-//    while (i <= j)
-//    {
-//        todos.Add(new Todo("Refresh"));
-//        //todos.Add(new Todo("FancyPause"));
-//        while ((items[i].data < pivot) && (i <= j))
-//        {
-//            todos.Add(new Todo("ResetColor", i));
-//            i++;
-//            todos.Add(new Todo("ChangeColor", i, Colors.Red));
-//            todos.Add(new Todo("Refresh"));
-//        }
-
-//        //todos.Add(new Todo("FancyPause"));
-//        while ((items[j].data > pivot) && (j >= i))
-//        {
-//            todos.Add(new Todo("ResetColor", j));
-//            j--;
-//            todos.Add(new Todo("ChangeColor", j, Colors.Green));
-//            todos.Add(new Todo("Refresh"));
-//        }
-
-//        //todos.Add(new Todo("FancyPause"));
-//        if (i <= j)
-//        {
-//            if (i < j)
-//            {
-//                todos.Add(new Todo("ResetColor", i));
-//                todos.Add(new Todo("ResetColor", j));
-//                todos.Add(new Todo("Switch", i, j));
-//                todos.Add(new Todo("Refresh"));
-//                int Backup = items[i].data;
-//                items[i].data = items[j].data;
-//                items[j].data = Backup;
-//            }
-//            i++;
-//            j--;
-//            //todos.Add(new Todo("FancyPause"));
-//            if (i <= rightModule)
-//            {
-//                todos.Add(new Todo("ChangeColor", i, Colors.Green));
-//            }
-//            if (j >= leftModule)
-//            {
-//                todos.Add(new Todo("ChangeColor", j, Colors.Red));
-//            }
-//        }
-//        todos.Add(new Todo("Refresh"));
-//    }
-//    if (i <= rightModule)
-//    {
-//        todos.Add(new Todo("ResetColor", i));
-//    }
-//    if (j >= leftModule)
-//    {
-//        todos.Add(new Todo("ResetColor", j));
-//    }
-//    todos.Add(new Todo("Refresh"));
-//    if (leftModule < j)
-//    {
-//        QSortAsMethod(items, leftModule, j);
-//    }
-//    if (i < rightModule)
-//    {
-//        QSortAsMethod(items, i, rightModule);
-//    }
-
-//}

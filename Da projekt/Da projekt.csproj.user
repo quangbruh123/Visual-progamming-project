@@ -7,16 +7,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="LearnCode.xaml.cs">
+    <Compile Update="LearnSortMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="LearnSortPanel.xaml.cs">
+    <Compile Update="LearnSortPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Page1.xaml.cs">
+    <Compile Update="WelcomePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Page2.xaml.cs">
+    <Compile Update="MainMenuPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Window1.xaml.cs">
@@ -24,16 +24,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="LearnCode.xaml">
+    <Page Update="LearnSortMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="LearnSortPanel.xaml">
+    <Page Update="LearnSortPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Page1.xaml">
+    <Page Update="WelcomePage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Page2.xaml">
+    <Page Update="MainMenuPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Window1.xaml">

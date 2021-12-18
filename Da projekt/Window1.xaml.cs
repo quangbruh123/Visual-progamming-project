@@ -20,7 +20,8 @@ namespace Da_projekt
     public partial class Window1 : Window
     {
         public static Window1 instance;
-
+        
+        public FileManager fm = new FileManager("E:\\");
 
         public Window1()
         {
@@ -30,12 +31,7 @@ namespace Da_projekt
             InitializeComponent();
             instance = this;
 
-            MainContentFrame.Content = new Page1();
-        }
-
-        private void Frame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
-        {
-
+            MainContentFrame.Content = new WelcomePage();
         }
     }
 }

@@ -23,23 +23,22 @@ namespace Da_projekt
     {
         public static LearnSortPanel instance;
         public SortSimulation sm;
-        public MergeSortSimulation mergeSortSimulation;
         Random rand = new Random();
         public List<Item> items = new List<Item>();
+        public bool isStarted = false;
 
         public LearnSortPanel()
         {
             InitializeComponent();
 
             instance = this;
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Item item = new Item(rand.Next(10, 100));
 
                 items.Add(item);
             }
-            sm = new SortSimulation(MainCanvas, items, tb);
-            mergeSortSimulation = new MergeSortSimulation(MainCanvas, items, tb);
+            sm = new SortSimulation(MainCanvas, items);
         }
 
         //bắt buộc phải sử dụng LearnSortPanel.instance.refresh() thay vì sm.refresh() nếu sort bằng thread. ko cần thiết nếu ko dùng thread
@@ -50,30 +49,39 @@ namespace Da_projekt
                 sm.refresh(refitems);
             }));
         }
-        public void Refresh(List<SubArray> subArrays)//vẽ ra màn hình mảng đã sort hay mang đang minh họa sort?
-        {
-            Application.Current.Dispatcher.BeginInvoke(
-            DispatcherPriority.Background, new Action(() => {
-                mergeSortSimulation.DrawSubArray(subArrays);
-            }));
-        }
+
+
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            mergeSortSimulation.MethodSort();
-            //sm.ManualReplay();
+            if (Start.Content.ToString() == "Hoàn tất")
+            {
+                return;
+            }    
+            if (isStarted == false)
+            {
+                Start.Content = "Bước tiếp ";
+                sm.MethodSort();
+                sm.ManualReplay();
+                isStarted = true;
+            }
+            else
+            {
+                if (sm.isPausing)
+                {
+                    sm.isPausing = false;
+                }
+                else
+                {
+                    sm.isPausing = true;
+                }
+
+            }
+
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private void Return_Click(object sender, RoutedEventArgs e)
         {
-            if (sm.isPausing)
-            {
-                mergeSortSimulation.isPaused = false;
-                //sm.isPausing = false;
-            } else
-            {
-                mergeSortSimulation.isPaused = true;
-                //sm.isPausing = true;
-            }
+            Window1.instance.MainContentFrame.Content = new LearnCode();
         }
     }
 }

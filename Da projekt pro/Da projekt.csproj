@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Da_projekt</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="1.png" />
+    <None Remove="CbGwZ31.jpg" />
+    <None Remove="CompareSelection.jpg" />
+    <None Remove="d5c58141a1cd5938fe50f96f7bd9b17a.gif" />
+    <None Remove="Font\Uni Sans Thin.otf" />
+    <None Remove="LearnSortPanel.jpg" />
+    <None Remove="learn_code.jpg" />
+    <None Remove="Page1.jpg" />
+    <None Remove="Page2.jpg" />
+    <None Remove="splash_screen.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="CompareSelection.jpg" />
+    <Resource Include="Font\Uni Sans Thin.otf" />
+    <Resource Include="Page1.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="LearnSortPanel.jpg" />
+    <Resource Include="learn_code.jpg" />
+    <Resource Include="Page2.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="splash_screen.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="SettingWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SettingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="SettingWindow.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SettingPage.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>
