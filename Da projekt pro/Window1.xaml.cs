@@ -20,7 +20,10 @@ namespace Da_projekt
     public partial class Window1 : Window
     {
         public static Window1 instance;
-        
+
+        public int minValue = 1;
+        public int maxValue = 999;
+        public int exampleCount = 10;
         public FileManager fm = new FileManager("E:\\");
 
         public Window1()

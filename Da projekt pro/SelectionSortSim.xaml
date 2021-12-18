@@ -12,7 +12,7 @@
         <ImageBrush ImageSource="/LearnSortPanel.jpg" Stretch="UniformToFill"></ImageBrush>
     </Page.Background>
 
-    <Grid>
+    <Grid x:Name="grid">
         <Grid.RowDefinitions>
             <RowDefinition Height="30*"/>
             <RowDefinition Height="30*"/>
@@ -23,19 +23,17 @@
             <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="30*"/>
-            <ColumnDefinition Width="330*"/>
-            <ColumnDefinition Width="200*"/>
-            <ColumnDefinition Width="330*"/>
-            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="282*"/>
+            <ColumnDefinition Width="174*"/>
+            <ColumnDefinition Width="289*"/>
+            <ColumnDefinition Width="30"/>
         </Grid.ColumnDefinitions>
         <Label 
             x:Name="PageLabel"
                Content="Selection Sort"
                Grid.Row="1"
-               Grid.Column="2"
-               HorizontalAlignment="Stretch" 
-               VerticalAlignment="Stretch" 
+               Grid.Column="2" 
                Style="{StaticResource lblDesign}"
                HorizontalContentAlignment="Center"
                VerticalContentAlignment="Center"
@@ -43,20 +41,17 @@
         <Canvas x:Name="MainCanvas" 
                 Background="White" 
                 Grid.Row="2" 
-                Grid.Column="0" 
-                Grid.ColumnSpan="5" 
-                HorizontalAlignment="Stretch" 
-                VerticalAlignment="Stretch"  
-                Height="250" 
-                Width="750"/>
+                Grid.Column="1" 
+                Grid.ColumnSpan="3" Grid.RowSpan="1"
+                SizeChanged="MainCanvas_SizeChanged"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"/>
         <Button x:Name="Start" 
                 Content="Bắt đầu" 
                 Grid.Row="4" 
-                Grid.Column="2" 
-                VerticalAlignment="Stretch"
-                HorizontalAlignment="Stretch"
+                Grid.Column="2"
                 Click="Start_Click" 
-                Style="{StaticResource btnDesign}"/>
+                Style="{StaticResource btnDesign}" Margin="0,0,0,28" Grid.RowSpan="2"/>
         <Button x:Name="Return" 
                 Content="   Trở về trang trước" 
                 Grid.Row="5" 

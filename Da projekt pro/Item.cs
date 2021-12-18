@@ -49,13 +49,26 @@ namespace Da_projekt
 
         public void drawItemSelectionSort(DrawingContext dc, Rect rect)
         {
-            float spacing = ((float)rect.Width);
+            int spacing = ((int)rect.Width);
+
             dc.DrawRectangle(brush(), new Pen(Brushes.Black, 0.5f), rect);
 
             FormattedText text = new FormattedText(data.ToString(), new System.Globalization.CultureInfo("en-us"),
                 FlowDirection.RightToLeft, new Typeface("Verdana"), spacing / 5, Brushes.White);
-            Point textLoc = new Point(rect.X + spacing / 2, rect.Y - spacing / 2.5);
+            Point textLoc = new Point(rect.X + spacing / 4 * 3, rect.Y - spacing / 2.5);
             dc.DrawText(text, textLoc);
+        }
+
+        public void drawItemWithoutTextSelectionSort(DrawingContext dc, Rect rect)
+        {
+            //int spacing = ((int)rect.Width);
+
+            dc.DrawRectangle(brush(), new Pen(Brushes.Black, 0.5f), rect);
+
+            /*FormattedText text = new FormattedText(data.ToString(), new System.Globalization.CultureInfo("en-us"),
+                FlowDirection.RightToLeft, new Typeface("Verdana"), spacing / 5, Brushes.White);
+            Point textLoc = new Point(rect.X + spacing / 4 * 3, rect.Y - spacing / 2.5);
+            dc.DrawText(text, textLoc);*/
         }
     }
 }
