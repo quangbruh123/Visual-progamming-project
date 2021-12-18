@@ -24,7 +24,7 @@ namespace Da_projekt
         public int minValue = 1;
         public int maxValue = 999;
         public int exampleCount = 10;
-        public FileManager fm = new FileManager("E:\\");
+        public FileManager fm = new FileManager("C:\\");
 
         public Window1()
         {

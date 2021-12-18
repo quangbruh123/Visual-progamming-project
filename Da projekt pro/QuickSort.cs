@@ -81,54 +81,32 @@ namespace Da_projekt
             int left = low;
             int right = high - 1;
             todos.Add(new Todo("ChangeColor", high, Colors.Blue));
-            todos.Add(new Todo("ChangeColor", left, Colors.Red));
+            todos.Add(new Todo("ChangeColor", left, Colors.Red));   
             todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
             todos.Add(new Todo("DescriptQS", high, left, right));
             todos.Add(new Todo("Refresh"));
             while (true)
             {
-                todos.Add(new Todo("Xét bên trái")); // xét nửa mảng trái nè
-                while (true)
+                while (left <= right && items[left].data < pivot)
                 {
-                    if (left <= right && items[left].data < pivot)
+                    todos.Add(new Todo("ResetColor", left));
+                    left++;
+                    if (left < high)
                     {
-                        todos.Add(new Todo("ResetColor", left));
-                        left++;
-                        if (left < high)
-                        {
-                            todos.Add(new Todo("ChangeColor", left, Colors.Red));
-                            todos.Add(new Todo("StartingLeft", left));
-                            todos.Add(new Todo("Refresh"));
-                        }
-                    }
-                    else
-                    {
-                        // lúc này nó có thể sẽ xét hết nửa mảng trái hoặc cái pivot nhỏ hơn cái data
-                        // add sub ở đây
-                        break;
+                        todos.Add(new Todo("ChangeColor", left, Colors.Red));
+                        todos.Add(new Todo("StartingLeft", left));
+                        todos.Add(new Todo("Refresh"));
                     }
                 }
-
-                todos.Add(new Todo("Xét bên phải")); // xét nửa mảng phải nè
-                while (true)
+                while (right >= left && items[right].data > pivot)
                 {
-                    if (right >= left && items[right].data > pivot)
+                    todos.Add(new Todo("ResetColor", right));
+                    right--;
+                    if (right > low)
                     {
-                        todos.Add(new Todo("ResetColor", right));
-                        right--;
-                        if (right > low)
-                        {
-                            todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
-                            todos.Add(new Todo("StartingRight", right));
-                            todos.Add(new Todo("Refresh"));
-                        }
-                        else
-                        {
-                            // lúc này nó có thể sẽ xét hết nửa mảng phải hoặc cái pivot lớn hơn cái data
-                            // add sub ở đây
-                            break;
-                        }
-
+                        todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
+                        todos.Add(new Todo("StartingRight", right));
+                        todos.Add(new Todo("Refresh"));
                     }
                 }
                 if (left >= right) break;
@@ -141,13 +119,10 @@ namespace Da_projekt
                 todos.Add(new Todo("ChangeColor", left, Colors.Orange));
                 todos.Add(new Todo("ChangeColor", right, Colors.Orange));
                 todos.Add(new Todo("Refresh"));
-
                 todos.Add(new Todo("ResetColor", left));
                 todos.Add(new Todo("ResetColor", right));
-
                 left++;
                 right--;
-
                 todos.Add(new Todo("ChangeColor", left, Colors.Red));
                 todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
                 todos.Add(new Todo("DiffQS"));
@@ -157,7 +132,6 @@ namespace Da_projekt
             items[left].data = items[high].data;
             items[high].data = tmp;
             todos.Add(new Todo("Switch", left, high));
-
             if (left <= high)
             {
                 todos.Add(new Todo("ChangeColor", left, Colors.Orange));
