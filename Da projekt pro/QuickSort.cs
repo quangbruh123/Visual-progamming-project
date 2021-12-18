@@ -46,6 +46,7 @@ namespace Da_projekt
             todos.Add(new Todo("Refresh"));
             QSort(ref returnItems, 0, items.Count - 1);
 
+            todos.Add(new Todo("Done"));
             sw.Stop();
             return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
         }

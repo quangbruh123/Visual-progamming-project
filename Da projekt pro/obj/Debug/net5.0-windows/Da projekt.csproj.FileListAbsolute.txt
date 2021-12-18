@@ -39,3 +39,7 @@ C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net
 C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\ref\Da projekt.dll
 C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.pdb
 C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.genruntimeconfig.cache
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\XamlAnimatedGif.dll
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.CopyComplete
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da_projekt.Properties.Resources.resources
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.GenerateResource.cache
