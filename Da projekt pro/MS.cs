@@ -101,5 +101,12 @@ namespace Da_projekt
         }
         
         public void SortAsThread() { }
+        
+        public void SortWithDescription() { }
+
+        public int SortWithResult(ref List<Item> items) 
+        {
+            return 2;
+        }
     }
 }
