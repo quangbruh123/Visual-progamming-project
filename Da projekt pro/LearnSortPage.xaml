@@ -43,11 +43,12 @@
         <Canvas x:Name="MainCanvas" 
                 Background="White" 
                 Grid.Row="2" 
-                Grid.Column="1" 
-                Grid.ColumnSpan="3" 
+                Grid.Column="0" 
+                Grid.ColumnSpan="5" 
                 HorizontalAlignment="Stretch" 
-                VerticalAlignment="Stretch"
-                SizeChanged="MainCanvas_SizeChanged"/>
+                VerticalAlignment="Stretch"  
+                Height="250" 
+                Width="750"/>
         <Button x:Name="Start" 
                 Content="Bắt đầu" 
                 Grid.Row="4" 

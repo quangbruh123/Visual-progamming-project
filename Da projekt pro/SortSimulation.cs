@@ -179,6 +179,11 @@ namespace Da_projekt
                     se = new SelectionSort(this, CreateCopy(itemsCopy), ref todos);
                     kq = se.SortWithResult(ref returnItems);
                     return kq;
+                case SortType.MergeSort:
+                    se = new MS(this, itemsCopy, ref todos);
+                    kq = se.SortWithResult(ref returnItems);
+                    return kq;
+
                 default:
                     return 0;
             }
@@ -187,7 +192,7 @@ namespace Da_projekt
         //minh họa lại quá trình sort.
         public async void Replay()
         {
-            List<Item> localcopy = CreateCopy(itemsCopy);
+            List<Item> localcopy = CreateCopy(items);
 
             isReplaying = true;
             foreach (Todo td in todos)
@@ -198,7 +203,7 @@ namespace Da_projekt
                     await Task.Delay(((int)(1000f / FPS)));
                 }
                 else
-                    td.Execute(localcopy, this);
+                    td.Execute(localcopy, this, itemsCopy);
                 if (!isReplaying)
                 {
                     break;
@@ -436,7 +441,7 @@ namespace Da_projekt
             item3 = refitemindex3;
         }
 
-        public void Execute(List<Item> items, SortSimulation sm)
+        public void Execute(List<Item> items, SortSimulation sm, List<Item> sorted = null)
         {
             switch (type)
             {
@@ -453,6 +458,46 @@ namespace Da_projekt
                     int Backup = items[item1].data;
                     items[item1].data = items[item2].data;
                     items[item2].data = Backup;
+                    break;
+                case "DrawSameTime":
+                    for (int i = 0; i <= item2 - item1 + 1; i++)
+                    {
+
+                        items[i + item1].changeColor(Colors.Red);
+                        if (i + item2 + 1 <= item3)
+                            items[i + item2 + 1].changeColor(Colors.Red);
+                        sm.refresh(items);
+
+                        // reset color 
+                        if (i + item1 == item1)
+                            items[i].changeColor(Colors.Green);
+                        else if (i + item1 == item2)
+                            items[i].changeColor(Colors.Blue);
+                        else
+                            items[i].ResetColor();
+
+                        if (i + item2 + 1 == item3)
+                            items[i + item2 + 1].changeColor(Colors.Green);
+                        else if (i + item2 + 1 < item3)
+                            items[i + item2 + 1].ResetColor();
+
+                        sm.refresh(items);
+                    }
+
+                    for (int i = item1; i <= item3; i++)
+                    {
+                        items[i].changeColor(Colors.Red);
+                        sm.refresh(items);
+                        items[i].data = sorted[i].data;
+                        if (i == item1 || i == item3)
+                            items[i].changeColor(Colors.Green);
+                        else
+                            items[i].ResetColor();
+                        sm.refresh(items);
+                    }
+                    items[item1].ResetColor();
+                    items[item3].ResetColor();
+                    sm.refresh(items);
                     break;
                 default:
                     Description d = new Description();

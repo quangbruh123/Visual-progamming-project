@@ -46,7 +46,6 @@ namespace Da_projekt
             todos.Add(new Todo("Refresh"));
             QSort(ref returnItems, 0, items.Count - 1);
 
-            todos.Add(new Todo("Done"));
             sw.Stop();
             return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
         }
@@ -88,26 +87,47 @@ namespace Da_projekt
             todos.Add(new Todo("Refresh"));
             while (true)
             {
-                while (left <= right && items[left].data < pivot)
+                while (true)
                 {
-                    todos.Add(new Todo("ResetColor", left));
-                    left++;
-                    if (left < high)
+                    if (left <= right && items[left].data < pivot)
                     {
-                        todos.Add(new Todo("ChangeColor", left, Colors.Red));
-                        todos.Add(new Todo("StartingLeft", left));
-                        todos.Add(new Todo("Refresh"));
+                        todos.Add(new Todo("ResetColor", left));
+                        left++;
+                        if (left < high)
+                        {
+                            todos.Add(new Todo("ChangeColor", left, Colors.Red));
+                            todos.Add(new Todo("StartingLeft", left));
+                            todos.Add(new Todo("Refresh"));
+                        }
+                    }
+                    else
+                    {
+                        // lúc này nó có thể sẽ xét hết nửa mảng trái hoặc cái pivot nhỏ hơn cái data
+                        // add sub ở đây
+                        break;
                     }
                 }
-                while (right >= left && items[right].data > pivot)
+
+                todos.Add(new Todo("Xét bên phải")); // xét nửa mảng phải nè
+                while (true)
                 {
-                    todos.Add(new Todo("ResetColor", right));
-                    right--;
-                    if (right > low)
+                    if (right >= left && items[right].data > pivot)
                     {
-                        todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
-                        todos.Add(new Todo("StartingRight", right));
-                        todos.Add(new Todo("Refresh"));
+                        todos.Add(new Todo("ResetColor", right));
+                        right--;
+                        if (right > low)
+                        {
+                            todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
+                            todos.Add(new Todo("StartingRight", right));
+                            todos.Add(new Todo("Refresh"));
+                        }
+                        else
+                        {
+                            // lúc này nó có thể sẽ xét hết nửa mảng phải hoặc cái pivot lớn hơn cái data
+                            // add sub ở đây
+                            break;
+                        }
+
                     }
                 }
                 if (left >= right) break;

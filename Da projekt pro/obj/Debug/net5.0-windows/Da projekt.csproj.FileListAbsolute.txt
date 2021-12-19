@@ -39,7 +39,85 @@ C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net
 C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\ref\Da projekt.dll
 C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.pdb
 C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.genruntimeconfig.cache
-C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\XamlAnimatedGif.dll
-C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.CopyComplete
-C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da_projekt.Properties.Resources.resources
-C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.GenerateResource.cache
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.exe
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.deps.json
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.runtimeconfig.json
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.runtimeconfig.dev.json
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.dll
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\ref\Da projekt.dll
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.pdb
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.AssemblyReference.cache
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\CompareSortPage.g.cs
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortMenu.g.cs
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortPage.g.cs
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\MainMenuPage.g.cs
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\RunSortPage.g.cs
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SelectionSortSim.g.cs
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingPage.g.cs
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingWindow.g.cs
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\WelcomePage.g.cs
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Window1.g.cs
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\App.g.cs
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt_MarkupCompile.cache
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt_MarkupCompile.lref
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\App.baml
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\CompareSortPage.baml
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortMenu.baml
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortPage.baml
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\MainMenuPage.baml
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\RunSortPage.baml
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SelectionSortSim.baml
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingPage.baml
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingWindow.baml
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\WelcomePage.baml
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Window1.baml
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.g.resources
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.GeneratedMSBuildEditorConfig.editorconfig
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.AssemblyInfoInputs.cache
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.AssemblyInfo.cs
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.CoreCompileInputs.cache
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.dll
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\ref\Da projekt.dll
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.pdb
+F:\Code\Visual-progamming-project-DMT\test\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.genruntimeconfig.cache
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.exe
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.deps.json
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.runtimeconfig.json
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.runtimeconfig.dev.json
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.dll
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\ref\Da projekt.dll
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.pdb
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.AssemblyReference.cache
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\CompareSortPage.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortMenu.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortPage.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\MainMenuPage.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\RunSortPage.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SelectionSortSim.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingPage.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingWindow.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\WelcomePage.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Window1.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\App.g.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt_MarkupCompile.cache
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt_MarkupCompile.lref
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\App.baml
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\CompareSortPage.baml
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortMenu.baml
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortPage.baml
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\MainMenuPage.baml
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\RunSortPage.baml
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SelectionSortSim.baml
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingPage.baml
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingWindow.baml
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\WelcomePage.baml
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Window1.baml
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.g.resources
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.GeneratedMSBuildEditorConfig.editorconfig
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.AssemblyInfoInputs.cache
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.AssemblyInfo.cs
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.CoreCompileInputs.cache
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.dll
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\ref\Da projekt.dll
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.pdb
+F:\Code\Visual-progamming-project-DMT\Visual-progamming-project DMT\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.genruntimeconfig.cache
