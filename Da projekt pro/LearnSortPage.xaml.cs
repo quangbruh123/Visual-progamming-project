@@ -22,6 +22,7 @@ namespace Da_projekt
     ///
     public partial class LearnSortPage : Page
     {
+        MergeSortSimulation mss;
         SortSimulation sm;
         Random rand = new Random();
         List<Item> items = new List<Item>();
@@ -54,7 +55,7 @@ namespace Da_projekt
                     break;
                 case SortType.MergeSort:
                     PageLabel.Content = "Merge Sort";
-                    MessageBox.Show("Tính năng chưa sẵn sàng.");
+                    mss = new MergeSortSimulation(MainCanvas, items, TextDisplay);
                     break;
                 case SortType.Quicksort:
                     PageLabel.Content = "Quick Sort";
@@ -74,36 +75,69 @@ namespace Da_projekt
             if (Start.Content.ToString() == "Hoàn tất")
             {
                 return;
-            }    
+            }
             if (isStarted == false)
             {
                 Start.Content = "Bước tiếp ";
                 List<Item> k = new List<Item>();
-                sm.LearnSort();
-                sm.ManualReplay();
+                if (sm != null)
+                {
+                    sm.SortWithResult(ref k);
+                    sm.ManualReplay();
+                }
+                else if (mss != null)
+                {
+                    mss.MethodSort();
+                }
                 isStarted = true;
             }
             else
             {
-                sm.Pause();
+                if (sm != null)
+                {
+                    sm.Pause();
+                }
+                else if (mss != null)
+                {
+                    if (mss.isPaused)
+                    {
+                        mss.isPaused = false;
+                        //sm.isPausing = false;
+                    }
+                    else
+                    {
+                        mss.isPaused = true;
+                        //sm.isPausing = true;
+                    }
+                }
             }
         }
 
         private void Return_Click(object sender, RoutedEventArgs e)
         {
-            sm.Stop();
-            sm = null;
+            if (sm != null)
+            {
+                sm.Stop();
+                sm = null;
+            }    
+            else if(mss != null)
+            {
+                mss = null;
+            }       
             Window1.instance.MainContentFrame.Content = null;
             Window1.instance.MainContentFrame.Navigate(new Uri("LearnSortMenu.xaml", UriKind.Relative));
         }
 
-        private void MainCanvas_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            if (first)
-            {
-                sm.Initialize();
-                first = false;
-            }
-        }
+        //private void MainCanvas_SizeChanged(object sender, SizeChangedEventArgs e)
+        //{
+        //    if (first)
+        //    {
+        //        if (sm != null)
+        //            sm.Initialize();
+        //        else if (mss != null)
+        //            mss.Initialize();
+        //        first = false;
+        //    }
+        //}
     }
 }

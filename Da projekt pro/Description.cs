@@ -212,7 +212,7 @@ namespace Da_projekt
             }
         }
 
-        private string GetDone(string type)
+        private string GetIntro(string type)
         {
             switch (type)
             {
@@ -231,7 +231,7 @@ namespace Da_projekt
             }
         }
 
-        private string GetIntro(string type)
+        private string GetDone(string type)
         {
             switch (type)
             {

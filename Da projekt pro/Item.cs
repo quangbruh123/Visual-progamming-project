@@ -21,6 +21,13 @@ namespace Da_projekt
         public Point location = new Point();
         public Color color = Colors.White;
 
+        public Item(Item item)
+        {
+            data = item.data;
+            location = item.location;
+            color = item.color;
+        }
+
         public Item(int i)
         {
             data = i;
@@ -69,6 +76,15 @@ namespace Da_projekt
                 FlowDirection.RightToLeft, new Typeface("Verdana"), spacing / 5, Brushes.White);
             Point textLoc = new Point(rect.X + spacing / 4 * 3, rect.Y - spacing / 2.5);
             dc.DrawText(text, textLoc);*/
+        }
+        public void DrawItemMergeSort(DrawingContext dc, Rect rect)
+        {
+            float space = ((float)rect.Width); // chiều dài cái ô chứa số
+            dc.DrawRectangle(brush(), new Pen(Brushes.Black, 0.5f), rect);
+
+            FormattedText text = new FormattedText(data.ToString(), new System.Globalization.CultureInfo("en-us"), FlowDirection.RightToLeft, new Typeface("Verdana"), space / 3, Brushes.Black);
+            Point textLoc = new Point(rect.X + 20, rect.Y);
+            dc.DrawText(text, textLoc);
         }
     }
 }
