@@ -48,11 +48,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Quang\\Desktop\\VP\\Visual-progamming-project\\Da projekt pro\\Da projekt.csproj",
+      "projectUniqueName": "C:\\Users\\Quang\\Desktop\\VP2\\Visual-progamming-project\\Da projekt pro\\Da projekt.csproj",
       "projectName": "Da projekt",
-      "projectPath": "C:\\Users\\Quang\\Desktop\\VP\\Visual-progamming-project\\Da projekt pro\\Da projekt.csproj",
+      "projectPath": "C:\\Users\\Quang\\Desktop\\VP2\\Visual-progamming-project\\Da projekt pro\\Da projekt.csproj",
       "packagesPath": "C:\\Users\\Quang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Quang\\Desktop\\VP\\Visual-progamming-project\\Da projekt pro\\obj\\",
+      "outputPath": "C:\\Users\\Quang\\Desktop\\VP2\\Visual-progamming-project\\Da projekt pro\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -266,14 +266,15 @@ namespace Da_projekt
                             if (tdb.Gettype() == "Switch")
                             {
                                 sw.Stop();
-                                
+
                                 refresh(localcopy);
                                 await Task.Delay(100);
                                 tdb.Execute(localcopy, this);
                                 refresh(localcopy);
                                 await Task.Delay(100);
                                 sw.Restart();
-                            } else if (tdb.Gettype() != "ResetColor")
+                            }
+                            else if (tdb.Gettype() != "ResetColor")
                             {
                                 tdb.Execute(localcopy, this);
                                 sw.Stop();
@@ -283,10 +284,11 @@ namespace Da_projekt
                                     await Task.Delay(((int)(1000f / FPS - sw.ElapsedMilliseconds)));
                                 }
                                 sw.Restart();
-                            } else
+                            }
+                            else
                             {
                                 if (tdb.Gettype() != "Refresh")
-                                tdb.Execute(localcopy, this);
+                                    tdb.Execute(localcopy, this);
                             }
                         }
                     }
@@ -299,7 +301,7 @@ namespace Da_projekt
                 }
             }
             //vẽ lại lần cuối sau khi xong.
-            
+
             MessageBox.Show("Đã sort xong");
         }
 
@@ -332,7 +334,7 @@ namespace Da_projekt
 
         public List<Item> CreateCopy(List<Item> refitems)
         {
-            List<Item>  copy = new List<Item>();
+            List<Item> copy = new List<Item>();
             foreach (Item i in refitems)
             {
                 Item k = new Item(i.data);
