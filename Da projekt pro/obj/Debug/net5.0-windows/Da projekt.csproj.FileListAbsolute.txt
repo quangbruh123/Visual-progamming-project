@@ -1,0 +1,135 @@
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.exe
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.deps.json
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.runtimeconfig.json
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.runtimeconfig.dev.json
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.dll
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\ref\Da projekt.dll
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.pdb
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.AssemblyReference.cache
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\CompareSortPage.g.cs
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortMenu.g.cs
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortPage.g.cs
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\MainMenuPage.g.cs
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\RunSortPage.g.cs
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SelectionSortSim.g.cs
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingPage.g.cs
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingWindow.g.cs
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\WelcomePage.g.cs
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Window1.g.cs
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt_MarkupCompile.cache
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt_MarkupCompile.lref
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\App.baml
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\CompareSortPage.baml
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortMenu.baml
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortPage.baml
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\MainMenuPage.baml
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\RunSortPage.baml
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SelectionSortSim.baml
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingPage.baml
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingWindow.baml
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\WelcomePage.baml
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Window1.baml
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.g.resources
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.AssemblyInfoInputs.cache
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.AssemblyInfo.cs
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.CoreCompileInputs.cache
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.dll
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\ref\Da projekt.dll
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.pdb
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.genruntimeconfig.cache
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\XamlAnimatedGif.dll
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.CopyComplete
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da_projekt.Properties.Resources.resources
+C:\Users\Quang\Desktop\VP\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.GenerateResource.cache
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.exe
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.deps.json
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.runtimeconfig.json
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.runtimeconfig.dev.json
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.dll
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\ref\Da projekt.dll
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.pdb
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\XamlAnimatedGif.dll
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.AssemblyReference.cache
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\CompareSortPage.g.cs
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortMenu.g.cs
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortPage.g.cs
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\MainMenuPage.g.cs
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\RunSortPage.g.cs
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SelectionSortSim.g.cs
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingPage.g.cs
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingWindow.g.cs
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\WelcomePage.g.cs
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Window1.g.cs
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt_MarkupCompile.cache
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt_MarkupCompile.lref
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\App.baml
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\CompareSortPage.baml
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortMenu.baml
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortPage.baml
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\MainMenuPage.baml
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\RunSortPage.baml
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SelectionSortSim.baml
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingPage.baml
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingWindow.baml
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\WelcomePage.baml
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Window1.baml
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.g.resources
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da_projekt.Properties.Resources.resources
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.GenerateResource.cache
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.AssemblyInfoInputs.cache
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.AssemblyInfo.cs
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.CoreCompileInputs.cache
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.CopyComplete
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.dll
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\ref\Da projekt.dll
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.pdb
+C:\Users\Quang\Desktop\VP2\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.genruntimeconfig.cache
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.exe
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.deps.json
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.runtimeconfig.json
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.runtimeconfig.dev.json
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.dll
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\ref\Da projekt.dll
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\Da projekt.pdb
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\bin\Debug\net5.0-windows\XamlAnimatedGif.dll
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\CompareSortPage.g.cs
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortMenu.g.cs
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortPage.g.cs
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\MainMenuPage.g.cs
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\RunSortPage.g.cs
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SelectionSortSim.g.cs
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingPage.g.cs
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingWindow.g.cs
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\WelcomePage.g.cs
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Window1.g.cs
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt_MarkupCompile.cache
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt_MarkupCompile.lref
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\App.baml
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\CompareSortPage.baml
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortMenu.baml
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\LearnSortPage.baml
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\MainMenuPage.baml
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\RunSortPage.baml
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SelectionSortSim.baml
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingPage.baml
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\SettingWindow.baml
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\WelcomePage.baml
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Window1.baml
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.g.resources
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da_projekt.Properties.Resources.resources
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.AssemblyInfo.cs
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.csproj.CopyComplete
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.dll
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\ref\Da projekt.dll
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.pdb
+C:\Users\Admin\Desktop\TET\Visual-progamming-project\Da projekt pro\obj\Debug\net5.0-windows\Da projekt.genruntimeconfig.cache

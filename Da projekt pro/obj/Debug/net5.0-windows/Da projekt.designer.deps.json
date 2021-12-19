@@ -1,0 +1,28 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "XamlAnimatedGif/2.0.2": {
+        "runtime": {
+          "lib/net5.0-windows7.0/XamlAnimatedGif.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.2.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "XamlAnimatedGif/2.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-C2ux+lDeu07iRMgc/8zh4p+gxL2bdqoEVshPDfPTEc3pWD5TO3tO4C5fsuoc1SwlPHXEBFwG6cgBg3+DrqPaog==",
+      "path": "xamlanimatedgif/2.0.2",
+      "hashPath": "xamlanimatedgif.2.0.2.nupkg.sha512"
+    }
+  }
+}
