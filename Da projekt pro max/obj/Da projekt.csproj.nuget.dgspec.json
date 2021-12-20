@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Quang\\Desktop\\VP\\Visual-progamming-project\\Da projekt pro max\\Da projekt.csproj": {}
+    "F:\\Code\\Visual-progamming-project-DMT\\test\\Visual-progamming-project\\Da projekt pro max\\Da projekt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Quang\\Desktop\\VP\\Visual-progamming-project\\Da projekt pro max\\Da projekt.csproj": {
+    "F:\\Code\\Visual-progamming-project-DMT\\test\\Visual-progamming-project\\Da projekt pro max\\Da projekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Quang\\Desktop\\VP\\Visual-progamming-project\\Da projekt pro max\\Da projekt.csproj",
+        "projectUniqueName": "F:\\Code\\Visual-progamming-project-DMT\\test\\Visual-progamming-project\\Da projekt pro max\\Da projekt.csproj",
         "projectName": "Da projekt",
-        "projectPath": "C:\\Users\\Quang\\Desktop\\VP\\Visual-progamming-project\\Da projekt pro max\\Da projekt.csproj",
-        "packagesPath": "C:\\Users\\Quang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Quang\\Desktop\\VP\\Visual-progamming-project\\Da projekt pro max\\obj\\",
+        "projectPath": "F:\\Code\\Visual-progamming-project-DMT\\test\\Visual-progamming-project\\Da projekt pro max\\Da projekt.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "F:\\Code\\Visual-progamming-project-DMT\\test\\Visual-progamming-project\\Da projekt pro max\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Quang\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

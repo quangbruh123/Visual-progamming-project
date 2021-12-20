@@ -82,7 +82,7 @@ namespace Da_projekt
                 List<Item> k = new List<Item>();
                 if (sm != null)
                 {
-                    sm.SortWithResult(ref k);
+                    sm.LearnSort();
                     sm.ManualReplay();
                 }
                 else if (mss != null)

@@ -64,7 +64,7 @@ namespace Da_projekt
             {
                 SortEngine se = new MergeSort(this, ref itemsCopy, ref todos, ref subArrays, textBox);
                 int kq = se.SortAsMethod();
-                MessageBox.Show("Started");
+                //MessageBox.Show("Started");
                 ManualReplay();
                 firstsort = false;
                 return kq;
@@ -77,7 +77,7 @@ namespace Da_projekt
                 CalculateRow();
                 SortEngine se = new MergeSort(this, ref itemsCopy, ref todos, ref subArrays, textBox);
                 int kq = se.SortAsMethod();
-                MessageBox.Show("Started");
+                //MessageBox.Show("Started");
                 ManualReplay();
                 return kq;
             }

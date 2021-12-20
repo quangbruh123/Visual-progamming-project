@@ -489,46 +489,9 @@ namespace Da_projekt
                     items[item1].data = items[item2].data;
                     items[item2].data = Backup;
                     break;
-                case "DrawSameTime":
-                    {
-                        for (int i = 0; i <= item2 - item1 + 1; i++)
-                        {
-                            items[i + item1].changeColor(Colors.Red);
-                            if (i + item2 + 1 <= item3)
-                                items[i + item2 + 1].changeColor(Colors.Red);
-                            sm.refresh2(items);
-
-                            // reset color 
-                            if (i + item1 == item1)
-                                items[i].changeColor(Colors.Green);
-                            else if (i + item1 == item2)
-                                items[i].changeColor(Colors.Blue);
-                            else
-                                items[i].ResetColor();
-
-                            if (i + item2 + 1 == item3)
-                                items[i + item2 + 1].changeColor(Colors.Green);
-                            else if (i + item2 + 1 < item3)
-                                items[i + item2 + 1].ResetColor();
-
-                            sm.refresh2(items);
-                        }
-
-                        for (int i = item1; i <= item3; i++)
-                        {
-                            items[i].changeColor(Colors.Red);
-                            sm.refresh2(items);
-                            items[i].data = sorted[i].data;
-                            if (i == item1 || i == item3)
-                                items[i].changeColor(Colors.Green);
-                            else
-                                items[i].ResetColor();
-                            sm.refresh2(items);
-                        }
-                        items[item1].ResetColor();
-                        items[item3].ResetColor();
-                        sm.refresh2(items);
-                    }
+                case "UpdateNewVal":
+                    items[item1].data = item2;
+                    //LearnSortPanel.instance.refresh(items);
                     break;
                 default:
                     Description d = new Description();

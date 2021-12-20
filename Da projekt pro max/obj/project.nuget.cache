@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lpCXwQSHdFxoJ+rk1dw51KyB1+zmf+wIMGau4q8Kovh3iYXFfRI155nHRMXEJMqlvh1xEE6+/Akggbp0gyP9vw==",
+  "dgSpecHash": "V2b+mx/v90G6otVP4DNj6vvHffPyuhw7FIv0uRFDlr3N7/neKycIDEkYTXZIMvAW7Ell+KAWYPP93goL+lZIBw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Quang\\Desktop\\VP\\Visual-progamming-project\\Da projekt pro max\\Da projekt.csproj",
+  "projectFilePath": "F:\\Code\\Visual-progamming-project-DMT\\test\\Visual-progamming-project\\Da projekt pro max\\Da projekt.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Quang\\.nuget\\packages\\xamlanimatedgif\\2.0.2\\xamlanimatedgif.2.0.2.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\xamlanimatedgif\\2.0.2\\xamlanimatedgif.2.0.2.nupkg.sha512"
   ],
   "logs": []
 }
