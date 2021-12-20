@@ -42,6 +42,12 @@ namespace Da_projekt
             //RefreshMerge(items, 0, items.Count - 1, 1); //vẽ ra mảng trước khi sort.
             
         }
+
+        ~MergeSortSimulation()
+        {
+            MessageBox.Show("Dead");
+        }
+
         public void CalculateRow()
         {
             row = (int)Math.Round(Math.Log2(items.Count)) + 2; // tính số hàng
