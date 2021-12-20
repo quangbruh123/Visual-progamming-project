@@ -117,6 +117,7 @@ namespace Da_projekt
 
             Save.IsEnabled = true;
 
+
             Sort();
             Carousel();
 
@@ -133,31 +134,34 @@ namespace Da_projekt
             Canvas p = new Canvas();
 
             sm = new SortSimulation(SortType.SelectionSort, p, items);
+            //sm.sortingScreen(returnCanvas(0));
             kq[0] = sm.MethodSort();
             todos[0] = sm.GetTodos();
 
             sm = new SortSimulation(SortType.BubbleSort, p, items);
+            //sm.sortingScreen(returnCanvas(1));
             kq[1] = sm.MethodSort();
             todos[1] = sm.GetTodos();
 
             sm = new SortSimulation(SortType.InsertionSort, p, items);
+            //sm.sortingScreen(returnCanvas(2));
             kq[2] = sm.MethodSort();
             todos[2] = sm.GetTodos();
 
             sm = new SortSimulation(SortType.InterchangeSort, p, items);
+            //sm.sortingScreen(returnCanvas(3));
             kq[3] = sm.MethodSort();
             todos[3] = sm.GetTodos();
 
             sm = new SortSimulation(SortType.Quicksort, p, items);
+            //sm.sortingScreen(returnCanvas(4));
             kq[4] = sm.MethodSort();
             todos[4] = sm.GetTodos();
 
-            //sm = new SortSimulation(SortType.MergeSort, p, items);
-            //kq[5] = sm.MethodSort();
-            //todos[5] = sm.GetTodos();
-
-            MessageBox.Show("Xong");
-
+            sm = new SortSimulation(SortType.MergeSort, p, items);
+            //sm.sortingScreen(returnCanvas(5));
+            kq[5] = sm.MethodSort();
+            todos[5] = sm.GetTodos();
         }
 
         private void Return_Click(object sender, RoutedEventArgs e)
@@ -188,7 +192,17 @@ namespace Da_projekt
                 str += i.data.ToString() + " ";
             }
             Save.Add(str);
-            str = "Thời gian sort: " + kq.ToString() + "ms.";
+            str = "Thời gian Selection sort: " + kq[0].ToString() + "ms.";
+            Save.Add(str);
+            str = "Thời gian Bubble sort: " + kq[1].ToString() + "ms.";
+            Save.Add(str);
+            str = "Thời gian Insertion sort: " + kq[2].ToString() + "ms.";
+            Save.Add(str);
+            str = "Thời gian Interchange sort: " + kq[3].ToString() + "ms.";
+            Save.Add(str);
+            str = "Thời gian Quick sort: " + kq[4].ToString() + "ms.";
+            Save.Add(str);
+            str = "Thời gian Merge sort: " + kq[5].ToString() + "ms.";
             Save.Add(str);
             FileManager.fileManager.Save(Save.ToArray());
         }

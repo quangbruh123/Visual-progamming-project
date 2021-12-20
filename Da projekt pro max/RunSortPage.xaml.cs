@@ -136,7 +136,7 @@ namespace Da_projekt
                     break;
                 case 4:
                     {
-                        Window1.instance.MainContentFrame.Content = new SelectionSortSim(items, SortType.MergeSort);
+                        Window1.instance.MainContentFrame.Navigate(new SelectionSortSim(items, SortType.MergeSort));
                     }
                     break;
                 case 5:

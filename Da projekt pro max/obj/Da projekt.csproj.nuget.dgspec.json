@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Code\\Visual-progamming-project-DMT\\test\\Visual-progamming-project\\Da projekt pro max\\Da projekt.csproj": {}
+    "C:\\Users\\Admin\\Downloads\\Visual-progamming-project-main (1)\\Visual-progamming-project-main\\Da projekt pro max\\Da projekt.csproj": {}
   },
   "projects": {
-    "F:\\Code\\Visual-progamming-project-DMT\\test\\Visual-progamming-project\\Da projekt pro max\\Da projekt.csproj": {
+    "C:\\Users\\Admin\\Downloads\\Visual-progamming-project-main (1)\\Visual-progamming-project-main\\Da projekt pro max\\Da projekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Code\\Visual-progamming-project-DMT\\test\\Visual-progamming-project\\Da projekt pro max\\Da projekt.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Downloads\\Visual-progamming-project-main (1)\\Visual-progamming-project-main\\Da projekt pro max\\Da projekt.csproj",
         "projectName": "Da projekt",
-        "projectPath": "F:\\Code\\Visual-progamming-project-DMT\\test\\Visual-progamming-project\\Da projekt pro max\\Da projekt.csproj",
+        "projectPath": "C:\\Users\\Admin\\Downloads\\Visual-progamming-project-main (1)\\Visual-progamming-project-main\\Da projekt pro max\\Da projekt.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "F:\\Code\\Visual-progamming-project-DMT\\test\\Visual-progamming-project\\Da projekt pro max\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Downloads\\Visual-progamming-project-main (1)\\Visual-progamming-project-main\\Da projekt pro max\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

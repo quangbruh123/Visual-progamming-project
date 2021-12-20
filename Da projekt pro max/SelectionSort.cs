@@ -85,6 +85,7 @@ namespace Da_projekt
         public int SortAsMethod()
         {
             Stopwatch sw = new Stopwatch();
+            sw.Start();
             todos.Add(new Todo("Refresh"));
             for (int i = 0; i < items.Count; i++)
             {

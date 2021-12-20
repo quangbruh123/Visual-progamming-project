@@ -357,6 +357,27 @@ namespace Da_projekt
             screen.Background = db;
         }
 
+        public void sortingScreen(Panel p)
+        {
+            DrawingVisual drawingVisual = new DrawingVisual();
+            DrawingContext drawingContext = drawingVisual.RenderOpen();
+
+            Point lcnr = new Point(0, 0);
+            Point rcnr = new Point(p.ActualWidth, p.ActualHeight);
+            Rect drawspace = new Rect(lcnr, rcnr);
+            drawingContext.DrawRectangle(Brushes.Black, new Pen(Brushes.Black, 0f), drawspace);
+
+            FormattedText text = new FormattedText("ĐANG SORT", new System.Globalization.CultureInfo("en-us"),
+                FlowDirection.RightToLeft, new Typeface("Verdana"), 40f, Brushes.White);
+            Point textLoc = new Point(p.ActualWidth / 10 * 8, p.ActualHeight / 10 * 2);
+            drawingContext.DrawText(text, textLoc);
+
+            drawingContext.Close();
+
+            DrawingBrush db = new DrawingBrush(drawingVisual.Drawing);
+            p.Background = db;
+        }
+
         public void refresh2(List<Item> refitems)
         {
             DrawingVisual drawingVisual = new DrawingVisual();
@@ -463,6 +484,9 @@ namespace Da_projekt
                     items[item1].data = items[item2].data;
                     items[item2].data = Backup;
                     break;
+                case "UpdateNewVal":
+                    items[item1].data = item2;
+                    break;
                 default:
                     Description d = new Description();
                     if (sm.tb != null)
@@ -492,6 +516,46 @@ namespace Da_projekt
                 case "UpdateNewVal":
                     items[item1].data = item2;
                     //LearnSortPanel.instance.refresh(items);
+                    break;
+                case "DrawSameTime":
+                    for (int i = 0; i <= item2 - item1 + 1; i++)
+                    {
+
+                        items[i + item1].changeColor(Colors.Red);
+                        if (i + item2 + 1 <= item3)
+                            items[i + item2 + 1].changeColor(Colors.Red);
+                        sm.refresh2(items);
+
+                        // reset color 
+                        if (i + item1 == item1)
+                            items[i].changeColor(Colors.Green);
+                        else if (i + item1 == item2)
+                            items[i].changeColor(Colors.Blue);
+                        else
+                            items[i].ResetColor();
+
+                        if (i + item2 + 1 == item3)
+                            items[i + item2 + 1].changeColor(Colors.Green);
+                        else if (i + item2 + 1 < item3)
+                            items[i + item2 + 1].ResetColor();
+
+                        sm.refresh2(items);
+                    }
+
+                    for (int i = item1; i <= item3; i++)
+                    {
+                        items[i].changeColor(Colors.Red);
+                        sm.refresh2(items);
+                        items[i].data = sorted[i].data;
+                        if (i == item1 || i == item3)
+                            items[i].changeColor(Colors.Green);
+                        else
+                            items[i].ResetColor();
+                        sm.refresh2(items);
+                    }
+                    items[item1].ResetColor();
+                    items[item3].ResetColor();
+                    sm.refresh2(items);
                     break;
                 default:
                     Description d = new Description();

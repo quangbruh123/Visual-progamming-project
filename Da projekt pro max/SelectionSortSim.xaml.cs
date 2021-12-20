@@ -26,6 +26,7 @@ namespace Da_projekt
         List<Item> result; //mảng lưu kq sau khi sort.
         int kq; //thời gian sort.
         bool first = true;
+        SortType sortType;
 
         ~SelectionSortSim()
         {
@@ -37,6 +38,7 @@ namespace Da_projekt
             InitializeComponent();
 
             items = Refitems;
+            sortType = type;
             switch (type)
             {
                 case SortType.BubbleSort:
@@ -71,6 +73,7 @@ namespace Da_projekt
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
+            sm.sortingScreen(MainCanvas);
             result = sm.CreateCopy(items);
             kq = sm.SortWithResult(ref result);
             sm.Replay();
@@ -107,7 +110,30 @@ namespace Da_projekt
                 str += i.data.ToString() + " ";
             }
             Save.Add(str);
-            str = "Thời gian sort: " + kq.ToString() + "ms.";
+
+            switch (sortType)
+            {
+                case SortType.BubbleSort:
+                    str = "Phương pháp Bubble Sort: " + kq.ToString() + "ms.";
+                    break;
+                case SortType.InsertionSort:
+                    str = "Phương pháp Insertion Sort: " + kq.ToString() + "ms.";
+                    break;
+                case SortType.InterchangeSort:
+                    str = "Phương pháp Interchange Sort: " + kq.ToString() + "ms."; 
+                    break;
+                case SortType.MergeSort:
+                    str = "Phương pháp Merge Sort: " + kq.ToString() + "ms."; 
+                    break;
+                case SortType.Quicksort:
+                    str = "Phương pháp Quick Sort: " + kq.ToString() + "ms."; 
+                    break;
+                case SortType.SelectionSort:
+                    str = "Phương pháp Selection Sort: " + kq.ToString() + "ms."; 
+                    break;
+                default:
+                    return;
+            }
             Save.Add(str);
             FileManager.fileManager.Save(Save.ToArray());
         }

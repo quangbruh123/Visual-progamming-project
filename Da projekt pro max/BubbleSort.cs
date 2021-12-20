@@ -24,6 +24,8 @@ namespace Da_projekt
         public int SortAsMethod()
         {
             Stopwatch sw = new Stopwatch();
+            
+            sw.Start();
             todos.Add(new Todo("Refresh"));
 
             for (int i = 0; i < items.Count - 1; i++)
@@ -124,6 +126,7 @@ namespace Da_projekt
         public int SortWithResult(ref List<Item> returnItems)
         {
             Stopwatch sw = new Stopwatch();
+            sw.Start();
             todos.Add(new Todo("Refresh"));
 
             todos.Add(new Todo("Refresh"));

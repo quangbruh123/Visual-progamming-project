@@ -32,7 +32,7 @@ namespace Da_projekt
         public int SortAsMethod()
         {
             Stopwatch sw = new Stopwatch();
-            todos.Add(new MergeTodo("MergeInfo", textBox));
+            sw.Start();
             todos.Add(new MergeTodo("Refresh"));
             MS(itemsCopy, 0, itemsCopy.Count - 1, 1, 0);
             todos.Add(new MergeTodo("ResetColor"));
@@ -50,7 +50,7 @@ namespace Da_projekt
         public int SortWithResult(ref List<Item> items)
         {
             Stopwatch sw = new Stopwatch();
-            todos.Add(new MergeTodo("MergeInfo", textBox));
+            sw.Start();
             todos.Add(new MergeTodo("Refresh"));
             MS(items, 0, items.Count - 1, 1, 0);
             sw.Stop();
