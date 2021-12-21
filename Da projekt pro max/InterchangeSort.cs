@@ -58,6 +58,7 @@ namespace Da_projekt
                         todos.Add(new Todo("ChangeColor", i, Colors.Green));
                         todos.Add(new Todo("ChangeColor", j, Colors.Green));
                         todos.Add(new Todo("Switch", i, j)); // swap i j
+                        todos.Add(new Todo("SwitchDes", i, j)); // thêm description
                         todos.Add(new Todo("Refresh"));
                         todos.Add(new Todo("ChangeColor", i, Colors.Red));
                         int Backup = items[i].data;

@@ -199,14 +199,24 @@ namespace Da_projekt
                     return $"Đã xong vòng lặp của phần tử thứ {item1}, bây giờ xét phần tử tiếp theo.";
                 case "ConfirmMin":
                     return $"Nhận thấy phần tử thứ {item1} bé hơn phần tử chính đang xét, gán cho min = phần tử này";
-                case "Switch":
-                    return GetSwitch(item1, item2);
+                case "SwitchDes":
+                    return GetSwitch("NormalSwitch", item1, item2);
+                case "SwitchDesLR":
+                    return GetSwitch("LRSwitch", item1, item2);
+                case "SwitchDesLP":
+                    return GetSwitch("LPSwitch", item1, item2);
                 case "DescriptQS":
                     return $"Xét pivot là phần tử thứ {item1} (màu vàng), phần tử bắt đầu của mảng bên trái là phần tử thứ {item2}, phần tử bắt đầu của mảng bên trái là phần tử thứ {item3}.";
                 case "CompareBB":
                     return $"Xét cặp thứ {item1} - {item2}";
                 case "AnnounceInsert":
                     return $"Phần tử thứ {item1} cũ đã chèn tới vị trí mới là vị trí thứ {item2}";
+                case "SaveLeft":
+                    return $"Lưu phần tử thứ {item1} ở mảng trái để cho việc đổi chỗ.";
+                case "SaveRight":
+                    return $"Lưu phần tử thứ {item1} ở mảng phải để cho việc đổi chỗ.";
+                case "AnnounceOrder":
+                    return "Đã xét hết các phần tử trừ pivot trong mảng.";
                 default:
                     return null;
             }
@@ -235,24 +245,34 @@ namespace Da_projekt
         {
             switch (type)
             {
-                case "Bubblesort":
-                    return "Đây là BB sort.";
+                case "BubbleSort":
+                    return "Đây là Bubble sort, là thuật toán sort đơn giản nhất.\nÝ tưởng: Thực hiện việc sắp xếp dãy số bằng cách lặp lại công việc đổi chỗ 2 số liên tiếp nhau nếu nó sai thứ tự."; ;
                 case "InsertionSort":
-                    return "Đây là Insertion sort.";
+                    return "Đây là Insertion sort, cách thức nó hoạt động như cách bạn sắp xếp các tấm trong bộ bài.\nÝ tưởng: Giá trị của các phần tử nào không đúng so với các phần tử còn lại sẽ được chọn và đặt ở vị trí đúng so với dãy số đã được sắp xếp.";
                 case "InterchangeSort":
-                    return "Đây là Interchange sort.";
+                    return "Đây là Interchange sort, là thuật toán sắp xếp đổi chỗ trực tiếp.\nÝ tưởng: Thuật toán sẽ duyệt qua tất cả các cặp giá trị trong mảng và hoán vị 2 giá trị trong 1 cặp nếu cặp giá trị đó không thỏa mãn thứ tự của dãy số (tăng dần hoặc giảm dần).";
                 case "SelectionSort":
-                    return "Đây là Selection Sort";
+                    return "Đây là Selection Sort, là thuật toán sort chia dãy số thành 2 mảng con: 1 mảng đã được sắp xếp và 1 mảng chửa được sắp xếp.\nÝ tưởng: Thuật toán sẽ tìm phần tử nhỏ nhất trong mảng phần từ chưa được sắp xếp, sau đó sẽ đưa phần tử đấy sang đầu đoạn chưa sắp xếp. Khi xết phần tử tiếp theo thì không xét thêm phần tử được chọn lúc trước.";
                 case "QuickSort":
-                    return "Đây là Quick Sort";
+                    return "Đây là Quick Sort, là thuật toán 'chia để trị'.\nÝ tưởng: Chọn phần tử cuối của mảng được xét là điểm đánh dấu (pivot), thực hiện chia mảng theo pivot bằng cách đưa các phần tử nhỏ hơn pivot vào phía bên trái, còn lại về phía bên phải. Tiếp theo sẽ thực hiện quick sort với mỗi mảng (mảng bên trái và mảng bên phải của pivot) liên tục cho đến khi mảng đã được sắp xếp. ";
                 default:
                     return null;
             }
         }
 
-        private string GetSwitch(int item1, int item2)
+        private string GetSwitch(string type, int item1, int item2)
         {
-            return $"Phần tử thứ {item1} và {item2} đổi chỗ";
+            switch (type)
+            {
+                case "NormalSwitch":
+                    return $"Phần tử thứ {item1} và {item2} đổi chỗ";
+                case "LRSwitch":
+                    return $"Phần tử thứ {item1} ở mảng bên trái và phần tử thứ {item2} ở mảng bên phải đổi chỗ cho nhau.";
+                case "LPSwitch":
+                    return $"Do đã xét hết các phần tử, nên phần tử thứ {item1} ở mảng bên trái và phần tử pivot ở vị trí thứ {item2} đổi chỗ cho nhau.";
+                default:
+                    return null;
+            }
         }
     }
 }

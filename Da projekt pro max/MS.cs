@@ -45,6 +45,7 @@ namespace Da_projekt
 
         public void SortWithDescription()
         {
+            todos.Add(new Todo("IntroMerge"));
             todos.Add(new Todo("Refresh"));
             sort(items, 0, items.Count - 1);
         }

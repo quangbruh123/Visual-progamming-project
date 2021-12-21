@@ -100,6 +100,11 @@ namespace Da_projekt
                         todos.Add(new Todo("Refresh"));
                     }
                 }
+                if (items[left].data >= pivot && left <= right) 
+                {
+                    todos.Add(new Todo("SaveLeft", left));
+                    todos.Add(new Todo("Refresh"));
+                }
                 while (right >= left && items[right].data > pivot)
                 {
                     todos.Add(new Todo("ResetColor", right));
@@ -111,11 +116,23 @@ namespace Da_projekt
                         todos.Add(new Todo("Refresh"));
                     }
                 }
-                if (left >= right) break;
+                if (right != -1)
+                    if (items[right].data <= pivot && left < right) 
+                    {
+                        todos.Add(new Todo("SaveRight", right));
+                        todos.Add(new Todo("Refresh"));
+                    }
+                if (left >= right)
+                {
+                    todos.Add(new Todo("AnnounceOrder"));
+                    todos.Add(new Todo("Refresh"));
+                    break;
+                }
                 int temp = items[left].data;
                 items[left].data = items[right].data;
                 items[right].data = temp;
                 todos.Add(new Todo("Switch", left, right));
+                todos.Add(new Todo("SwitchDesLR", left, right)); // thêm description
                 //todos.Add(new Todo("ResetColor", left));
                 //todos.Add(new Todo("ResetColor", right));
                 todos.Add(new Todo("ChangeColor", left, Colors.Orange));
@@ -134,6 +151,7 @@ namespace Da_projekt
             items[left].data = items[high].data;
             items[high].data = tmp;
             todos.Add(new Todo("Switch", left, high));
+            todos.Add(new Todo("SwitchDesLP", left, high));
             if (left <= high)
             {
                 todos.Add(new Todo("ChangeColor", left, Colors.Orange));

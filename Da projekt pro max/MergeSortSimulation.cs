@@ -349,6 +349,11 @@ namespace Da_projekt
                         ms.subArrays[arrange].items = new List<Item>(items1);
                         break;
                     }
+                case "IntroMerge":
+                    {
+                        textBox.Text = "Cũng như Quick Sort, đây là thuật toán 'Chia để trị'.\nÝ tưởng: Thuật toán này chia mảng cần sắp xếp thành 2 nửa, rồi tiếp tục lặp lại việc này ở các nửa mảng đã chia. Sau cùng gộp các nửa đó thành mảng đã sắp xếp. ";
+                        break;
+                    }
                 case "SelectL":
                     {
                         textBox.Text = "Chọn nửa mảng bên trái.";
