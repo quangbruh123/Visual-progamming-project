@@ -1,0 +1,161 @@
+﻿<Page x:Class="Da_projekt.CompareSortSim"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Da_projekt"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SelectionSortSim">
+
+    <Page.Background>
+        <ImageBrush ImageSource="/LearnSortPanel.jpg" Stretch="UniformToFill"></ImageBrush>
+    </Page.Background>
+
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+        <Label 
+            x:Name="SelectionLabel"
+               Content="Selection Sort"
+               Grid.Row="0"
+               Grid.Column="1" 
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Style="{StaticResource lblDesign}"
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center"
+               />
+        <Canvas x:Name="Canvas1" 
+                Background="White" 
+                Grid.Row="1" 
+                Grid.Column="1" 
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                SizeChanged="MainCanvas_SizeChanged"/>
+
+        <Label 
+            x:Name="InsertionLabel"
+               Content="Insertion Sort"
+               Grid.Row="2"
+               Grid.Column="1" 
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Style="{StaticResource lblDesign}"
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center"
+               />
+        <Canvas x:Name="Canvas3" 
+                Background="White" 
+                Grid.Row="3" 
+                Grid.Column="1" 
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                SizeChanged="MainCanvas_SizeChanged"/>
+
+        <Label 
+            x:Name="QuickLabel"
+               Content="Quick Sort"
+               Grid.Row="4"
+               Grid.Column="1" 
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Style="{StaticResource lblDesign}"
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center"
+               />
+        <Canvas x:Name="Canvas5" 
+                Background="White" 
+                Grid.Row="5" 
+                Grid.Column="1" 
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                SizeChanged="MainCanvas_SizeChanged"/>
+        
+        <Label 
+            x:Name="BubbleLabel"
+               Content="Bubble Sort"
+               Grid.Row="0"
+               Grid.Column="4"
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Style="{StaticResource lblDesign}"
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center"
+               />
+        <Canvas x:Name="Canvas2" 
+                Background="White" 
+                Grid.Row="1" 
+               Grid.Column="4"
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                SizeChanged="MainCanvas_SizeChanged"/>
+
+        <Label 
+            x:Name="InterchangeLabel"
+               Content="Interchange Sort"
+               Grid.Row="2"
+               Grid.Column="4"
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Style="{StaticResource lblDesign}"
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center"
+               />
+        <Canvas x:Name="Canvas4" 
+                Background="White" 
+                Grid.Row="3" 
+               Grid.Column="4"
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                SizeChanged="MainCanvas_SizeChanged"/>
+
+        <Label 
+            x:Name="MergeLabel"
+               Content="Merge Sort"
+               Grid.Row="4"
+               Grid.Column="4"
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Style="{StaticResource lblDesign}"
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center"
+               />
+        <Canvas x:Name="Canvas6" 
+                Background="White" 
+                Grid.Row="5" 
+               Grid.Column="4"
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                SizeChanged="MainCanvas_SizeChanged"/>
+
+        <Button x:Name="Start" 
+                Content="Bắt đầu" 
+                Grid.Row="6" 
+                Grid.Column="2"
+                Click="Start_Click" 
+                Style="{StaticResource btnDesign}" Grid.RowSpan="1" Grid.ColumnSpan="3"/>
+        <Button x:Name="Return" 
+                Content="   Trở về trang trước" 
+                Grid.Row="6" 
+                Grid.Column="1"
+                Click="Return_Click" 
+                Style="{StaticResource btnDesign}"/>
+        <Button x:Name="Save" 
+                Content="Lưu KQ" 
+                Grid.Row="6" 
+                Grid.Column="5"
+                Style="{StaticResource btnDesign}" Click="Save_Click"/>
+
+    </Grid>
+</Page>
