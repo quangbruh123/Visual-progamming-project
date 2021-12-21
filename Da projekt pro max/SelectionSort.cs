@@ -36,8 +36,8 @@ namespace Da_projekt
 
         public void SortWithDescription()
         {
-            todos.Add(new Todo("Refresh"));
             todos.Add(new Todo("IntroSS")); // intro giải thích sơ bộ về selection sort
+            todos.Add(new Todo("Refresh"));
             for (int i = 0; i < items.Count - 1; i++)
             {
                 int min = i;
@@ -71,6 +71,7 @@ namespace Da_projekt
                     todos.Add(new Todo("ChangeColor", i, Colors.Green));
                     //todos.Add(new Todo("FancyPause"));
                     todos.Add(new Todo("Switch", i, min)); // thông báo đã swap
+                    todos.Add(new Todo("SwitchDes", i, min)); // thêm description
                     int Backup = items[i].data;
                     items[i].data = items[min].data;
                     items[min].data = Backup;

@@ -94,6 +94,7 @@ namespace Da_projekt
                         items[j].data = items[j + 1].data;
                         items[j + 1].data = temp;
                         todos.Add(new Todo("Switch", j, j + 1)); // swap cái cặp đó
+                        todos.Add(new Todo("SwitchDes", j, j + 1)); // thêm description
                         todos.Add(new Todo("ChangeColor", j, Colors.Green));
                         todos.Add(new Todo("ChangeColor", j + 1, Colors.Green));
                         todos.Add(new Todo("Refresh"));
