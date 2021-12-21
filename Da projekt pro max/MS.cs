@@ -81,7 +81,7 @@ namespace Da_projekt
                     todos.Add(new Todo("ResetColor", i + l));
 
                 if (i + m + 1 == r)
-                    todos.Add(new Todo("ChangeColor", i + m + 1, Colors.Pink));
+                    todos.Add(new Todo("ChangeColor", i + m + 1, Colors.Green));
                 else if (i + m + 1 < r)
                     todos.Add(new Todo("ResetColor", i + m + 1));
 
@@ -128,7 +128,7 @@ namespace Da_projekt
                 todos.Add(new Todo("UpdateNewVal", k, tmp));
                 todos.Add(new Todo("Refresh"));
                 if (k == r)
-                    todos.Add(new Todo("ChangeColor", k, Colors.Pink));
+                    todos.Add(new Todo("ChangeColor", k, Colors.Green));
                 else
                     todos.Add(new Todo("ResetColor", k));
 
@@ -147,7 +147,7 @@ namespace Da_projekt
                 todos.Add(new Todo("UpdateNewVal", k, tmp));
                 todos.Add(new Todo("Refresh"));
                 if (k == r)
-                    todos.Add(new Todo("ChangeColor", k, Colors.Pink));
+                    todos.Add(new Todo("ChangeColor", k, Colors.Green));
                 else
                     todos.Add(new Todo("ResetColor", k));
 
@@ -174,7 +174,6 @@ namespace Da_projekt
                 todos.Add(new Todo("Refresh"));
                 
                 merge(items, l, m, r);
-                todos.Add(new Todo("DrawSameTime", l, m, r));
             }
         }
     }
