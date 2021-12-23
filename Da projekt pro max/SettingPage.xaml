@@ -45,7 +45,6 @@
                 Content=""
                 Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                Width="120" 
                 Background="Transparent" 
                 BorderBrush="Transparent" 
                 Click="output_Click"
