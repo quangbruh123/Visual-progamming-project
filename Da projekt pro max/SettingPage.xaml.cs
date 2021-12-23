@@ -63,6 +63,12 @@ namespace Da_projekt
 
                 return false;
             }
+            if (k > 100)
+            {
+                System.Windows.MessageBox.Show("Giá trị số phần tử phải bé hơn hoặc bằng 100!");
+
+                return false;
+            }
             if (m > n)
             {
                 System.Windows.MessageBox.Show("Giá trị lớn nhất phải lớn hơn giá trị nhỏ nhất");

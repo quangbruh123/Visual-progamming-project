@@ -32,7 +32,6 @@ namespace Da_projekt
         {
             InitializeComponent();
             SortList.SelectedIndex = 0;
-            t = tbxInput;
             GC.Collect();
             GC.WaitForPendingFinalizers();
             GC.Collect();
@@ -108,90 +107,93 @@ namespace Da_projekt
                     }
                     break;
             }
-            switch (sortIndex)
+            if (items.Count > 200000)
             {
-                case 0:
-                    {
-                        Window1.instance.MainContentFrame.Navigate(new SelectionSortSim(items, SortType.SelectionSort));
+                MessageBox.Show("Chức năng này chỉ hoạt động với dữ liệu tối đa 200 000 phần tử!", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                switch (sortIndex)
+                {
+                    case 0:
+                        {
+                            Window1.instance.MainContentFrame.Navigate(new SelectionSortSim(items, SortType.SelectionSort));
 
-                    }
-                    break;
-                case 1:
-                    {
-                        Window1.instance.MainContentFrame.Navigate(new SelectionSortSim(items, SortType.BubbleSort));
+                        }
+                        break;
+                    case 1:
+                        {
+                            Window1.instance.MainContentFrame.Navigate(new SelectionSortSim(items, SortType.BubbleSort));
 
-                    }
-                    break;
-                case 2:
-                    {
-                        Window1.instance.MainContentFrame.Navigate(new SelectionSortSim(items, SortType.InsertionSort));
+                        }
+                        break;
+                    case 2:
+                        {
+                            Window1.instance.MainContentFrame.Navigate(new SelectionSortSim(items, SortType.InsertionSort));
 
-                    }
-                    break;
-                case 3:
-                    {
-                        Window1.instance.MainContentFrame.Navigate(new SelectionSortSim(items, SortType.InterchangeSort));
+                        }
+                        break;
+                    case 3:
+                        {
+                            Window1.instance.MainContentFrame.Navigate(new SelectionSortSim(items, SortType.InterchangeSort));
 
-                    }
-                    break;
-                case 4:
-                    {
-                        Window1.instance.MainContentFrame.Navigate(new SelectionSortSim(items, SortType.MergeSort));
-                    }
-                    break;
-                case 5:
-                    {
+                        }
+                        break;
+                    case 4:
+                        {
+                            Window1.instance.MainContentFrame.Navigate(new SelectionSortSim(items, SortType.MergeSort));
+                        }
+                        break;
+                    case 5:
+                        {
 
-                        Window1.instance.MainContentFrame.Navigate(new SelectionSortSim(items, SortType.Quicksort));
-                    }
-                    break;
+                            Window1.instance.MainContentFrame.Navigate(new SelectionSortSim(items, SortType.Quicksort));
+                        }
+                        break;
+                }
             }
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (first)
-            {
-                first = false;
-                return;
-            }
-            tbxInput.Clear();
-            ComboBox cbx = (ComboBox)FindName("cbFile");
-            if (cbx != null)
-                Grid.Children.Remove(cbx);
-            TextBox txb = (TextBox)FindName("tbxInput");
-            if (txb != null)
-                Grid.Children.Remove(txb);
             switch (Selection.SelectedIndex)
             {
                 case 0:
                     {
-                        inputIndex = 0;
-
+                        ComboBox cbx = (ComboBox)FindName("cbFile");
+                        Grid.Children.Remove(cbx);
                         t = new TextBox();
                         t.Name = "tbxInput";
-                        t.SetValue(Grid.RowProperty, 3);
+                        t.SetValue(Grid.RowProperty, 2);
                         t.SetValue(Grid.ColumnProperty, 2);
                         var style = Application.Current.TryFindResource("txblDesign") as Style;
                         t.Style = style;
                         t.VerticalContentAlignment = VerticalAlignment.Center;
+                        t.VerticalAlignment = VerticalAlignment.Stretch;
+                        t.HorizontalAlignment = HorizontalAlignment.Stretch;
 
+
+                        inputIndex = 0;
                         lbInput.Content = "Nhập các số cần xếp:";
                         Grid.Children.Add(t);
                     }
                     break;
                 case 1:
                     {
-                        inputIndex = 1;
-
+                        ComboBox cbx = (ComboBox)FindName("cbFile");
+                        Grid.Children.Remove(cbx);
                         t = new TextBox();
                         t.Name = "tbxInput";
-                        t.SetValue(Grid.RowProperty, 3);
+                        t.SetValue(Grid.RowProperty, 2);
                         t.SetValue(Grid.ColumnProperty, 2);
                         var style = Application.Current.TryFindResource("txblDesign") as Style;
                         t.Style = style;
                         t.VerticalContentAlignment = VerticalAlignment.Center;
+                        t.VerticalAlignment = VerticalAlignment.Stretch;
+                        t.HorizontalAlignment = HorizontalAlignment.Stretch;
                         t.SetValue(NameProperty, "tbxInput");
+                        
+                        inputIndex = 1;
                         lbInput.Content = "Nhập số lượng phần tử cần sắp xếp:";
                         Grid.Children.Add(t);
                     }
@@ -199,14 +201,20 @@ namespace Da_projekt
                 case 2:
                     {
                         inputIndex = 2;
-
+                        TextBox tb = (TextBox)FindName("tbxInput");
+                        if (tb != null)
+                        {
+                            Grid.Children.Remove(tb);
+                        }
                         lbInput.Content = "Chọn đường dẫn file";
                         ComboBox cb = new ComboBox();
                         cb.Name = "cbFile";
-                        cb.SetValue(Grid.RowProperty, 3);
+                        cb.SetValue(Grid.RowProperty, 2);
                         cb.SetValue(Grid.ColumnProperty, 2);
                         var style = Application.Current.TryFindResource("cbxlDesign") as Style;
                         cb.VerticalContentAlignment = VerticalAlignment.Center;
+                        cb.VerticalAlignment = VerticalAlignment.Stretch;
+                        cb.HorizontalAlignment = HorizontalAlignment.Stretch;
                         cb.Style = style;
                         foreach (string s in Window1.instance.fm.files)
                         {

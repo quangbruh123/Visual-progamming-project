@@ -154,5 +154,26 @@ namespace Da_projekt
             sw.Stop();
             return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
         }
+
+        public int SortWithResultOnly(ref List<Item> returnItems)
+        {
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+            for (int i = 0; i < returnItems.Count - 1; i++)
+            {
+                for (int j = i + 1; j < returnItems.Count; j++)
+                {
+                    if (returnItems[i].data * sortOder > returnItems[j].data * sortOder)
+                    {
+                        int Backup = returnItems[i].data;
+                        returnItems[i].data = returnItems[j].data;
+                        returnItems[j].data = Backup;
+                    }
+                }
+            }
+
+            sw.Stop();
+            return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
+        }
     }
 }
