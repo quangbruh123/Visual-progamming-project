@@ -22,7 +22,6 @@ namespace Da_projekt
     /// </summary>
     public partial class CompareSortPage : Page
     {
-        bool first = true;
         bool ignore = false;
         int sortIndex = 0,
             inputIndex = 0;
@@ -31,7 +30,7 @@ namespace Da_projekt
         public CompareSortPage()
         {
             InitializeComponent();
-            t = tbxInput;
+            //t = tbxInput;
             GC.Collect();
             GC.WaitForPendingFinalizers();
             GC.Collect();
@@ -109,46 +108,24 @@ namespace Da_projekt
                     }
                     break;
             }
-            Window1.instance.MainContentFrame.Navigate(new CompareSortSim(items));
+            if (items.Count > 300)
+            {
+                MessageBox.Show("Chức năng này chỉ hoạt động với dữ liệu tối đa 300 phần tử!", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
+            } else
+            {
+                Window1.instance.MainContentFrame.Navigate(new CompareSortSim(items));
+            }
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (first)
-            {
-                first = false;
-                return;
-            }
-            tbxInput.Clear();
-            ComboBox cbx = (ComboBox)FindName("cbFile");
-            if (cbx != null)
-                Grid.Children.Remove(cbx);
-            TextBox txb = (TextBox)FindName("tbxInput");
-            if (txb != null)
-                Grid.Children.Remove(txb);
-
+            //tbxInput.Clear();
             switch (Selection.SelectedIndex)
             {
                 case 0:
                     {
-                        inputIndex = 0;
-
-                        lbInput.Content = "Nhập các số cần xếp:";
-                        t = new TextBox();
-                        t.Name = "tbxInput";
-                        t.SetValue(Grid.RowProperty, 2);
-                        t.SetValue(Grid.ColumnProperty, 2);
-                        var style = Application.Current.TryFindResource("txblDesign") as Style;
-                        t.Style = style;
-                        t.VerticalContentAlignment = VerticalAlignment.Center;             
-                        Grid.Children.Add(t);
-                    }
-                    break;
-                case 1:
-                    {
-                        inputIndex = 1;
-
-                        lbInput.Content = "Nhập số lượng phần tử cần sắp xếp:";
+                        ComboBox cbx = (ComboBox)FindName("cbFile");
+                        Grid.Children.Remove(cbx);
                         t = new TextBox();
                         t.Name = "tbxInput";
                         t.SetValue(Grid.RowProperty, 2);
@@ -156,14 +133,42 @@ namespace Da_projekt
                         var style = Application.Current.TryFindResource("txblDesign") as Style;
                         t.Style = style;
                         t.VerticalContentAlignment = VerticalAlignment.Center;
-                        t.SetValue(NameProperty, "tbxInput");                        
+                        t.VerticalAlignment = VerticalAlignment.Stretch;
+                        t.HorizontalAlignment = HorizontalAlignment.Stretch;
+
+                        inputIndex = 0;
+                        lbInput.Content = "Nhập các số cần xếp:";
+                        Grid.Children.Add(t);
+                    }
+                    break;
+                case 1:
+                    {
+                        ComboBox cbx = (ComboBox)FindName("cbFile");
+                        Grid.Children.Remove(cbx);
+                        t = new TextBox();
+                        t.Name = "tbxInput";
+                        t.SetValue(Grid.RowProperty, 2);
+                        t.SetValue(Grid.ColumnProperty, 2);
+                        var style = Application.Current.TryFindResource("txblDesign") as Style;
+                        t.Style = style;
+                        t.VerticalContentAlignment = VerticalAlignment.Center;
+                        t.VerticalAlignment = VerticalAlignment.Stretch;
+                        t.HorizontalAlignment = HorizontalAlignment.Stretch;
+                        t.SetValue(NameProperty, "tbxInput");
+
+                        inputIndex = 1;
+                        lbInput.Content = "Nhập số lượng phần tử cần sắp xếp:";
                         Grid.Children.Add(t);
                     }
                     break;
                 case 2:
                     {
                         inputIndex = 2;
-
+                        TextBox tb = (TextBox)FindName("tbxInput");
+                        if (tb != null)
+                        {
+                            Grid.Children.Remove(tb);
+                        }
                         lbInput.Content = "Chọn đường dẫn file";
                         ComboBox cb = new ComboBox();
                         cb.Name = "cbFile";
@@ -171,6 +176,8 @@ namespace Da_projekt
                         cb.SetValue(Grid.ColumnProperty, 2);
                         var style = Application.Current.TryFindResource("cbxlDesign") as Style;
                         cb.VerticalContentAlignment = VerticalAlignment.Center;
+                        cb.VerticalAlignment = VerticalAlignment.Stretch;
+                        cb.HorizontalAlignment = HorizontalAlignment.Stretch;
                         cb.Style = style;
                         foreach (string s in Window1.instance.fm.files)
                         {

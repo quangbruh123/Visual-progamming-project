@@ -60,6 +60,11 @@ namespace Da_projekt
             return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
         }
 
+        public int SortWithResultOnly(ref List<Item> items)
+        {
+            return 0;
+        }
+
         private void MS(List<Item> items, int l, int r, int row, int arrange)
         {
             if (arrange == 0)

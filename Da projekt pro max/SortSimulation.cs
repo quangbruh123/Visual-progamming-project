@@ -185,6 +185,43 @@ namespace Da_projekt
             }
         }
 
+        public int SortWithResultOnly(ref List<Item> returnItems)
+        {
+            todos = null;
+            SortEngine se = new SelectionSort(this, itemsCopy, ref todos);
+            int kq = 0;
+            switch (st)
+            {
+                case SortType.BubbleSort:
+                    todos = new List<Todo>();
+                    se = new BubbleSort(this, itemsCopy, ref todos);
+                    kq = se.SortWithResultOnly(ref returnItems);
+                    return kq;
+                case SortType.InsertionSort:
+                    se = new InsertionSort(this, itemsCopy, ref todos);
+                    kq = se.SortWithResultOnly(ref returnItems);
+                    return kq;
+                case SortType.InterchangeSort:
+                    se = new InterchangeSort(this, itemsCopy, ref todos);
+                    kq = se.SortWithResultOnly(ref returnItems);
+                    return kq;
+                case SortType.Quicksort:
+                    se = new QuickSort(this, itemsCopy, ref todos);
+                    kq = se.SortWithResultOnly(ref returnItems);
+                    return kq;
+                case SortType.SelectionSort:
+                    se = new SelectionSort(this, itemsCopy, ref todos);
+                    kq = se.SortWithResultOnly(ref returnItems);
+                    return kq;
+                case SortType.MergeSort:
+                    se = new MS(this, itemsCopy, ref todos);
+                    kq = se.SortWithResultOnly(ref returnItems);
+                    return kq;
+                default:
+                    return 0;
+            }
+        }
+
         //minh họa lại quá trình sort.
         public async void Replay()
         {

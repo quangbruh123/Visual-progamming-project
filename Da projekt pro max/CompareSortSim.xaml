@@ -24,11 +24,11 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30"/>
-            <ColumnDefinition Width="245*"/>
-            <ColumnDefinition Width="109*"/>
-            <ColumnDefinition Width="32*"/>
-            <ColumnDefinition Width="109*"/>
-            <ColumnDefinition Width="245*"/>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="300*"/>
             <ColumnDefinition Width="30"/>
         </Grid.ColumnDefinitions>
         <Label 
@@ -36,79 +36,89 @@
                Content="Selection Sort"
                Grid.Row="0"
                Grid.Column="1" 
-               Grid.ColumnSpan="2"
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
                Style="{StaticResource lblDesign}"
                HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"/>
+               VerticalContentAlignment="Center"
+               />
         <Canvas x:Name="Canvas1" 
                 Background="White" 
+                Grid.Row="1" 
                 Grid.Column="1" 
-                Grid.ColumnSpan="2" 
-                Grid.Row="1"
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                 SizeChanged="MainCanvas_SizeChanged"/>
+
         <Label 
             x:Name="InsertionLabel"
                Content="Insertion Sort"
                Grid.Row="2"
                Grid.Column="1" 
-               Grid.ColumnSpan="2" 
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
                Style="{StaticResource lblDesign}"
                HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"  />
+               VerticalContentAlignment="Center"
+               />
         <Canvas x:Name="Canvas3" 
                 Background="White" 
                 Grid.Row="3" 
                 Grid.Column="1" 
-                Grid.ColumnSpan="2"
-                SizeChanged="MainCanvas_SizeChanged" />
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                SizeChanged="MainCanvas_SizeChanged"/>
 
         <Label 
             x:Name="QuickLabel"
                Content="Quick Sort"
                Grid.Row="4"
                Grid.Column="1" 
-               Grid.ColumnSpan="2" 
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
                Style="{StaticResource lblDesign}"
                HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"/>
+               VerticalContentAlignment="Center"
+               />
         <Canvas x:Name="Canvas5" 
                 Background="White" 
                 Grid.Row="5" 
                 Grid.Column="1" 
-                Grid.ColumnSpan="2" 
-                SizeChanged="MainCanvas_SizeChanged" />
-
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                SizeChanged="MainCanvas_SizeChanged"/>
+        
         <Label 
             x:Name="BubbleLabel"
                Content="Bubble Sort"
                Grid.Row="0"
                Grid.Column="4"
-               Grid.ColumnSpan="2"
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
                Style="{StaticResource lblDesign}"
                HorizontalContentAlignment="Center"
                VerticalContentAlignment="Center"
                />
         <Canvas x:Name="Canvas2" 
                 Background="White" 
+                Grid.Row="1" 
                Grid.Column="4"
-                Grid.Row="1"
-               Grid.ColumnSpan="2" 
-                SizeChanged="MainCanvas_SizeChanged" />
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                SizeChanged="MainCanvas_SizeChanged"/>
 
         <Label 
             x:Name="InterchangeLabel"
                Content="Interchange Sort"
                Grid.Row="2"
                Grid.Column="4"
-               Grid.ColumnSpan="2"
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
                Style="{StaticResource lblDesign}"
                HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"/>
+               VerticalContentAlignment="Center"
+               />
         <Canvas x:Name="Canvas4" 
                 Background="White" 
                 Grid.Row="3" 
                Grid.Column="4"
-               Grid.ColumnSpan="2" 
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                 SizeChanged="MainCanvas_SizeChanged"/>
 
         <Label 
@@ -116,27 +126,27 @@
                Content="Merge Sort"
                Grid.Row="4"
                Grid.Column="4"
-               Grid.ColumnSpan="2"
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
                Style="{StaticResource lblDesign}"
                HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center" />
+               VerticalContentAlignment="Center"
+               />
         <Canvas x:Name="Canvas6" 
                 Background="White" 
                 Grid.Row="5" 
-                Grid.Column="4"
-                Grid.ColumnSpan="2" 
+               Grid.Column="4"
+               Grid.ColumnSpan="2" Grid.RowSpan="1"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                 SizeChanged="MainCanvas_SizeChanged"/>
 
         <Button x:Name="Start" 
                 Content="Bắt đầu" 
                 Grid.Row="6" 
                 Grid.Column="2"
-                Grid.ColumnSpan="3"
                 Click="Start_Click" 
-                Style="{StaticResource btnDesign}"  
-                />
+                Style="{StaticResource btnDesign}" Grid.RowSpan="1" Grid.ColumnSpan="3"/>
         <Button x:Name="Return" 
-                Content="   Trở về trang trước" 
+                Content="Trở về trang trước" 
                 Grid.Row="6" 
                 Grid.Column="1"
                 Click="Return_Click" 

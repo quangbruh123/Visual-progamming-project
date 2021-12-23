@@ -44,11 +44,22 @@ namespace Da_projekt
             sw.Start();
 
             todos.Add(new Todo("Refresh"));
-            QSort(ref returnItems, 0, items.Count - 1);
+            QSortResult(ref returnItems, 0, items.Count - 1);
 
             todos.Add(new Todo("Done"));
             sw.Stop();
             todos.Add(new Todo("Refresh"));
+            return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
+        }
+
+        public int SortWithResultOnly(ref List<Item> returnItems)
+        {
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
+            QSortResultOnly(ref returnItems, 0, items.Count - 1);
+            sw.Stop();
+
             return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
         }
 
@@ -57,7 +68,7 @@ namespace Da_projekt
             Stopwatch sw = new Stopwatch();
             sw.Start();
             todos.Add(new Todo("Refresh"));
-            QSortResultOnly(ref items, 0, items.Count - 1);
+            QSortResult(ref items, 0, items.Count - 1);
             sw.Stop();
             todos.Add(new Todo("Refresh"));
             return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
@@ -84,7 +95,7 @@ namespace Da_projekt
             int right = high - 1;
             todos.Add(new Todo("ChangeColor", high, Colors.Blue));
             todos.Add(new Todo("ChangeColor", left, Colors.Red));   
-            todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
+            todos.Add(new Todo("ChangeColor", right, Colors.Magenta));
             todos.Add(new Todo("DescriptQS", high, left, right));
             todos.Add(new Todo("Refresh"));
             while (true)
@@ -111,7 +122,7 @@ namespace Da_projekt
                     right--;
                     if (right > low)
                     {
-                        todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
+                        todos.Add(new Todo("ChangeColor", right, Colors.Magenta));
                         todos.Add(new Todo("StartingRight", right));
                         todos.Add(new Todo("Refresh"));
                     }
@@ -143,7 +154,7 @@ namespace Da_projekt
                 left++;
                 right--;
                 todos.Add(new Todo("ChangeColor", left, Colors.Red));
-                todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
+                todos.Add(new Todo("ChangeColor", right, Colors.Magenta));
                 todos.Add(new Todo("DiffQS"));
                 todos.Add(new Todo("Refresh"));
             }
@@ -168,28 +179,28 @@ namespace Da_projekt
             return left;
         }
         //...................
-        public void QSortResultOnly(ref List<Item> items, int low, int high)
+        public void QSortResult(ref List<Item> items, int low, int high)
         {
             if (low < high)
             {
                 /* pi là chỉ số nơi phần tử này đã đứng đúng vị trí
                  và là phần tử chia mảng làm 2 mảng con trái & phải */
-                int pi = partitionResultOnly(ref items, low, high);
+                int pi = partitionResult(ref items, low, high);
 
                 // Gọi đệ quy sắp xếp 2 mảng con trái và phải
-                QSortResultOnly(ref items, low, pi - 1);
-                QSortResultOnly(ref items, pi + 1, high);
+                QSortResult(ref items, low, pi - 1);
+                QSortResult(ref items, pi + 1, high);
             }
         }
 
-        private int partitionResultOnly(ref List<Item> items, int low, int high)
+        private int partitionResult(ref List<Item> items, int low, int high)
         {
             int pivot = items[high].data;    // pivot
             int left = low;
             int right = high - 1;
             todos.Add(new Todo("ChangeColor", high, Colors.Blue));
             todos.Add(new Todo("ChangeColor", left, Colors.Red));
-            todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
+            todos.Add(new Todo("ChangeColor", right, Colors.Magenta));
             while (true)
             {
                 while (left <= right && items[left].data < pivot)
@@ -208,7 +219,7 @@ namespace Da_projekt
                     right--;
                     if (right > low)
                     {
-                        todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
+                        todos.Add(new Todo("ChangeColor", right, Colors.Magenta));
                         todos.Add(new Todo("Refresh"));
                     }
                 }
@@ -228,7 +239,7 @@ namespace Da_projekt
                 left++;
                 right--;
                 todos.Add(new Todo("ChangeColor", left, Colors.Red));
-                todos.Add(new Todo("ChangeColor", right, Colors.Yellow));
+                todos.Add(new Todo("ChangeColor", right, Colors.Magenta));
                 todos.Add(new Todo("Refresh"));
             }
             int tmp = items[left].data;
@@ -248,6 +259,48 @@ namespace Da_projekt
             if (left <= high)
                 todos.Add(new Todo("ResetColor", left));
             todos.Add(new Todo("ResetColor", high));
+            return left;
+        }
+        //.............................
+        public void QSortResultOnly(ref List<Item> items, int low, int high)
+        {
+            if (low < high)
+            {
+                /* pi là chỉ số nơi phần tử này đã đứng đúng vị trí
+                 và là phần tử chia mảng làm 2 mảng con trái & phải */
+                int pi = partitionResultOnly(ref items, low, high);
+
+                // Gọi đệ quy sắp xếp 2 mảng con trái và phải
+                QSortResultOnly(ref items, low, pi - 1);
+                QSortResultOnly(ref items, pi + 1, high);
+            }
+        }
+
+        private int partitionResultOnly(ref List<Item> items, int low, int high)
+        {
+            int pivot = items[high].data;    // pivot
+            int left = low;
+            int right = high - 1;
+            while (true)
+            {
+                while (left <= right && items[left].data < pivot)
+                {
+                    left++;
+                }
+                while (right >= left && items[right].data > pivot)
+                {
+                    right--;
+                }
+                if (left >= right) break;
+                int temp = items[left].data;
+                items[left].data = items[right].data;
+                items[right].data = temp;
+                left++;
+                right--;
+            }
+            int tmp = items[left].data;
+            items[left].data = items[high].data;
+            items[high].data = tmp;
             return left;
         }
     }

@@ -11,5 +11,7 @@ namespace Da_projekt
         void SortWithDescription();
         int SortAsMethod();
         int SortWithResult(ref List<Item> returnItems);
+
+        int SortWithResultOnly(ref List<Item> returnItems);
     }
 }

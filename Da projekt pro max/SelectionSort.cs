@@ -174,5 +174,33 @@ namespace Da_projekt
             todos.Add(new Todo("Refresh"));
             return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
         }
+
+        public int SortWithResultOnly(ref List<Item> returnItems)
+        {
+            returnItems = sm.CreateCopy(items);
+
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
+            for (int i = 0; i < returnItems.Count; i++)
+            {
+                int min = i;
+                for (int j = i + 1; j < returnItems.Count; j++)
+                {
+                    if (returnItems[min].data > returnItems[j].data)
+                    {
+                        min = j;
+                    }
+                }
+                if (i != min)
+                {
+                    int Backup = returnItems[i].data;
+                    returnItems[i].data = returnItems[min].data;
+                    returnItems[min].data = Backup;
+                }
+            }
+            sw.Stop();
+            return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
+        }
     }
 }

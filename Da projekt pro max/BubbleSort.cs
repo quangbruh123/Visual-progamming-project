@@ -177,5 +177,28 @@ namespace Da_projekt
             sw.Stop();
             return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
         }
+
+        public int SortWithResultOnly(ref List<Item> returnItems)
+        {
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
+            for (int i = 0; i < returnItems.Count - 1; i++)
+            {
+                for (int j = 0; j < returnItems.Count - i - 1; j++)
+                {
+                    if (returnItems[j].data > returnItems[j + 1].data)
+                    {
+                        // swap temp and arr[i]
+                        int temp = returnItems[j].data;
+                        returnItems[j].data = returnItems[j + 1].data;
+                        returnItems[j + 1].data = temp;
+                    }
+                }
+            }
+
+            sw.Stop();
+            return ((int)sw.ElapsedMilliseconds);//trả về thời gian sort.
+        }
     }
 }

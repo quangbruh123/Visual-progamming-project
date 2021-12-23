@@ -12,68 +12,60 @@
     </Page.Background>
     <Grid x:Name="Grid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="160*"/>
-            <RowDefinition Height="60*"/>
             <RowDefinition Height="50*"/>
-            <RowDefinition Height="123*"/>
-            <RowDefinition Height="34*"/>
-            <RowDefinition Height="23*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="261*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="74*"/>
+            <ColumnDefinition Width="75*"/>
             <ColumnDefinition Width="45*"/>
-            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="20*"/>
         </Grid.ColumnDefinitions>
-        <Label  Content="Chọn phương pháp nhập dữ liệu vào:" 
-                VerticalAlignment="Center" 
-                HorizontalAlignment="Stretch"
-                Grid.Row="1"
-                Grid.Column="1"
-                Style="{StaticResource lblDesign}" />
+        <Label  Content="Chọn phương pháp nhập dữ liệu vào:"
+                VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                VerticalContentAlignment="Center"
+                Grid.Column="1" Grid.Row="1" 
+                Style="{StaticResource lblDesign}"/>
 
         <Label  x:Name="lbInput"
                 Content="Nhập các số cần xếp:" 
-                VerticalAlignment="Center" 
-                HorizontalAlignment="Stretch"
-                Grid.Row="2"
-                Grid.Column="1"
-                Style="{StaticResource lblDesign}" />
+                VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                VerticalContentAlignment="Center"
+                Grid.Column="1" Grid.Row="2" 
+                Style="{StaticResource lblDesign}"/>
 
-        <ComboBox   x:Name="Selection" 
-                    Grid.Column="2"
-                    Grid.Row="1"
+        <ComboBox   x:Name="Selection"
                     IsSynchronizedWithCurrentItem="True" 
                     SelectedIndex="0"
                     SelectionChanged="ComboBox_SelectionChanged" 
                     VerticalContentAlignment="Center"
-                    Style="{StaticResource cbxlDesign}" >
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                    Grid.Column="2" Grid.Row="1" 
+                    Style="{StaticResource cbxlDesign}">
             <ComboBoxItem Content="Nhập bằng tay" />
             <ComboBoxItem Content="Ngẫu nhiên" />
             <ComboBoxItem Content="Nhập từ file / DTB" />
         </ComboBox>
 
-
-        <TextBox x:Name="tbxInput" 
-                 Grid.Column="2"
-                 Grid.Row="2"
-                 TextWrapping="NoWrap"
-                 Style="{StaticResource txblDesign}"
-                 VerticalContentAlignment="Center" />
-
         <Button Content="Bắt đầu"
                 Grid.Column="2"
                 Grid.Row="4"
                 Click="btnConfirm_Click" 
-                Style="{StaticResource btnDesign}" >
+                Style="{StaticResource btnDesign}" Grid.ColumnSpan="2" Margin="0,0,118,0">
 
         </Button>
-        <Button Content="        Trở về trang trước      "
+        <Button Content="Trở về trang trước"
                 Grid.Row="4"
-                Grid.ColumnSpan="2"
-                HorizontalAlignment="Left"
+                Grid.Column="1"
+                Grid.ColumnSpan="1"
+                HorizontalAlignment="Stretch"
                 Click="btnReturn_Click" 
-                Style="{StaticResource btnDesign}" Width="293">
+                Style="{StaticResource btnDesign}">
+
         </Button>
     </Grid>
 </Page>

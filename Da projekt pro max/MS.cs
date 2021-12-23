@@ -43,6 +43,18 @@ namespace Da_projekt
             return ((int)sw.ElapsedMilliseconds);
         }
 
+        public int SortWithResultOnly(ref List<Item> refitems)
+        {
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
+            sortResultOnly(refitems, 0, refitems.Count - 1);
+
+            sw.Stop();
+            items = new List<Item>(refitems);
+            return ((int)sw.ElapsedMilliseconds);
+        }
+
         public void SortWithDescription()
         {
             todos.Add(new Todo("IntroMerge"));
@@ -175,6 +187,75 @@ namespace Da_projekt
                 
                 merge(items, l, m, r);
             }
+        }
+
+        void sortResultOnly(List<Item> items, int l, int r)
+        {
+            if (l < r)
+            {
+                int m = l + (r - l) / 2;
+                sortResultOnly(items, l, m);
+                sortResultOnly(items, m + 1, r);
+
+                mergeResultOnly(items, l, m, r);
+            }
+        }
+
+        void mergeResultOnly(List<Item> items, int l, int m, int r)
+        {
+            int n1 = m - l + 1;
+            int n2 = r - m;
+
+
+            int[] L = new int[n1];
+            int[] R = new int[n2];
+            int i, j;
+
+
+            for (i = 0; i < n1; ++i)
+                L[i] = items[l + i].data;
+            for (j = 0; j < n2; ++j)
+                R[j] = items[m + 1 + j].data;
+
+            i = 0;
+            j = 0;
+
+
+            int k = l;
+            while (i < n1 && j < n2)
+            {
+                if (L[i] <= R[j])
+                {
+                    items[k].data = L[i];
+                    i++;
+                }
+                else
+                {
+                    items[k].data = R[j];
+                    j++;
+                }
+                int tmp = items[k].data;
+                k++;
+            }
+
+            while (i < n1)
+            {
+                items[k].data = L[i];
+                i++;
+
+                int tmp = items[k].data;
+                k++;
+            }
+
+            while (j < n2)
+            {
+
+                items[k].data = R[j];
+                j++;
+                int tmp = items[k].data;
+                k++;
+            }
+
         }
     }
 }

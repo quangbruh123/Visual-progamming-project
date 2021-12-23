@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace Da_projekt
 {
@@ -24,14 +25,11 @@ namespace Da_projekt
         Random rand = new Random();
         List<Item> items;
         List<Item> result; //mảng lưu kq sau khi sort.
+        List<string> SaveData = new List<string>();
         int kq; //thời gian sort.
         bool first = true;
         SortType sortType;
-
-        ~SelectionSortSim()
-        {
-            MessageBox.Show("hlfsahfkjadshfkj");
-        }
+        Thread t;
 
         public SelectionSortSim(List<Item> Refitems, SortType type)
         {
@@ -68,6 +66,7 @@ namespace Da_projekt
                 default:
                     return;
             }
+            sm.refresh2(items);
             Save.IsEnabled = false;
         }
 
@@ -75,16 +74,62 @@ namespace Da_projekt
         {
             sm.sortingScreen(MainCanvas);
             result = sm.CreateCopy(items);
-            kq = sm.SortWithResult(ref result);
-            sm.Replay();
-            Save.IsEnabled = true;
 
-            string s = "";
-            foreach (Item i in result)
-            {
-                s += i.data.ToString() + " ";
-            }
             Start.IsEnabled = false;
+
+            if (items.Count <= 250)
+            {
+                kq = sm.SortWithResult(ref result);
+
+                Save.IsEnabled = true;
+                string s = "";
+                foreach (Item i in result)
+                {
+                    s += i.data.ToString() + " ";
+                }
+
+                sm.Replay();
+            }
+            else
+            {
+                t = new Thread(sort);
+                t.IsBackground = true;
+                t.Start();
+            }
+            
+        }
+
+        private void sort()
+        {
+            kq = sm.SortWithResultOnly(ref result);
+            refresh(result);
+        }
+
+        public void refresh(List<Item> refitems)
+        {
+            this.Dispatcher.Invoke(() => {
+                Save.IsEnabled = true;
+                DrawingVisual drawingVisual = new DrawingVisual();
+                DrawingContext drawingContext = drawingVisual.RenderOpen();
+
+                float spacing = ((float)MainCanvas.ActualWidth) / ((float)(refitems.Count));
+
+                //Rect background = new Rect(new Point(0, 0), new Point(screen.ActualWidth, screen.ActualHeight));
+                //drawingContext.DrawRectangle(Brushes.Black, new Pen(Brushes.White, 0f), background);
+
+                for (int i = 0; i < refitems.Count; i++)
+                {
+                    Point lcnr = new Point(spacing * i, MainCanvas.ActualHeight - refitems[i].data - 1);
+                    Point rcnr = new Point(spacing * (i + 1), MainCanvas.ActualHeight);
+                    Rect drawspace = new Rect(lcnr, rcnr);
+                    refitems[i].drawItemWithoutTextSelectionSort(drawingContext, drawspace);
+                }
+
+                drawingContext.Close();
+
+                DrawingBrush db = new DrawingBrush(drawingVisual.Drawing);
+                MainCanvas.Background = db;
+            });
         }
 
         private void Return_Click(object sender, RoutedEventArgs e)
@@ -97,19 +142,14 @@ namespace Da_projekt
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            List<string> Save = new List<string>();
+            MessageBox.Show("Đang lưu lại thành file, vui lòng chờ...");
+            SaveData.Add("Kết quả: ");
             string str = "";
-            foreach (Item i in items)
-            {
-                str += i.data.ToString() + " ";
-            }
-            Save.Add(str);
-            str = "";
             foreach (Item i in result)
             {
                 str += i.data.ToString() + " ";
             }
-            Save.Add(str);
+            SaveData.Add(str);
 
             switch (sortType)
             {
@@ -134,8 +174,8 @@ namespace Da_projekt
                 default:
                     return;
             }
-            Save.Add(str);
-            FileManager.fileManager.Save(Save.ToArray());
+            SaveData.Add(str);
+            FileManager.fileManager.Save(SaveData.ToArray());
         }
 
         private void MainCanvas_SizeChanged(object sender, SizeChangedEventArgs e)

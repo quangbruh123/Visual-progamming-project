@@ -180,13 +180,8 @@ namespace Da_projekt
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             List<string> Save = new List<string>();
+            Save.Add("Kết quả: ");
             string str = "";
-            foreach (Item i in items)
-            {
-                str += i.data.ToString() + " ";
-            }
-            Save.Add(str);
-            str = "";
             foreach (Item i in result)
             {
                 str += i.data.ToString() + " ";
