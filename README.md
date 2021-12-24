@@ -30,3 +30,8 @@ Nội dung: Xây dựng một phần mềm hỗ trợ việc học các giải t
 
 ## Công cụ (Tools)
 - Visual Studio 2019
+
+## Link tham khảo:
+- https://docs.microsoft.com/en-us/dotnet/api/?view=net-5.0
+- https://www.hackerearth.com/practice/algorithms/sorting/insertion-sort/visualize/
+- https://www.geeksforgeeks.org/
