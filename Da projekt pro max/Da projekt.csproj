@@ -23,6 +23,7 @@
     <None Remove="Resources\Merge Sort.gif" />
     <None Remove="Resources\Quick Sort.gif" />
     <None Remove="Resources\Selection Sort.gif" />
+    <None Remove="Resources\unnamed %281%29.png" />
     <None Remove="splash_screen.jpg" />
   </ItemGroup>
 
@@ -45,6 +46,7 @@
     <Resource Include="Resources\Merge Sort.gif" />
     <Resource Include="Resources\Quick Sort.gif" />
     <Resource Include="Resources\Selection Sort.gif" />
+    <Resource Include="Resources\unnamed (1).png" />
   </ItemGroup>
 
   <ItemGroup>

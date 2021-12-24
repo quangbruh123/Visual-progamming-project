@@ -27,6 +27,8 @@ namespace Da_projekt
             inputIndex = 0;
         TextBox t;
         string input = "";
+        bool FileError = false;
+
         public CompareSortPage()
         {
             InitializeComponent();
@@ -100,9 +102,17 @@ namespace Da_projekt
                             string[] txt = input.Split(' ');
                             foreach (string str in txt)
                             {
-                                Item item = new Item(int.Parse(str));
-
-                                items.Add(item);
+                                try
+                                {
+                                    Item item = new Item(int.Parse(str));
+                                    items.Add(item);
+                                }
+                                catch(FormatException)
+                                {
+                                    MessageBox.Show("File input đầu vào không hợp lệ.");
+                                    FileError = true;
+                                    break;
+                                }
                             }
                         }
                     }
@@ -111,7 +121,9 @@ namespace Da_projekt
             if (items.Count > 300)
             {
                 MessageBox.Show("Chức năng này chỉ hoạt động với dữ liệu tối đa 300 phần tử!", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
-            } else
+            } 
+            else if (FileError == true) { }
+            else
             {
                 Window1.instance.MainContentFrame.Navigate(new CompareSortSim(items));
             }

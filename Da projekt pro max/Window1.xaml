@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Da_projekt"
         mc:Ignorable="d"
-        Title="Window1" Height="680" Width="1050"
+        Title="Mô phỏng sắp xếp" Height="680" Width="1050"
+        Icon="Resources/unnamed (1).png"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Frame x:Name="MainContentFrame" NavigationUIVisibility="Hidden"/>
