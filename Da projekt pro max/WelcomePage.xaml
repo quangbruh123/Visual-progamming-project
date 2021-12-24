@@ -65,8 +65,4 @@
                 BorderBrush="Transparent" 
                 Click="output_Click"/>
     </Grid>
-
-
-
-    
 </Page>

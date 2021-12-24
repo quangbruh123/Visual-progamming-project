@@ -13,6 +13,7 @@
     </Page.Background>
     <Grid x:Name="Grid">
         <Grid.RowDefinitions>
+            <RowDefinition Height="70*"/>
             <RowDefinition Height="275*"/>
             <RowDefinition Height="70*"/>
             <RowDefinition Height="70*"/>
@@ -29,19 +30,19 @@
         <Label  Content="Chọn phương pháp nhập dữ liệu vào:" 
                 VerticalAlignment="Stretch" VerticalContentAlignment="Center"
                 Grid.Column="1" 
-                Grid.Row="1"
+                Grid.Row="2"
                 Style="{StaticResource lblDesign}" HorizontalAlignment="Stretch"  />
 
         <Label  x:Name="lbInput"
                 Content="Nhập các số cần xếp:" 
                 VerticalAlignment="Stretch" VerticalContentAlignment="Center"
                 Grid.Column="1" 
-                Grid.Row="2"
+                Grid.Row="3"
                 Style="{StaticResource lblDesign}" HorizontalAlignment="Stretch"/>
 
         <ComboBox   x:Name="Selection" 
                     Grid.Column="2"
-                    Grid.Row="1"
+                    Grid.Row="2"
                     IsSynchronizedWithCurrentItem="True" 
                     SelectedIndex="0"
                     SelectionChanged="ComboBox_SelectionChanged" 
@@ -52,13 +53,15 @@
             <ComboBoxItem Content="Nhập từ file / DTB" />
         </ComboBox>
 
-
         <ListBox x:Name="SortList"  
                  Grid.Column="1" 
+                 Grid.Row="1"
                  Grid.ColumnSpan="2"
                  HorizontalContentAlignment="Stretch"
+                 HorizontalAlignment="Stretch"
+                 VerticalAlignment="Stretch"
                  ScrollViewer.HorizontalScrollBarVisibility="Hidden" 
-                 ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,50,0,50" >
+                 ScrollViewer.VerticalScrollBarVisibility="Hidden" >
 
             <ListBoxItem Content="Selection Sort" 
                          Height="{Binding Path=ActualHeight, ElementName=SortList}" 
@@ -82,12 +85,14 @@
 
         <Button Content="Kế tiếp" 
                 Grid.Column="3" 
+                Grid.Row="1"
                 VerticalAlignment="Center" 
                 Click="btnNext_Click" 
                 Style="{StaticResource btnDesign}"
                 />
 
         <Button Content="Trước"
+                Grid.Row="1"
                 VerticalAlignment="Center"
                 Click="btnPrevious_Click" 
                 Style="{StaticResource btnDesign}"
@@ -95,26 +100,33 @@
 
         <Button Content="Bắt đầu"
                 Grid.Column="2"
-                Grid.Row="4"
+                Grid.Row="5"
                 Click="btnConfirm_Click" 
                 Style="{StaticResource btnDesign}">
 
         </Button>
         <Button Content="        Trở về trang trước      "
-                Grid.Row="4"
+                Grid.Row="5"
                 Grid.ColumnSpan="2"
                 HorizontalAlignment="Left"
                 Click="btnReturn_Click" 
                 Style="{StaticResource btnDesign}">
 
         </Button>
-        <Image Grid.Column="1" HorizontalAlignment="Left" Height="142" Margin="294,50,0,0" VerticalAlignment="Top" Width="267" Grid.ColumnSpan="2"
-               gif:AnimationBehavior.SourceUri="Resources/Selection Sort.gif" Visibility="Visible"/>
+        <Image Grid.Column="2" 
+               HorizontalAlignment="Stretch"
+               Grid.Row="1"
+               VerticalAlignment="Stretch" 
+               gif:AnimationBehavior.SourceUri="Resources/Selection Sort.gif" 
+               Visibility="Visible"/>
         
         <Label  Content="Lưu ý: Chức năng minh họa sắp xếp sẽ bị tắt nếu kích thước quá 250 phần tử." VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Center"
-            Grid.Column="1" 
-            Grid.Row="3"
-            Style="{StaticResource lblDesign}" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="15"/>
+                Grid.Column="1" 
+                Grid.Row="4"
+                Style="{StaticResource lblDesign}" 
+                Grid.ColumnSpan="2" 
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" FontSize="16"/>
     </Grid>
 </Page>

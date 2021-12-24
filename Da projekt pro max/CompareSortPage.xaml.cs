@@ -119,13 +119,16 @@ namespace Da_projekt
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //tbxInput.Clear();
+            ComboBox cbx = (ComboBox)FindName("cbFile");
+            if (cbx != null)
+                Grid.Children.Remove(cbx);
+            TextBox txb = (TextBox)FindName("tbxInput");
+            if (txb != null)
+                Grid.Children.Remove(txb);
             switch (Selection.SelectedIndex)
             {
                 case 0:
                     {
-                        ComboBox cbx = (ComboBox)FindName("cbFile");
-                        Grid.Children.Remove(cbx);
                         t = new TextBox();
                         t.Name = "tbxInput";
                         t.SetValue(Grid.RowProperty, 2);
@@ -143,8 +146,6 @@ namespace Da_projekt
                     break;
                 case 1:
                     {
-                        ComboBox cbx = (ComboBox)FindName("cbFile");
-                        Grid.Children.Remove(cbx);
                         t = new TextBox();
                         t.Name = "tbxInput";
                         t.SetValue(Grid.RowProperty, 2);
@@ -164,11 +165,6 @@ namespace Da_projekt
                 case 2:
                     {
                         inputIndex = 2;
-                        TextBox tb = (TextBox)FindName("tbxInput");
-                        if (tb != null)
-                        {
-                            Grid.Children.Remove(tb);
-                        }
                         lbInput.Content = "Chọn đường dẫn file";
                         ComboBox cb = new ComboBox();
                         cb.Name = "cbFile";

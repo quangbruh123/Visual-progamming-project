@@ -12,12 +12,12 @@
     </Page.Background>
     <Grid x:Name="Grid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="261*"/>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="30*"/>
+            <RowDefinition Height="165*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="102*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="27*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>
@@ -26,16 +26,18 @@
             <ColumnDefinition Width="20*"/>
         </Grid.ColumnDefinitions>
         <Label  Content="Chọn phương pháp nhập dữ liệu vào:"
-                VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-                VerticalContentAlignment="Center"
-                Grid.Column="1" Grid.Row="1" 
+                VerticalContentAlignment="Center" 
+                VerticalAlignment="Stretch"
+                Grid.Row="1"
+                Grid.Column="1"
                 Style="{StaticResource lblDesign}"/>
 
         <Label  x:Name="lbInput"
-                Content="Nhập các số cần xếp:" 
-                VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-                VerticalContentAlignment="Center"
-                Grid.Column="1" Grid.Row="2" 
+                Content="Nhập các số cần xếp:"
+                VerticalAlignment="Stretch"
+                VerticalContentAlignment="Center" 
+                Grid.Column="1"
+                Grid.Row="2"
                 Style="{StaticResource lblDesign}"/>
 
         <ComboBox   x:Name="Selection"
@@ -43,7 +45,6 @@
                     SelectedIndex="0"
                     SelectionChanged="ComboBox_SelectionChanged" 
                     VerticalContentAlignment="Center"
-                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                     Grid.Column="2" Grid.Row="1" 
                     Style="{StaticResource cbxlDesign}">
             <ComboBoxItem Content="Nhập bằng tay" />
@@ -55,17 +56,12 @@
                 Grid.Column="2"
                 Grid.Row="4"
                 Click="btnConfirm_Click" 
-                Style="{StaticResource btnDesign}" Grid.ColumnSpan="2" Margin="0,0,118,0">
-
-        </Button>
+                Style="{StaticResource btnDesign}" />
+        
         <Button Content="Trở về trang trước"
                 Grid.Row="4"
                 Grid.Column="1"
-                Grid.ColumnSpan="1"
-                HorizontalAlignment="Stretch"
                 Click="btnReturn_Click" 
-                Style="{StaticResource btnDesign}">
-
-        </Button>
+                Style="{StaticResource btnDesign}" />
     </Grid>
 </Page>

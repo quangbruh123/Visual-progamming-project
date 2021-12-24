@@ -36,7 +36,7 @@
                Content="Selection Sort"
                Grid.Row="0"
                Grid.Column="1" 
-               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Grid.ColumnSpan="2" 
                Style="{StaticResource lblDesign}"
                HorizontalContentAlignment="Center"
                VerticalContentAlignment="Center"
@@ -45,7 +45,7 @@
                 Background="White" 
                 Grid.Row="1" 
                 Grid.Column="1" 
-               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Grid.ColumnSpan="2" 
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                 SizeChanged="MainCanvas_SizeChanged"/>
 
@@ -54,7 +54,7 @@
                Content="Insertion Sort"
                Grid.Row="2"
                Grid.Column="1" 
-               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Grid.ColumnSpan="2" 
                Style="{StaticResource lblDesign}"
                HorizontalContentAlignment="Center"
                VerticalContentAlignment="Center"
@@ -63,7 +63,7 @@
                 Background="White" 
                 Grid.Row="3" 
                 Grid.Column="1" 
-               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Grid.ColumnSpan="2" 
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                 SizeChanged="MainCanvas_SizeChanged"/>
 
@@ -72,7 +72,7 @@
                Content="Quick Sort"
                Grid.Row="4"
                Grid.Column="1" 
-               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Grid.ColumnSpan="2" 
                Style="{StaticResource lblDesign}"
                HorizontalContentAlignment="Center"
                VerticalContentAlignment="Center"
@@ -81,7 +81,7 @@
                 Background="White" 
                 Grid.Row="5" 
                 Grid.Column="1" 
-               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Grid.ColumnSpan="2" 
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                 SizeChanged="MainCanvas_SizeChanged"/>
         
@@ -90,7 +90,7 @@
                Content="Bubble Sort"
                Grid.Row="0"
                Grid.Column="4"
-               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Grid.ColumnSpan="2"
                Style="{StaticResource lblDesign}"
                HorizontalContentAlignment="Center"
                VerticalContentAlignment="Center"
@@ -99,7 +99,7 @@
                 Background="White" 
                 Grid.Row="1" 
                Grid.Column="4"
-               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Grid.ColumnSpan="2"
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                 SizeChanged="MainCanvas_SizeChanged"/>
 
@@ -108,7 +108,7 @@
                Content="Interchange Sort"
                Grid.Row="2"
                Grid.Column="4"
-               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Grid.ColumnSpan="2"
                Style="{StaticResource lblDesign}"
                HorizontalContentAlignment="Center"
                VerticalContentAlignment="Center"
@@ -117,7 +117,7 @@
                 Background="White" 
                 Grid.Row="3" 
                Grid.Column="4"
-               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Grid.ColumnSpan="2" 
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                 SizeChanged="MainCanvas_SizeChanged"/>
 
@@ -126,7 +126,7 @@
                Content="Merge Sort"
                Grid.Row="4"
                Grid.Column="4"
-               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Grid.ColumnSpan="2" 
                Style="{StaticResource lblDesign}"
                HorizontalContentAlignment="Center"
                VerticalContentAlignment="Center"
@@ -135,7 +135,7 @@
                 Background="White" 
                 Grid.Row="5" 
                Grid.Column="4"
-               Grid.ColumnSpan="2" Grid.RowSpan="1"
+               Grid.ColumnSpan="2" 
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                 SizeChanged="MainCanvas_SizeChanged"/>
 
@@ -144,7 +144,8 @@
                 Grid.Row="6" 
                 Grid.Column="2"
                 Click="Start_Click" 
-                Style="{StaticResource btnDesign}" Grid.RowSpan="1" Grid.ColumnSpan="3"/>
+                Style="{StaticResource btnDesign}" 
+                Grid.ColumnSpan="3"/>
         <Button x:Name="Return" 
                 Content="Trở về trang trước" 
                 Grid.Row="6" 
