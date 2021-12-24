@@ -18,11 +18,6 @@
     <None Remove="learn_code.jpg" />
     <None Remove="Page1.jpg" />
     <None Remove="Page2.jpg" />
-    <None Remove="Resources\Bubble Sort.gif" />
-    <None Remove="Resources\Insertion Sort.gif" />
-    <None Remove="Resources\Merge Sort.gif" />
-    <None Remove="Resources\Quick Sort.gif" />
-    <None Remove="Resources\Selection Sort.gif" />
     <None Remove="Resources\unnamed %281%29.png" />
     <None Remove="splash_screen.jpg" />
   </ItemGroup>
@@ -41,12 +36,13 @@
     <Resource Include="LearnSortPanel.jpg" />
     <Resource Include="learn_code.jpg" />
     <Resource Include="Page2.jpg" />
-    <Resource Include="Resources\Bubble Sort.gif" />
-    <Resource Include="Resources\Insertion Sort.gif" />
-    <Resource Include="Resources\Merge Sort.gif" />
-    <Resource Include="Resources\Quick Sort.gif" />
-    <Resource Include="Resources\Selection Sort.gif" />
     <Resource Include="Resources\unnamed (1).png" />
+    <Resource Include="Resources\SS.gif" />
+    <Resource Include="Resources\MS.gif" />
+    <Resource Include="Resources\BS.gif" />
+    <Resource Include="Resources\QS.gif" />
+    <Resource Include="Resources\ItcS.gif" />
+    <Resource Include="Resources\IstS.gif" />
   </ItemGroup>
 
   <ItemGroup>

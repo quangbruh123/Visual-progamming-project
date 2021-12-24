@@ -33,7 +33,7 @@ namespace Da_projekt
         public RunSortPage()
         {
             InitializeComponent();
-            SortList.SelectedIndex = 0;
+            SortList.SelectedIndex = sortIndex;
             GC.Collect();
             GC.WaitForPendingFinalizers();
             GC.Collect();
@@ -181,7 +181,7 @@ namespace Da_projekt
 
                         t = new TextBox();
                         t.Name = "tbxInput";
-                        t.SetValue(Grid.RowProperty, 3);
+                        t.SetValue(Grid.RowProperty, 2);
                         t.SetValue(Grid.ColumnProperty, 2);
                         var style = Application.Current.TryFindResource("txblDesign") as Style;
                         t.Style = style;
@@ -199,7 +199,7 @@ namespace Da_projekt
 
                         t = new TextBox();
                         t.Name = "tbxInput";
-                        t.SetValue(Grid.RowProperty, 3);
+                        t.SetValue(Grid.RowProperty, 2);
                         t.SetValue(Grid.ColumnProperty, 2);
                         var style = Application.Current.TryFindResource("txblDesign") as Style;
                         t.Style = style;

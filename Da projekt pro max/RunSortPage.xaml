@@ -13,7 +13,6 @@
     </Page.Background>
     <Grid x:Name="Grid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="70*"/>
             <RowDefinition Height="275*"/>
             <RowDefinition Height="70*"/>
             <RowDefinition Height="70*"/>
@@ -30,19 +29,19 @@
         <Label  Content="Chọn phương pháp nhập dữ liệu vào:" 
                 VerticalAlignment="Stretch" VerticalContentAlignment="Center"
                 Grid.Column="1" 
-                Grid.Row="2"
-                Style="{StaticResource lblDesign}" HorizontalAlignment="Stretch"  />
+                Grid.Row="1"
+                Style="{StaticResource lblDesign}" HorizontalAlignment="Stretch"/>
 
         <Label  x:Name="lbInput"
                 Content="Nhập các số cần xếp:" 
                 VerticalAlignment="Stretch" VerticalContentAlignment="Center"
                 Grid.Column="1" 
-                Grid.Row="3"
+                Grid.Row="2"
                 Style="{StaticResource lblDesign}" HorizontalAlignment="Stretch"/>
 
         <ComboBox   x:Name="Selection" 
                     Grid.Column="2"
-                    Grid.Row="2"
+                    Grid.Row="1"
                     IsSynchronizedWithCurrentItem="True" 
                     SelectedIndex="0"
                     SelectionChanged="ComboBox_SelectionChanged" 
@@ -53,46 +52,54 @@
             <ComboBoxItem Content="Nhập từ file / DTB" />
         </ComboBox>
 
-        <ListBox x:Name="SortList"  
+
+        <ListBox x:Name="SortList"  Background="Black"
                  Grid.Column="1" 
-                 Grid.Row="1"
                  Grid.ColumnSpan="2"
-                 HorizontalContentAlignment="Stretch"
-                 HorizontalAlignment="Stretch"
-                 VerticalAlignment="Stretch"
+                 Margin="25,25,25,25"
+                 HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
                  ScrollViewer.HorizontalScrollBarVisibility="Hidden" 
                  ScrollViewer.VerticalScrollBarVisibility="Hidden" >
 
-            <ListBoxItem Content="Selection Sort" 
-                         Height="{Binding Path=ActualHeight, ElementName=SortList}" 
-                         Style="{StaticResource lbIDesign}"/>
-            <ListBoxItem Content="Bubble Sort" 
-                         Height="{Binding Path=ActualHeight, ElementName=SortList}"
-                         Style="{StaticResource lbIDesign}"/>
-            <ListBoxItem Content="Insertion Sort" 
-                         Height="{Binding Path=ActualHeight, ElementName=SortList}"
-                         Style="{StaticResource lbIDesign}"/>
-            <ListBoxItem Content="Interchange Sort" 
-                         Height="{Binding Path=ActualHeight, ElementName=SortList}"
-                         Style="{StaticResource lbIDesign}"/>
-            <ListBoxItem Content="Merge Sort" 
-                         Height="{Binding Path=ActualHeight, ElementName=SortList}"
-                         Style="{StaticResource lbIDesign}"/>
-            <ListBoxItem Content="Quick Sort" 
-                         Height="{Binding Path=ActualHeight, ElementName=SortList}"
-                         Style="{StaticResource lbIDesign}"/>
+            <ListBoxItem HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                         Height="{Binding Path=ActualHeight, ElementName=SortList}" Width="{Binding Path=ActualWidth, ElementName=SortList}">
+                <Image gif:AnimationBehavior.SourceUri="Resources/SS.gif" Visibility="Visible" Stretch="Fill"/>
+            </ListBoxItem>
+
+            <ListBoxItem HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                         Height="{Binding Path=ActualHeight, ElementName=SortList}" Width="{Binding Path=ActualWidth, ElementName=SortList}">
+                <Image gif:AnimationBehavior.SourceUri="Resources/BS.gif" Visibility="Visible" Stretch="Fill"/>
+            </ListBoxItem>
+
+            <ListBoxItem HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                         Height="{Binding Path=ActualHeight, ElementName=SortList}" Width="{Binding Path=ActualWidth, ElementName=SortList}">
+                <Image gif:AnimationBehavior.SourceUri="Resources/IstS.gif" Visibility="Visible" Stretch="Fill"/>
+            </ListBoxItem>
+
+            <ListBoxItem HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                         Height="{Binding Path=ActualHeight, ElementName=SortList}" Width="{Binding Path=ActualWidth, ElementName=SortList}">
+                <Image gif:AnimationBehavior.SourceUri="Resources/ItcS.gif" Visibility="Visible" Stretch="Fill"/>
+            </ListBoxItem>
+
+            <ListBoxItem HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                         Height="{Binding Path=ActualHeight, ElementName=SortList}" Width="{Binding Path=ActualWidth, ElementName=SortList}">
+                <Image gif:AnimationBehavior.SourceUri="Resources/MS.gif" Visibility="Visible" Stretch="Fill"/>
+            </ListBoxItem>
+
+            <ListBoxItem HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                         Height="{Binding Path=ActualHeight, ElementName=SortList}" Width="{Binding Path=ActualWidth, ElementName=SortList}">
+                <Image gif:AnimationBehavior.SourceUri="Resources/QS.gif" Visibility="Visible" Stretch="Fill"/>
+            </ListBoxItem>
         </ListBox>
 
         <Button Content="Kế tiếp" 
                 Grid.Column="3" 
-                Grid.Row="1"
                 VerticalAlignment="Center" 
                 Click="btnNext_Click" 
                 Style="{StaticResource btnDesign}"
                 />
 
         <Button Content="Trước"
-                Grid.Row="1"
                 VerticalAlignment="Center"
                 Click="btnPrevious_Click" 
                 Style="{StaticResource btnDesign}"
@@ -100,33 +107,24 @@
 
         <Button Content="Bắt đầu"
                 Grid.Column="2"
-                Grid.Row="5"
+                Grid.Row="4"
                 Click="btnConfirm_Click" 
                 Style="{StaticResource btnDesign}">
 
         </Button>
         <Button Content="        Trở về trang trước      "
-                Grid.Row="5"
+                Grid.Row="4"
                 Grid.ColumnSpan="2"
                 HorizontalAlignment="Left"
                 Click="btnReturn_Click" 
                 Style="{StaticResource btnDesign}">
 
         </Button>
-        <Image Grid.Column="2" 
-               HorizontalAlignment="Stretch"
-               Grid.Row="1"
-               VerticalAlignment="Stretch" 
-               gif:AnimationBehavior.SourceUri="Resources/Selection Sort.gif" 
-               Visibility="Visible"/>
-        
+
         <Label  Content="Lưu ý: Chức năng minh họa sắp xếp sẽ bị tắt nếu kích thước quá 250 phần tử." VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Center"
-                Grid.Column="1" 
-                Grid.Row="4"
-                Style="{StaticResource lblDesign}" 
-                Grid.ColumnSpan="2" 
-                HorizontalAlignment="Stretch" 
-                VerticalAlignment="Stretch" FontSize="16"/>
+            Grid.Column="1" 
+            Grid.Row="3"
+            Style="{StaticResource lblDesign}" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="15"/>
     </Grid>
 </Page>
