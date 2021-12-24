@@ -16,9 +16,9 @@ Nội dung: Xây dựng một phần mềm hỗ trợ việc học các giải t
 ## Các chức năng chính của chương trình
 Chức năng chính: **Hướng dẫn người dùng về các thuật toán sắp xếp thông dụng hiện nay**.
 Gồm có 3 chức năng nhỏ:
-  1. Hướng dẫn người dùng về các thuật toán thông qua hình ảnh trực quan kèm diễn giải
-  2. Mô phỏng từng  thuật toán với các đầu vào: nhập thủ công, ngẫu nhiên theo số phần tử yêu cầu hoặc đọc từ file text
-  3. Chạy song song các thuật toán với nhau với mục đích làm rõ hơn điểm mạnh yếu của các thuật toán với các loại đầu vào tương tự như chức năng 2
+  1. Hướng dẫn người dùng về các thuật toán thông qua hình ảnh trực quan kèm diễn giải.
+  2. Mô phỏng từng thuật toán với các đầu vào: nhập thủ công, ngẫu nhiên theo số phần tử yêu cầu hoặc đọc từ file text.
+  3. Chạy song song các thuật toán với nhau với mục đích làm rõ hơn điểm mạnh yếu của các thuật toán với các loại đầu vào tương tự như chức năng 2.
 
 ## Thư viện được sử dụng:
 - C#/.NET
