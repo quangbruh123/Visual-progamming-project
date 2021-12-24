@@ -14,7 +14,7 @@ Nội dung: Xây dựng một phần mềm hỗ trợ việc học các giải t
 4. [Mai Phúc Tâm](https://github.com/Hew01)
 5. [Nguyễn Duy Minh Tuấn](https://github.com/wtf420)
 
-## Các chức năng chính của chương trình
+## Các chức năng của chương trình
 Chức năng chính: **Hướng dẫn người dùng về các thuật toán sắp xếp thông dụng hiện nay**.
 Gồm có 3 chức năng nhỏ:
   1. Hướng dẫn người dùng về các thuật toán thông qua hình ảnh trực quan kèm diễn giải.
