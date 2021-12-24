@@ -3,9 +3,8 @@
 ## Mô tả
 Đồ án môn học Lập trình trực quan lớp IT008.M11 học kì I năm học 2021-2022. Sử dụng ngôn ngữ lập trình C#.
 
-Đề tài: Chương trình mô phỏng các thuật toán sắp xếp.
-
-Nội dung: Xây dựng một phần mềm hỗ trợ việc học các giải thuật sắp xếp bằng cách trực quan hóa.
+Đề tài: Chương trình mô phỏng các thuật toán sắp xếp._
+Nội dung: Xây dựng một phần mềm hỗ trợ việc học các thuật toán sắp xếp bằng cách trực quan hóa.
 
 ## Thành viên nhóm
 1. [Cấn Đức Quang](https://github.com/quangbruh123)
@@ -15,7 +14,7 @@ Nội dung: Xây dựng một phần mềm hỗ trợ việc học các giải t
 5. [Nguyễn Duy Minh Tuấn](https://github.com/wtf420)
 
 ## Các chức năng của chương trình
-Chức năng chính: **Hướng dẫn người dùng về các thuật toán sắp xếp thông dụng hiện nay**.\n
+Chức năng chính: **Hướng dẫn người dùng về các thuật toán sắp xếp thông dụng hiện nay**._
 Gồm có 3 chức năng nhỏ:
   1. Hướng dẫn người dùng về các thuật toán thông qua hình ảnh trực quan kèm diễn giải.
   2. Mô phỏng từng thuật toán với các đầu vào: nhập thủ công, ngẫu nhiên theo số phần tử yêu cầu hoặc đọc từ file text.
