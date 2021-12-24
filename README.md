@@ -14,7 +14,7 @@ Nội dung: Xây dựng một phần mềm hỗ trợ việc học các giải t
 5. [Nguyễn Duy Minh Tuấn](https://github.com/wtf420)
 
 ## Các chức năng chính của chương trình
-Chức năng chính: **hướng dẫn người dùng về các sort thông dụng hiện nay**
+Chức năng chính: **hướng dẫn người dùng về các sort thông dụng hiện nay**.
 Gồm có 3 chức năng nhỏ:
   1. Hướng dẫn người dùng về các thuật toán thông qua hình ảnh trực quan kèm diễn giải
   2. Mô phỏng từng  thuật toán với các đầu vào: nhập thủ công, ngẫu nhiên theo số phần tử yêu cầu hoặc đọc từ file text
