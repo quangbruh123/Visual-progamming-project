@@ -121,7 +121,7 @@ namespace Da_projekt
             {
                 MessageBox.Show("Chức năng này chỉ hoạt động với dữ liệu tối đa 200 000 phần tử!", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            else if (FileError == true) {   }
+            else if (FileError == true) { }
             else
             {
                 switch (sortIndex)
@@ -219,7 +219,7 @@ namespace Da_projekt
                         lbInput.Content = "Chọn đường dẫn file";
                         ComboBox cb = new ComboBox();
                         cb.Name = "cbFile";
-                        cb.SetValue(Grid.RowProperty, 3);
+                        cb.SetValue(Grid.RowProperty, 2);
                         cb.SetValue(Grid.ColumnProperty, 2);
                         var style = Application.Current.TryFindResource("cbxlDesign") as Style;
                         cb.VerticalContentAlignment = VerticalAlignment.Center;
