@@ -35,6 +35,11 @@ Gồm có 3 phần:
 ## Công cụ (Tools)
 - Visual Studio 2019
 
+## Hướng dẫn cài đặt
+1. Chạy file cài đặt ```Sort Simulation.msi```.
+2. Chọn đường dẫn cho file tại mục folder. Nhấn Next.
+3. Hoàn thành việc cài đặt, sẽ có 1 file shortcut ở Desktop.
+
 ## Link tham khảo:
 - https://docs.microsoft.com/en-us/dotnet/api/?view=net-5.0
 - https://www.hackerearth.com/practice/algorithms/sorting/insertion-sort/visualize/
